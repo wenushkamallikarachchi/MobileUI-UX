@@ -1,0 +1,71 @@
+.ui-header {
+    color: red;
+}
+
+#product {
+    background-color: white;
+}
+.page-heading{
+    font-family: Gilroy;
+    font-size: 35px;
+}
+
+    .icons {
+        height: 15px;
+        width: 15px;
+    }
+
+    .sub-topics {
+        font-family: "Open Sans";
+        font-size: 15px;
+    }
+
+.ui-grid-a{
+    margin-top: 14px
+}
+
+    .ui-btn {
+        border-radius: 1.5em 0 1.5em 0 !important;
+        cursor: pointer;
+    }
+        a {
+            width: 115px;
+            height: 185px;
+            background-color:white !important;
+        }
+
+        .product-img1 {
+            width: 100px;
+            height: 83px;
+        }
+        .product-img2 {
+            width: 89px;
+            height: 84px;
+        }
+
+        .btn-details {
+            margin-top: 13px;
+        }
+
+            .product-name {
+                font-size: 18px;
+                font-family: "Open Sans";
+            }
+
+            .product-detail {
+                font-size: 15px;
+                font-family: "Open Sans";
+                color: #8CC63F;
+            }
+            p { 
+                margin:5px
+            }
+            .cart-btn {
+                height: 35px;
+                width: 55px !important;
+                background-color: #8CC63F !important;
+                margin-left: 27px;
+            }
+                .cart-icon {
+                    margin-top: -4px;
+                }
