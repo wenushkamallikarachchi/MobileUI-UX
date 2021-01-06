@@ -9,20 +9,9 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <link rel="stylesheet" href="Products.css">
-        <script src="js/pagination.js"></script>
-
-        <script>
-            $(document).ready(function() {
-                $(".ui-pagination").pagination({
-                    items: 5,
-                    content: 'content',
-                    previous: 'Previous',
-                    next: 'Next',
-                    position: 'bottom'
-                });
-            });
-        </script>
     </head>
 
     <body>
@@ -71,13 +60,48 @@
 
                 </div>
 
-                <div class="ui-pagination">
-
+                <!-- <div class="para">
                 </div>
+                <script>
+                    $(document).ready(function(){
+                        for(var i = 0; i <=3; i++) {
+                            $('<p> HI this is a paragrapg </p>' ).appendTo('.para')
+                        }
+                        
+                    })
+                </script> -->
 
+                <div class="ui-pagination">
+                    <ul>
+                        <li class="prev"> <a href="#"> &laquo; </a></li>
+                        <li class="page_num active"> <a href="#">1</a> </li>
+                        <li class="page_num"> <a href="#">2</a> </li>
+                        <li class="page_num"> <a href="#">3</a> </li>
+                        <li class="page_num"> <a href="#">4</a> </li>
+                        <li class="page_num"> <a href="#">5</a> </li>
+                        <li class="next"> <a href="#"> &raquo; </a></li>
+                    </ul>
 
+                    <script>
+                        $(document).ready(function() {
+                            $(".ui-pagination .page_num a").on("click", function(){
+                                if(!$(this).parent().hasClass("active")) {
+                                    $(".ui-pagination .page_num.active").removeClass("active");
+                                    $(this).parent().addClass("active")
+                                }
+                            })
+                            $(".next").on("click", function() {
+                                $(".ui-pagination").find(".page_num.active").next().addClass("active");
+                                $(".ui-pagination").find(".page_num.active").prev().removeClass("active");
+                            })
+                            $(".prev").on("click", function() {
+                                $(".ui-pagination").find(".page_num.active").prev().addClass("active");
+                                $(".ui-pagination").find(".page_num.active").next().removeClass("active");
+                            })
+                        });
+                    </script>
+                </div>
             </div>
-
         </div>
     </body>
 </html>

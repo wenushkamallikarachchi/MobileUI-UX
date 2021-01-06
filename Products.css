@@ -28,7 +28,7 @@
         border-radius: 1.5em 0 1.5em 0 !important;
         cursor: pointer;
     }
-        a {
+        .ui-block-a a, .ui-block-b a {
             width: 115px;
             height: 185px;
             background-color:white !important;
@@ -69,3 +69,60 @@
                 .cart-icon {
                     margin-top: -4px;
                 }
+
+ul {
+    display: flex;
+    background-color: white;
+    /* padding: 5px 8px; */
+    border-radius: 1.5em 0 1.5em 0 !important;
+    box-shadow: 0 0 10px 5px rgb(0, 0, 0, .1);
+    width: 229px;
+    height: 39px;
+    margin-left: 38px;
+}
+
+    ul li {
+        position: relative;
+        list-style: none;
+        line-height: 24px;
+        margin: 8px;
+        transition: 0.4s;
+        margin-left: -22px;
+        margin-top: 7px;
+        font-family: "Open Sans";
+    }
+
+        ul li.page_num {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        ul li a {
+            display: inline;
+            text-decoration: none;
+            color: black !important;
+            /* font-weight: 100; */
+            transition: 0.4s;
+        }
+        ul li.page_num:hover a,
+        ul li.page_num.active {
+            background-color: #8CC63F;
+            color: white !important;
+            font-size: 20px;
+            display: table;
+            height: 20px !important;
+            width: 55px;
+            border-radius: 1.5em 0 1.5em 0 !important;
+        }
+        ul li:first-child {
+            margin-right: 30px;
+            font-size: 30px;
+        }
+        ul li:last-child {
+            margin-left: 30px;
+            font-size: 30px;
+        }
+        ul li:first-child :hover,
+        ul li:last-child :hover {
+            transform: scale(1.25);
+        }
