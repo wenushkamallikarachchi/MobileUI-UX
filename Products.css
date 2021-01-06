@@ -1,24 +1,10 @@
 .ui-header {
     color: red;
 }
-
-#product {
-    background-color: white;
+.icons {
+    height: 15px;
+    width: 15px;
 }
-.page-heading{
-    font-family: Gilroy;
-    font-size: 35px;
-}
-
-    .icons {
-        height: 15px;
-        width: 15px;
-    }
-
-    .sub-topics {
-        font-family: "Open Sans";
-        font-size: 15px;
-    }
 
 .ui-grid-a{
     margin-top: 14px

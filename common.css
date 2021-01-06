@@ -1,0 +1,16 @@
+#page-body {
+    background-color: white;
+}
+    .page-heading{
+        font-family: "Gilroy";
+        font-size: 35px;
+    }
+        .sub-topic {
+            font-family: "Proza Libre";
+            font-size: 18px;
+            color: #707070;
+        }
+        .page-details {
+            font-family: "Open Sans";
+            font-size: 15px;
+        }

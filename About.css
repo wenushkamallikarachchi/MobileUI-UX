@@ -1,0 +1,80 @@
+p {
+    margin: 2px;
+}
+div{
+    margin: 5px;
+    display: inline-block;
+}
+.iconify.people{
+    display: inline;
+    width: 176px;
+    height: 58px;
+    color: #707070;
+
+    
+}
+.iconify.van{
+    display: inline;
+    width: 97px;
+    height: 46px;
+    color: #707070
+}
+    .icon-topic {
+        font-family: "Gilroy";
+        font-size: 17px;
+        text-align: center;
+        color: #707070;
+
+        /* @media screen and (min-width: 375) {
+            color: black
+        } */
+    }
+    .icon-data {
+        font-family: "Open Sans";
+        font-size: 14px;
+        text-align: center;
+        color: #707070;
+    }
+
+#map {
+    height: 200px;
+    width: 330px;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+
+    .outlets {
+        display: block;
+        margin-left: 20px;
+    }
+
+        .location.store-1, .location.store-2, .location.store-3 {
+            border-radius: 1.5em 0 1.5em 0 !important;
+            box-shadow: 0 0 10px 2px rgb(0, 0, 0, .1);
+            width: 124px;
+            height: 120px;
+            padding: 5px;
+        }
+        .location.store-2 {
+            margin-left: 24px;
+        }
+        .location.store-3 {
+            margin-left: 84px;
+            margin-top: 14px;
+        }
+        
+        .outlet-city {
+            font-family: "Gilroy";
+            font-size: 14px;
+            color: #707070;
+            text-align: center;
+        }
+        .outlet-address{
+            font-family: "Open Sans";
+            font-size: 11px;
+            text-align: center;
+            height: 82px;
+            margin-top: 11px;
+        }
+        
