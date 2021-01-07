@@ -20,41 +20,39 @@ p {
         float: right;
         margin-top: 12px;
     }
-    .wrapper-shoppers p {
-        text-align: center;
-    }
-    .wrapper-courier p {
-        text-align: center;
-        margin-right: 77px;
-    }
-    .wrapper-people {
-        display: none;
-    }
-    .iconify.shoppers {
-        /* display: inline; */
-        width: 176px;
-        height: 58px;
-        color: #707070;
-    }
-    .iconify.van {
-        /* display: inline; */
-        width: 97px;
-        height: 46px;
-        color: #707070
-    }
-    
-        .icon-topic {
-            font-family: "Gilroy";
-            font-size: 17px;
+        .wrapper-shoppers p {
+            text-align: center;
+        }
+        .wrapper-courier p {
+            text-align: center;
+            margin-right: 77px;
+        }
+        .wrapper-people {
+            display: none;
+        }
+        .iconify.shoppers {
+            width: 176px;
+            height: 58px;
             color: #707070;
         }
+        .iconify.van {
+            width: 97px;
+            height: 46px;
+            color: #707070
+        }
+        
+            .icon-topic {
+                font-family: "Gilroy";
+                font-size: 17px;
+                color: #707070;
+            }
 
-        .icon-data {
-            font-family: "Open Sans";
-            font-size: 14px;
-            color: #707070;
-            margin-top: -11px;
-        }
+            .icon-data {
+                font-family: "Open Sans";
+                font-size: 14px;
+                color: #707070;
+                margin-top: -11px;
+            }
 
 #map {
     height: 200px;
@@ -90,23 +88,23 @@ p {
             margin-top: 14px;
         }
         
-        .outlet-city {
-            font-family: "Gilroy";
-            font-size: 14px;
-            color: #707070;
-            text-align: center;
-        }
-        .outlet-address{
-            font-family: "Open Sans";
-            font-size: 11px;
-            text-align: center;
-            height: 82px;
-        }
+            .outlet-city {
+                font-family: "Gilroy";
+                font-size: 14px;
+                color: #707070;
+                text-align: center;
+            }
+            .outlet-address{
+                font-family: "Open Sans";
+                font-size: 11px;
+                text-align: center;
+                height: 82px;
+            }
 
 @media only screen and (min-width: 667px) {
     
     .iconify.shoppers, .iconify.van {
-        margin-left: 74px;
+        margin-left: 45px;
     }
     #map {
         width: 95%;
@@ -116,6 +114,41 @@ p {
     }
     .location.store-3 {
         margin-left: 24px;
+    } 
+}
+
+@media (min-width: 768px), (min-width: 1024px) {
+
+    .wrapper-our-numbers div {
+        width: 30%;
+        float: none;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    
+        .iconify.people {
+            width: 97px;
+            height: 44px;
+            color: #707070
+        }
+    .outlets div {
+        margin: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper-shoppers p {
+        margin-left: 49px
+    }
+    .wrapper-courier p {
+        margin-left: 46px;
+    }
+    .wrapper-people p {
+        text-align: center;
+        margin-left: -122px;
+    }
+    .outlets {
+        margin-left: 94px;
     }
     
 }
