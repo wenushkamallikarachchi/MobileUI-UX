@@ -104,7 +104,7 @@ p {
 @media only screen and (min-width: 667px) {
     
     .iconify.shoppers, .iconify.van {
-        margin-left: 45px;
+        margin-left: 75px;
     }
     #map {
         width: 95%;
@@ -131,9 +131,7 @@ p {
             height: 44px;
             color: #707070
         }
-    .outlets div {
-        margin: 12px;
-    }
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -149,6 +147,23 @@ p {
     }
     .outlets {
         margin-left: 94px;
+    } 
+    .outlets div {
+        margin: 12px;
     }
-    
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .iconify.shoppers, .iconify.van {
+        margin-left: 83px;
+    }
+    .iconify.people {
+        margin-left: 40px;
+    }
+    .outlets div {
+        margin: 15px;
+        margin-left: 140px;
+    }
+
 }
