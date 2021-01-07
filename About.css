@@ -1,44 +1,64 @@
+.ui-content {
+    width: 100%;
+}
+
 p {
     margin: 2px;
+    padding: 5px 2px 5px 0px;
 }
-div{
-    margin: 5px;
-    display: inline-block;
-}
-.iconify.people{
-    display: inline;
-    width: 176px;
-    height: 58px;
-    color: #707070;
 
+.wrapper-our-numbers {
+    width: 100%;
+}       
+
+    .wrapper-shoppers {
+        width: 50%;
+        float: left;
+    }
+    .wrapper-courier {
+        width: 50%;
+        float: right;
+        margin-top: 12px;
+    }
+    .wrapper-shoppers p {
+        text-align: center;
+    }
+    .wrapper-courier p {
+        text-align: center;
+        margin-right: 77px;
+    }
+    .wrapper-people {
+        display: none;
+    }
+    .iconify.shoppers{
+        display: inline;
+        width: 176px;
+        height: 58px;
+        color: #707070;
+    }
+    .iconify.van{
+        display: inline;
+        width: 97px;
+        height: 46px;
+        color: #707070
+    }
     
-}
-.iconify.van{
-    display: inline;
-    width: 97px;
-    height: 46px;
-    color: #707070
-}
-    .icon-topic {
-        font-family: "Gilroy";
-        font-size: 17px;
-        text-align: center;
-        color: #707070;
+        .icon-topic {
+            font-family: "Gilroy";
+            font-size: 17px;
+            color: #707070;
+        }
 
-        /* @media screen and (min-width: 375) {
-            color: black
-        } */
-    }
-    .icon-data {
-        font-family: "Open Sans";
-        font-size: 14px;
-        text-align: center;
-        color: #707070;
-    }
+        
+        .icon-data {
+            font-family: "Open Sans";
+            font-size: 14px;
+            color: #707070;
+        }
 
 #map {
     height: 200px;
-    width: 330px;
+    width: 341px;
     margin: 0;
     padding: 0;
     margin-top: 15px;
@@ -46,6 +66,12 @@ div{
 
     .outlets {
         display: block;
+        padding-top: 30px;
+    }
+
+    .outlets div{
+        padding: 10px;
+        display: inline-block;
         margin-left: 20px;
     }
 
@@ -54,7 +80,6 @@ div{
             box-shadow: 0 0 10px 2px rgb(0, 0, 0, .1);
             width: 124px;
             height: 120px;
-            padding: 5px;
         }
         .location.store-2 {
             margin-left: 24px;
@@ -75,6 +100,19 @@ div{
             font-size: 11px;
             text-align: center;
             height: 82px;
-            margin-top: 11px;
         }
-        
+
+@media only screen and (min-width: 667px) {
+    .icon-topic {
+        font-family: Arial;
+        color: black;
+    }
+    .icon-people {
+        display: block;
+        display: inline;
+        width: 97px;
+        height: 46px;
+        color: #707070
+    }
+    
+}

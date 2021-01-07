@@ -13,4 +13,6 @@
         .page-details {
             font-family: "Open Sans";
             font-size: 15px;
+            width: 100%;
+            text-align: justify;
         }

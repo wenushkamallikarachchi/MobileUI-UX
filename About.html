@@ -2,13 +2,14 @@
 <html>
     <head>
         <title> About </title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
         <link rel="stylesheet" href="common.css">
         <link rel="stylesheet" href="About.css">
@@ -23,25 +24,30 @@
 
     <body>
         <div data-role="page" class="page-body">
-            <div data-role="maim" class="ui-content">
+            <div data-role="main" class="ui-content">
                 <div class="about-us">
                     <p class="page-heading"> ABOUT </p>
                     <p class="sub-topic"> About Us </p>
                     <p class="page-details">
-                        <b>"Fresh Mart" </b>    is the Sri Lankan best platform enables for the customers to buy freshest & 
+                        <b>"Fresh Mart" </b> is the Sri Lankan best platform enables for the customers to buy freshest & 
                         quality products for a reasonable price over the last decade. We deliver for free at any bill 
                         value. Our Outlets are located at Colombo, Kandy and Galle.
                     </p>
                 </div>
-                <div class="our-numbers">
+                <div class="wrapper-our-numbers">
                     <p class="sub-topic"> Our Numbers </p>
-                    <div>
-                        <span class="iconify people" data-icon="ion-ios-people" data-inline="false"></span>
+                    <div class="wrapper-shoppers">
+                        <span class="iconify shoppers" data-icon="ion-ios-people" data-inline="false"></span>
                         <p class="icon-topic">20.1 million</p>
                         <p class="icon-data">online shoppers</p>
                     </div>
-                    <div>
+                    <div class="wrapper-courier">
                         <span class="iconify van" data-icon="fa-solid:shuttle-van" data-inline="false"></span>
+                        <p class="icon-topic">50 +</p>
+                        <p class="icon-data">Couriers</p>
+                    </div>
+                    <div class="wrapper-people">
+                        <span class="iconify" data-icon="oi:people" data-inline="false"></span>
                         <p class="icon-topic">50 +</p>
                         <p class="icon-data">Couriers</p>
                     </div>
@@ -61,9 +67,9 @@
                         }
 
                         const campuses = [
-                            ["New Cavendish", 6.927629850000001, 79.84493183092067, 1],
-                            ["Regent Street", 7.2931394, 80.6384294, 2],
-                            ["Marylebone", 5.9477405, 80.4585864, 3],
+                            ["Colombo", 6.927629850000001, 79.84493183092067, 1],
+                            ["Galle", 7.2931394, 80.6384294, 2],
+                            ["Kandy", 5.9477405, 80.4585864, 3],
                         ];
 
                         function setMarkers(map) {
