@@ -17,6 +17,10 @@
 .grid-container > div {
     padding: 0 5px 0 5px;
 }
+
+.wrapper-delivery-detail, .wrapper-payment-detail {
+    padding: 0 11px 0 10px;
+}
     #delivery-data, #payment-data {
         width: 100%;
         height: 169px;
@@ -78,6 +82,9 @@
     }
     .wrapper-grid3 th:last-child {
         border-radius: 0 2em 0 0 !important;
+    }
+    .iconify.orders {
+        display: none;
     }
 
     #order-data td {
@@ -155,4 +162,55 @@
     box-shadow: 0 0 8px 5px rgba(33,22,22, 0.1);
     margin: -28px 0px 21px 53px;
     height: 38px;
+}
+
+@media (min-width: 667px) {
+    .total-count-wrapper {
+        width: 57%;
+        padding: 9px;
+        margin: 18px 0 6px 122px;
+    }
+    .wrapper-amount {
+        margin: 5px 0px 0px 122px;
+        width: 386px;
+    }
+    .wrapper-grid3 .wrapper-amount p:last-child {
+        padding: 0 0 0 200px;
+    }
+    .ui-btn.back {
+        margin: -28px 0px 20px 192px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper-delivery-detail, .wrapper-payment-detail {
+        padding: 0 54px 0 52px;
+    }
+    .iconify.orders {
+        display: inline;
+        width: 20px;
+        height: 20px;
+    }
+    #order-data td {
+        font-size: 13px;
+    }
+
+    .total-count-wrapper {
+        padding: 8px;
+        margin: 7px 0 6px 143px;
+    }
+    .wrapper-amount {
+        margin: 5px 0px 0px 144px;
+        width: 441px;
+        height: 38px;
+    }
+    .wrapper-grid3 .wrapper-amount p:last-child {
+        padding: 7px 0 0 245px;
+    }
+    .wrapper-grid3 .wrapper-amount p {
+        padding: 7px 0 0 30px;
+    }
+    .ui-btn.back {
+        margin: -28px 0px 20px 248px;
+    }
 }
