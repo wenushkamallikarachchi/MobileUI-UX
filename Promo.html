@@ -1,77 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Products
-        </title>
+  <head>
+    <title>Promo</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>       
-         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <link rel="stylesheet" href="Products.css">
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="Promo.css" />
+    <link rel="stylesheet" href="common.css" />
+  </head>
 
-    <body>
-        
-        <div data-role="page" id="product">
-            <div data-role="header" >
-                <h1 class="ui-header">  include header elements</h1>
-            </div>
+  <body>
+    <div data-role="page" id="promo">
+      <div data-role="header">
+        <h1 class="ui-header">include header elements</h1>
+      </div>
 
-            <div data-role="main" class="ui-content">
-                <div>
-                    <p class="page-heading"> PROMOS </p>
-                </div>
-
-                <div class="ui-pagination">
-                    <ul>
-                        <li class="prev"> <a href="#"> &laquo; </a></li>
-                        <li class="page_num active"> <a href="#">FreshMart Deals</a> </li>
-                        <li class="page_num"> <a href="#">Card Deals</a> </li>
-                     
-                        <li class="next"> <a href="#"> &raquo; </a></li>
-                    </ul>
-
-                    <script>
-                        $(document).ready(function() {
-                            $(".ui-pagination .page_num a").on("click", function(){
-                                if(!$(this).parent().hasClass("active")) {
-                                    $(".ui-pagination .page_num.active").removeClass("active");
-                                    $(this).parent().addClass("active")
-                                }
-                            })
-                            $(".next").on("click", function() {
-                                $(".ui-pagination").find(".page_num.active").next().addClass("active");
-                                $(".ui-pagination").find(".page_num.active").prev().removeClass("active");
-                            })
-                            $(".prev").on("click", function() {
-                                $(".ui-pagination").find(".page_num.active").prev().addClass("active");
-                                $(".ui-pagination").find(".page_num.active").next().removeClass("active");
-                            })
-                        });
-                    </script>
-                </div>
-            
-                    <div class="ui-grid-a" style="margin-right: 50%;">
-                        <div class="ui-block-a" style="margin-right: 50%;">
-                          <a href="#" class="ui-btn ui-corner-all ui-shadow">
-                            <img class="product-img1" src="images\beetroot.jpg" alt="beetroot">
-                            <div class="btn-details">
-                                <p class="product-name"> Beetroot</p>
-                                <p class="product-detail"> Rs. 55.00/500g</p>
-                            </div>
-                            <button class="ui-btn cart-btn">
-                                <img class="cart-icon" src="icons\cart-icon.png" alt="cart">
-                            </button>
-                          </a>
-                        </div>
-                </div>
-
-            </div>
+      <div data-role="main" class="ui-content">
+        <div>
+          <p class="page-heading">PROMOS</p>
         </div>
-    </body>
+        <div class="ui-pagination">
+          <ul>
+            <img class="arrow_back active" src="icons/arrow_back.png" alt="arrow" />
+            <li class="page_num active"><a href="#">Shop Deals</a></li>
+            <img
+              class="arrow_forward"
+              src="icons/arrow_forward.png"
+              alt="arrow"
+            />
+          </ul>
+
+          </script>
+        </div>
+
+        <div class="ui-grid-a">
+    
+          <div class="ui-block-a">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow" >
+              <img
+                class="product-img1"
+                src="images\beetroot.jpg"
+                alt="beetroot"
+              />
+              <div class="btn-details">
+                <p class="product-name">Beetroot</p>
+                <p class="product-detail">Rs. 55.00/500g</p>
+              </div>
+              <button class="ui-btn cart-btn">
+                <img class="cart-icon" src="icons\cart-icon.png" alt="cart" />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
