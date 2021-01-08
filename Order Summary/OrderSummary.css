@@ -10,13 +10,13 @@
     grid-gap: 45px;
     padding: 10px;
 }
-.grid-container:last-child {
-    padding: 5px;
-}
+    .grid-container:last-child {
+        padding: 5px;
+    }
 
-.grid-container > div {
-    padding: 0 5px 0 5px;
-}
+    .grid-container > div {
+        padding: 0 5px 0 5px;
+    }
 
 .wrapper-delivery-detail, .wrapper-payment-detail {
     padding: 0 11px 0 10px;
@@ -83,30 +83,30 @@
     .wrapper-grid3 th:last-child {
         border-radius: 0 2em 0 0 !important;
     }
-    .iconify.orders {
-        display: none;
-    }
+        .iconify.orders {
+            display: none;
+        }
 
-    #order-data td {
-        font-size: 10px;
-        font-weight: 600;
-        text-align: center;
-        border: 1px solid #F3F3F3;
-    }
+        #order-data td {
+            font-size: 10px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #F3F3F3;
+        }
 
-    #order-data td:first-child {
-        border-radius:  0 0 0 1.5em !important;
-        border: 1px solid #F3F3F3;
-    }
-    #order-data td:last-child {
-        border-radius: 0 1.5em 0  0 !important;
-        border: 1px solid #F3F3F3;
-    }
+        #order-data td:first-child {
+            border-radius:  0 0 0 1.5em !important;
+            border: 1px solid #F3F3F3;
+        }
+        #order-data td:last-child {
+            border-radius: 0 1.5em 0  0 !important;
+            border: 1px solid #F3F3F3;
+        }
 
-    #order-data tbody tr {
-        overflow:hidden ;
-        border-collapse: separate !important;
-    }
+        #order-data tbody tr {
+            overflow:hidden ;
+            border-collapse: separate !important;
+        }
 
 .total-count-wrapper {
     width: 78%;
@@ -119,7 +119,6 @@
 
     #summary-data tbody tr {
         border-bottom: 1pt solid #656d68;
-        
     }
     #summary-data td:last-child  {
        text-align: right;
@@ -132,12 +131,13 @@
         font-family: "Open Sans" ;
         font-size: 12px;
     }
+
 .wrapper-amount {
     display: flex;
     border-radius: 0 0 1.5em 0 !important;
     background-color: #CAC9C7;
     margin: 6px 0 0px 25px;
-    width: 286px;
+    width: 298px;
     height: 33px;
 }
     .wrapper-grid3 .wrapper-amount p {
@@ -148,7 +148,7 @@
         margin: 5px;
     }
     .wrapper-grid3 .wrapper-amount p:last-child {
-        padding: 0 0 0 101px;
+        padding: 0 0 0 113px;
     }
 
 .ui-btn.back {
@@ -194,23 +194,50 @@
     #order-data td {
         font-size: 13px;
     }
-
     .total-count-wrapper {
         padding: 8px;
         margin: 7px 0 6px 143px;
     }
+        #summary-data td {
+            font-size: 14px;
+        }
     .wrapper-amount {
         margin: 5px 0px 0px 144px;
         width: 441px;
         height: 38px;
     }
-    .wrapper-grid3 .wrapper-amount p:last-child {
-        padding: 7px 0 0 245px;
-    }
-    .wrapper-grid3 .wrapper-amount p {
-        padding: 7px 0 0 30px;
-    }
+        .wrapper-grid3 .wrapper-amount p:last-child {
+            padding: 7px 0 0 245px;
+        }
+        .wrapper-grid3 .wrapper-amount p {
+            padding: 7px 0 0 30px;
+            font-size: 17px;
+        }
     .ui-btn.back {
         margin: -28px 0px 20px 248px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper-delivery-detail, .wrapper-payment-detail {
+        padding: 0px 109px 0 101px;
+    }
+    .total-count-wrapper {
+        padding: 8px;
+        margin: 7px 0 6px 200px;
+    }
+    .wrapper-amount {
+        margin: 5px 0px 0px 199px;
+        width: 588px;
+    }
+        .wrapper-grid3 .wrapper-amount p:last-child {
+            padding: 7px 0 0 345px;
+        }
+        .wrapper-grid3 .wrapper-amount p {
+            padding: 7px 0 0 48px;
+        }
+    .ui-btn.back {
+        width: 277px;
+        margin: -18px 0px 20px 343px;
     }
 }
