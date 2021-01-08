@@ -24,13 +24,12 @@
 
 .ui-btn {
   border-radius: 1.5em 0 1.5em 0 !important;
- 
   cursor: pointer;
 }
 .ui-block-a a,
 .ui-block-b a {
-  height: 221px;
-  width: 186px;
+    width: 186px;
+    height: 200px;
   background-color: white !important;
 }
 
@@ -61,13 +60,15 @@ p {
   margin: 5px;
 }
 .cart-btn {
-    width: 51px !important;
-    height: 25px;
+    width: 52px !important;
+    height: 27px;
   background-color: #8cc63f !important;
-  margin-left: 27px;
+  /* margin-left: 27px; */
+  margin-top: -5%;
 }
 .cart-icon {
-  margin-top: -4px;
+  margin-top: -12px;
+  
 }
 
 ul {
@@ -120,7 +121,8 @@ ul li.page_num.active {
 
 .column {
     float: left;
-    width: 25%;
+    padding: -5px;
+    width: 18%;
   }
   
   /* Clear floats after the columns */
@@ -129,3 +131,10 @@ ul li.page_num.active {
     display: table;
     clear: both;
   }
+
+.heart{
+    margin-bottom: 30%;
+    margin-left: -50px;
+    width: 21.5px;
+    height: 19.7px;
+}
