@@ -9,17 +9,17 @@
   margin-top: 1.5%;
   height: 20px;
   width: 20px;
-  margin-left: 35%;
+  margin-left: 20%;
 }
 .arrow_back {
   margin-top: 1%;
   height: 20px;
   width: 20px;
-  margin-right: 20%;
+  margin-left: -9%;
 }
 .ui-grid-a {
   margin-top: 14px;
-  margin-left: 18%;
+  margin-left: 15%;
 }
 
 .ui-btn {
@@ -61,8 +61,8 @@ p {
   margin: 5px;
 }
 .cart-btn {
-  height: 35px;
-  width: 55px !important;
+    width: 51px !important;
+    height: 25px;
   background-color: #8cc63f !important;
   margin-left: 27px;
 }
@@ -88,7 +88,7 @@ ul li {
   /* line-height: 15px; */
   /* margin: 8px; */
   transition: 0.4s;
-  margin-left: 0%;
+  margin-left: 1%;
   margin-top: 7px;
   font-family: "Open Sans";
 }
@@ -97,11 +97,12 @@ ui-pagination {
   text-align: center;
 }
 ul li.page_num {
-  width: 5px;
-  height: 2px;
   text-align: center;
+
+  white-space: nowrap ;
 }
 ul li a {
+    margin-left: 15%;
   display: inline;
   text-decoration: none;
   color: rgb(255, 250, 250) !important;
@@ -112,19 +113,19 @@ ul li.page_num:hover a,
 ul li.page_num.active {
   color: rgb(24, 23, 23) !important;
   font-size: 13px;
-  display: inline-block;
   /* height: 10px !important; */
-  width: 20px;
+  margin-top: 2%;
+
 }
-/* ul li:first-child {
-  margin-right: 7px;
-  font-size: 11px;
-}
-ul li:last-child {
-  margin-left: 30px;
-  font-size: 11px;
-}
-ul li:first-child :hover,
-ul li:last-child :hover {
-  transform: scale(1.25);
-} */
+
+.column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
