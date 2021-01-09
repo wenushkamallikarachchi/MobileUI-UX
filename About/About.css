@@ -1,0 +1,169 @@
+.ui-content {
+    width: 100%;
+}
+
+p {
+    margin: 2px;
+    padding: 5px 2px 5px 0px;
+}
+
+.wrapper-our-numbers {
+    width: 100%;
+}       
+
+    .wrapper-shoppers {
+        width: 50%;
+        float: left;
+    }
+    .wrapper-courier {
+        width: 50%;
+        float: right;
+        margin-top: 12px;
+    }
+        .wrapper-shoppers p {
+            text-align: center;
+        }
+        .wrapper-courier p {
+            text-align: center;
+            margin-right: 77px;
+        }
+        .wrapper-people {
+            display: none;
+        }
+        .iconify.shoppers {
+            width: 176px;
+            height: 58px;
+            color: #707070;
+        }
+        .iconify.van {
+            width: 97px;
+            height: 46px;
+            color: #707070
+        }
+        
+            .icon-topic {
+                font-family: "Gilroy";
+                font-size: 17px;
+                color: #707070;
+            }
+
+            .icon-data {
+                font-family: "Open Sans";
+                font-size: 14px;
+                color: #707070;
+                margin-top: -11px;
+            }
+
+#map {
+    height: 200px;
+    width: 341px;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+
+    .outlets {
+        width: 100%;
+        display: block;
+        padding-top: 30px;
+    }
+
+    .outlets div{
+        padding: 10px;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+        .location.store-1, .location.store-2, .location.store-3 {
+            border-radius: 1.5em 0 1.5em 0 !important;
+            box-shadow: 0 0 10px 2px rgb(0, 0, 0, .1);
+            width: 124px;
+            height: 120px;
+        }
+        .location.store-2 {
+            margin-left: 24px;
+        }
+        .location.store-3 {
+            margin-left: 84px;
+            margin-top: 14px;
+        }
+        
+            .outlet-city {
+                font-family: "Gilroy";
+                font-size: 14px;
+                color: #707070;
+                text-align: center;
+            }
+            .outlet-address{
+                font-family: "Open Sans";
+                font-size: 11px;
+                text-align: center;
+                height: 82px;
+            }
+
+@media only screen and (min-width: 667px) {
+    
+    .iconify.shoppers, .iconify.van {
+        margin-left: 75px;
+    }
+    #map {
+        width: 95%;
+    }
+    .outlets {
+        margin-left: 55px;
+    }
+    .location.store-3 {
+        margin-left: 24px;
+    } 
+}
+
+@media (min-width: 768px), (min-width: 1024px) {
+
+    .wrapper-our-numbers div {
+        width: 30%;
+        float: none;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    
+        .iconify.people {
+            width: 97px;
+            height: 44px;
+            color: #707070
+        }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper-shoppers p {
+        margin-left: 49px
+    }
+    .wrapper-courier p {
+        margin-left: 46px;
+    }
+    .wrapper-people p {
+        text-align: center;
+        margin-left: -122px;
+    }
+    .outlets {
+        margin-left: 94px;
+    } 
+    .outlets div {
+        margin: 12px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .iconify.shoppers, .iconify.van {
+        margin-left: 83px;
+    }
+    .iconify.people {
+        margin-left: 40px;
+    }
+    .outlets div {
+        margin: 15px;
+        margin-left: 140px;
+    }
+
+}
