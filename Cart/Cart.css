@@ -3,10 +3,10 @@
   width: 33%;
 }
 .columnSelect {
-    float: left;
-    width: 33%;
-    margin-left: 30px;
-  }
+  float: left;
+  width: 33%;
+  margin-left: 30px;
+}
 .column2 {
   float: left;
   width: 25%;
@@ -15,7 +15,7 @@
 .column3 {
   float: left;
   width: 10%;
-  margin:-5px 0px 0px 25%;
+  margin: -5px 0px 0px 25%;
 }
 /* Clear floats after the columns */
 .row:after {
@@ -35,136 +35,175 @@
   width: 15px;
 }
 
-    .wrapper-grid3 .wrapper-order p {
-        margin: -11px;
-        padding: 0 0 28px 20px;
-        color: #707070;
-        font-family: "Proza Libre";
-        font-size: 20px;
-    }
-        
-        #order-data {
-            border-collapse: separate !important;
-            border-spacing: 5px 5px;
-            overflow:hidden ;
-        }
-    
-        .wrapper-grid3 th {
-            background-color: #8CC63F;
-            color: white;
-            text-align: center;
-            font-family: "Open Sans";
-            font-size: 12px;  
-            height: 24px;  
-            border-radius: 0 0 0 0 !important;
-            padding: 6px 0 0 0;
-        }
-        .wrapper-grid3 th:first-child {
-            border-radius: 0 0 0 2em !important;
-        }
-        .wrapper-grid3 th:last-child {
-            border-radius: 0 2em 0 0 !important;
-        }
-            .iconify.orders {
-                display: none;
-            }
-    
-            #order-data td {
-                font-size: 10px;
-                font-weight: 600;
-                text-align: center;
-                border: 1px solid #F3F3F3;
-            }
-    
-            #order-data td:first-child {
-                border-radius:  0 0 0 1.5em !important;
-                border: 1px solid #F3F3F3;
-            }
-            #order-data td:last-child {
-                border-radius: 0 1.5em 0  0 !important;
-                border: 1px solid #F3F3F3;
-            }
-    
-            #order-data tbody tr {
-                overflow:hidden ;
-                border-collapse: separate !important;
-            }
+.wrapper-grid3 .wrapper-order p {
+  margin: -11px;
+  padding: 0 0 28px 20px;
+  color: #707070;
+  font-family: "Proza Libre";
+  font-size: 20px;
+}
 
-      /* Media query */
-    @media (min-width: 667px) {
-        .total-count-wrapper {
-            width: 57%;
-            padding: 9px;
-            margin: 18px 0 6px 122px;
-        }
-        .wrapper-amount {
-            margin: 5px 0px 0px 122px;
-            width: 386px;
-        }
-        .wrapper-grid3 .wrapper-amount p:last-child {
-            padding: 0 0 0 200px;
-        }
-        .ui-btn.back {
-            margin: -28px 0px 20px 192px;
-        }
-    }
-    
-    @media (min-width: 768px) {
-        .wrapper-delivery-detail, .wrapper-payment-detail {
-            padding: 0 54px 0 52px;
-        }
-        .iconify.orders {
-            display: inline;
-            width: 20px;
-            height: 20px;
-        }
-        #order-data td {
-            font-size: 13px;
-        }
-        .total-count-wrapper {
-            padding: 8px;
-            margin: 7px 0 6px 143px;
-        }
-            #summary-data td {
-                font-size: 14px;
-            }
-        .wrapper-amount {
-            margin: 5px 0px 0px 144px;
-            width: 441px;
-            height: 38px;
-        }
-            .wrapper-grid3 .wrapper-amount p:last-child {
-                padding: 7px 0 0 245px;
-            }
-            .wrapper-grid3 .wrapper-amount p {
-                padding: 7px 0 0 30px;
-                font-size: 17px;
-            }
-        .ui-btn.back {
-            margin: -28px 0px 20px 248px;
-        }
-    }
-    
-    @media (min-width: 1024px) {
-        .wrapper-delivery-detail, .wrapper-payment-detail {
-            padding: 0px 109px 0 101px;
-        }
-        .total-count-wrapper {
-            padding: 8px;
-            margin: 7px 0 6px 200px;
-        }
-        .wrapper-amount {
-            margin: 5px 0px 0px 199px;
-            width: 588px;
-        }
-            .wrapper-grid3 .wrapper-amount p:last-child {
-                padding: 7px 0 0 345px;
-            }
-            .wrapper-grid3 .wrapper-amount p {
-                padding: 7px 0 0 48px;
-            }
-        .ui-btn.back {
-            width: 277px;
-            margin: -18px 0px 20px 343px;
-        }
-    }
+#order-data {
+  border-collapse: separate !important;
+  border-spacing: 5px 5px;
+  overflow: hidden;
+}
+
+.wrapper-grid3 th {
+  background-color: #8cc63f;
+  color: white;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 12px;
+  height: 24px;
+  border-radius: 0 0 0 0 !important;
+  padding: 6px 0 0 0;
+}
+.wrapper-grid3 th:first-child {
+  border-radius: 0 0 0 2em !important;
+}
+.wrapper-grid3 th:last-child {
+  border-radius: 0 2em 0 0 !important;
+}
+.iconify.orders {
+  display: none;
+}
+
+#order-data td {
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #f3f3f3;
+}
+
+#order-data td:first-child {
+  border-radius: 0 0 0 1.5em !important;
+  border: 1px solid #f3f3f3;
+}
+#order-data td:last-child {
+  border-radius: 0 1.5em 0 0 !important;
+  border: 1px solid #f3f3f3;
+}
+
+#order-data tbody tr {
+  overflow: hidden;
+  border-collapse: separate !important;
+}
+.wrapper-amount {
+  display: flex;
+  border-radius: 0 0 1.5em 0 !important;
+  background-color: #cac9c7;
+  margin: 6px 0 0px 0px;
+  width: 345px;
+  height: 33px;
+}
+.wrapper-grid3 .wrapper-amount p {
+  font-family: "Proza Libre Regular";
+  font-size: 15px;
+  font-weight: 600;
+  color: black !important;
+  margin: 5px;
+}
+.wrapper-grid3 .wrapper-amount p:last-child {
+  padding: 0 0 0 113px;
+}
+.total-count-wrapper {
+  background-color: transparent;
+  table-layout: auto;
+}
+
+#summary-data tbody tr {
+  border-bottom: 1pt solid #4f5351;
+}
+#summary-data td:last-child {
+  text-align: right;
+}
+#summary-data td:first-child {
+  width: 100px;
+}
+#summary-data td {
+  padding: 14px 14px 6px 22px;
+  font-family: "Open Sans";
+  font-size: 12px;
+}
+
+/* Media query */
+@media (min-width: 667px) {
+  .total-count-wrapper {
+    width: 57%;
+    padding: 9px;
+    margin: 18px 0 6px 122px;
+  }
+  .wrapper-amount {
+    margin: 5px 0px 0px 122px;
+    width: 386px;
+  }
+  .wrapper-grid3 .wrapper-amount p:last-child {
+    padding: 0 0 0 200px;
+  }
+  .ui-btn.back {
+    margin: -28px 0px 20px 192px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper-delivery-detail,
+  .wrapper-payment-detail {
+    padding: 0 54px 0 52px;
+  }
+  .iconify.orders {
+    display: inline;
+    width: 20px;
+    height: 20px;
+  }
+  #order-data td {
+    font-size: 13px;
+  }
+  .total-count-wrapper {
+    padding: 8px;
+    margin: 7px 0 6px 143px;
+  }
+  #summary-data td {
+    font-size: 14px;
+  }
+  .wrapper-amount {
+    margin: 5px 0px 0px 144px;
+    width: 441px;
+    height: 38px;
+  }
+  .wrapper-grid3 .wrapper-amount p:last-child {
+    padding: 7px 0 0 245px;
+  }
+  .wrapper-grid3 .wrapper-amount p {
+    padding: 7px 0 0 30px;
+    font-size: 17px;
+  }
+  .ui-btn.back {
+    margin: -28px 0px 20px 248px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper-delivery-detail,
+  .wrapper-payment-detail {
+    padding: 0px 109px 0 101px;
+  }
+  .total-count-wrapper {
+    padding: 8px;
+    margin: 7px 0 6px 200px;
+  }
+  .wrapper-amount {
+    margin: 5px 0px 0px 199px;
+    width: 588px;
+  }
+  .wrapper-grid3 .wrapper-amount p:last-child {
+    padding: 7px 0 0 345px;
+  }
+  .wrapper-grid3 .wrapper-amount p {
+    padding: 7px 0 0 48px;
+  }
+  .ui-btn.back {
+    width: 277px;
+    margin: -18px 0px 20px 343px;
+  }
+}
