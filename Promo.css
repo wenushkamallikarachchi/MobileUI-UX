@@ -28,12 +28,13 @@
 }
 .ui-block-a a,
 .ui-block-b a {
-    width: 186px;
-    height: 200px;
+  width: 180px;
+  height: 200px;
   background-color: white !important;
 }
 
 .product-img1 {
+  margin-left: 25px;
   width: 100px;
   height: 83px;
 }
@@ -47,28 +48,39 @@
 }
 
 .product-name {
-  font-size: 18px;
   font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
 }
 
 .product-detail {
   font-size: 15px;
   font-family: "Open Sans";
   color: #8cc63f;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
 }
 p {
   margin: 5px;
 }
 .cart-btn {
-    width: 52px !important;
-    height: 27px;
+  width: 52px !important;
+  height: 27px;
   background-color: #8cc63f !important;
   /* margin-left: 27px; */
   margin-top: -5%;
 }
 .cart-icon {
   margin-top: -12px;
-  
 }
 
 ul {
@@ -100,10 +112,10 @@ ui-pagination {
 ul li.page_num {
   text-align: center;
 
-  white-space: nowrap ;
+  white-space: nowrap;
 }
 ul li a {
-    margin-left: 15%;
+  margin-left: 15%;
   display: inline;
   text-decoration: none;
   color: rgb(255, 250, 250) !important;
@@ -116,25 +128,31 @@ ul li.page_num.active {
   font-size: 13px;
   /* height: 10px !important; */
   margin-top: 2%;
-
 }
 
 .column {
-    float: left;
-    padding: -5px;
-    width: 18%;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  float: left;
+  padding: -5px;
+  width: 18%;
+}
 
-.heart{
-    margin-bottom: 30%;
-    margin-left: -50px;
-    width: 21.5px;
-    height: 19.7px;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.heart {
+  margin-bottom: 30%;
+  margin-left: -50px;
+  width: 21.5px;
+  height: 19.7px;
+}
+.swipe {
+  width: 29.3px;
+  height: 29.3px;
+  margin-left: 85%;
+  margin-bottom: -115px;
+
 }
