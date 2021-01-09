@@ -10,87 +10,205 @@
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>       
-         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
         <link rel="stylesheet" href="Products.css">
         <link rel="stylesheet" href="../common.css">
     </head>
 
     <body>
         
-        <div data-role="page" id="product">
-            <div data-role="header" >
+        <div data-role="page" id="page-body">
+            <div data-role="header" > 
                 <h1 class="ui-header">  include header elements</h1>
             </div>
 
             <div data-role="main" class="ui-content">
-                <div>
-                    <p class="page-heading"> PRODUCTS </p>
 
-                    <a> <img class ="icons" src="../icons/filter.png" alt="sort and filter"> </a>
-                    <span class="page-details"> Sort & Filter </span>
-                </div>
+                <div class="ui-grid-a">
 
-            
-                    <div class="ui-grid-a">
-                        <div class="ui-block-a">
-                          <a href="#" class="ui-btn ui-corner-all ui-shadow">
+                    <div class="ui-block-a heading">
+                        <p class="page-heading"> PRODUCTS </p>
+                        <div class="filter-wrapper">
+                            <span class="iconify filter" data-icon="bx:bx-filter" data-inline="true"></span> 
+                            <p class="filter-text"> Sort & Filter </p> 
+                        </div>
+                    </div>
+                    <div class="ui-block-a item">
+                        <a href="#" class="ui-btn ui-shadow">
                             <img class="product-img1" src="../images/beetroot.jpg" alt="beetroot">
                             <div class="btn-details">
                                 <p class="product-name"> Beetroot</p>
                                 <p class="product-detail"> Rs. 55.00/500g</p>
                             </div>
                             <button class="ui-btn cart-btn">
-                                <img class="cart-icon" src="../icons/cart-icon.png" alt="cart">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
                             </button>
                           </a>
-                        </div>
+
+                          <a href="#" class="ui-btn ui-shadow product">
+                            <img class="product-img1" src="../images/beetroot.jpg" alt="beetroot">
+                            <div class="btn-details">
+                                <p class="product-name"> Beetroot</p>
+                                <p class="product-detail"> Rs. 55.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
                         
-                        <div class="ui-block-b">
-                          <a href="#" class="ui-btn ui-corner-all ui-shadow">
+                    </div>
+                    <div class="ui-block-a item">
+                        <a href="#" class="ui-btn ui-corner-all ui-shadow">
                             <img class="product-img2" src="../images/lemon.png" alt="lemon">
                             <div class="btn-details">
                                 <p class="product-name"> Lemon </p>
                                 <p class="product-detail"> Rs. 102.00/500g</p>
                             </div>
                             <button class="ui-btn cart-btn">
-                                <img class="cart-icon" src="../icons/cart-icon.png" alt="cart">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
                             </button>
                           </a>
+
+                          <a href="#" class="ui-btn ui-shadow product">
+                            <img class="product-img2" src="../images/lemon.png" alt="lemon">
+                            <div class="btn-details">
+                                <p class="product-name"> Lemon </p>
+                                <p class="product-detail"> Rs. 102.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+                    </div>
+                    <div class="ui-block-b item">
+                        <a href="#" class="ui-btn ui-corner-all ui-shadow">
+                            <img class="product-img2" src="../images/lemon.png" alt="lemon">
+                            <div class="btn-details">
+                                <p class="product-name"> Lemon </p>
+                                <p class="product-detail"> Rs. 102.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+
+                          <a href="#" class="ui-btn ui-shadow product">
+                            <img class="product-img2" src="../images/lemon.png" alt="lemon">
+                            <div class="btn-details">
+                                <p class="product-name"> Lemon </p>
+                                <p class="product-detail"> Rs. 102.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+                    </div>
+                    <div class="ui-block-a item">
+                        <a href="#" class="ui-btn ui-shadow">
+                            <img class="product-img1" src="../images/beetroot.jpg" alt="beetroot">
+                            <div class="btn-details">
+                                <p class="product-name"> Beetroot</p>
+                                <p class="product-detail"> Rs. 55.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+                        
+                          <a href="#" class="ui-btn ui-shadow product">
+                            <img class="product-img1" src="../images/beetroot.jpg" alt="beetroot">
+                            <div class="btn-details">
+                                <p class="product-name"> Beetroot</p>
+                                <p class="product-detail"> Rs. 55.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+                    </div>
+                    <div class="ui-block-b item">
+                        <a href="#" class="ui-btn ui-shadow">
+                            <img class="product-img1" src="../images/beetroot.jpg" alt="beetroot">
+                            <div class="btn-details">
+                                <p class="product-name"> Beetroot</p>
+                                <p class="product-detail"> Rs. 55.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+
+                          <a href="#" class="ui-btn ui-shadow product">
+                            <img class="product-img1" src="../images/beetroot.jpg" alt="beetroot">
+                            <div class="btn-details">
+                                <p class="product-name"> Beetroot</p>
+                                <p class="product-detail"> Rs. 55.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+                        
+                    </div>
+                    <div class="ui-block-a item">
+                        <a href="#" class="ui-btn ui-corner-all ui-shadow">
+                            <img class="product-img2" src="../images/lemon.png" alt="lemon">
+                            <div class="btn-details">
+                                <p class="product-name"> Lemon </p>
+                                <p class="product-detail"> Rs. 102.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+
+                          <a href="#" class="ui-btn ui-shadow product">
+                            <img class="product-img2" src="../images/lemon.png" alt="lemon">
+                            <div class="btn-details">
+                                <p class="product-name"> Lemon </p>
+                                <p class="product-detail"> Rs. 102.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+                    </div>
+                    
+                    <div class="ui-block-b pagination">
+                        <div class="ui-pagination">
+                            <ul>
+                                <li class="prev"> <a href="#"> <span class="iconify backward" data-icon="fa-solid:backward" data-inline="false"></span></span></a></li>
+                                <li class="page_num active"> <a href="#">1</a> </li>
+                                <li class="page_num"> <a href="#">2</a> </li>
+                                <li class="page_num"> <a href="#">3</a> </li>
+                                <li class="page_num"> <a href="#">4</a> </li>
+                                <li class="page_num"> <a href="#">5</a> </li>
+                                <li class="next"> <a href="#"> <span class="iconify forward" data-icon="fa-solid:forward" data-inline="false"></span> </a></li>
+                            </ul>
+        
+                            <script>
+                                $(document).ready(function() {
+                                    $(".ui-pagination .page_num a").on("click", function(){
+                                        if(!$(this).parent().hasClass("active")) {
+                                            $(".ui-pagination .page_num.active").removeClass("active");
+                                            $(this).parent().addClass("active")
+                                        }
+                                    })
+                                    $(".next").on("click", function() {
+                                        $(".ui-pagination").find(".page_num.active").next().addClass("active");
+                                        $(".ui-pagination").find(".page_num.active").prev().removeClass("active");
+                                    })
+                                    $(".prev").on("click", function() {
+                                        $(".ui-pagination").find(".page_num.active").prev().addClass("active");
+                                        $(".ui-pagination").find(".page_num.active").next().removeClass("active");
+                                    })
+                                });
+                            </script>
                         </div>
-                      </div>
-
-                </div>
-                <div class="ui-pagination">
-                    <ul>
-                        <li class="prev"> <a href="#"> &laquo; </a></li>
-                        <li class="page_num active"> <a href="#">1</a> </li>
-                        <li class="page_num"> <a href="#">2</a> </li>
-                        <li class="page_num"> <a href="#">3</a> </li>
-                        <li class="page_num"> <a href="#">4</a> </li>
-                        <li class="page_num"> <a href="#">5</a> </li>
-                        <li class="next"> <a href="#"> &raquo; </a></li>
-                    </ul>
-
-                    <script>
-                        $(document).ready(function() {
-                            $(".ui-pagination .page_num a").on("click", function(){
-                                if(!$(this).parent().hasClass("active")) {
-                                    $(".ui-pagination .page_num.active").removeClass("active");
-                                    $(this).parent().addClass("active")
-                                }
-                            })
-                            $(".next").on("click", function() {
-                                $(".ui-pagination").find(".page_num.active").next().addClass("active");
-                                $(".ui-pagination").find(".page_num.active").prev().removeClass("active");
-                            })
-                            $(".prev").on("click", function() {
-                                $(".ui-pagination").find(".page_num.active").prev().addClass("active");
-                                $(".ui-pagination").find(".page_num.active").next().removeClass("active");
-                            })
-                        });
-                    </script>
-                </div>
+                    </div>
+                </div>         
             </div>
         </div>
     </body>
