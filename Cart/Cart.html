@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="Cart.css" />
+  </head>
+  <body>
+    <div data-role="page" id="Cart">
+      <div data-role="header">
+        <h1 class="ui-header">include header elements</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <p class="page-heading">CART</p>
+        <div class="row">
+          <div class="column2">
+            <label>Sort & Filter</label>
+          </div>
+          <div class="column3"><img src="../icons/cart_delete.png" /></div>
+        </div>
+
+        <div class="wrapper-grid3">
+          <div class="wrapper-order">
+            <table
+              data-role="table"
+              id="order-data"
+              data-mode="columtoggle"
+              class="ui-responsive"
+            >
+              <thead>
+                <th>Select</th>
+                <th>Product Name</th>
+                <th style="white-space: nowrap">Unit Price</th>
+                <th>Qty</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input
+                      style="width: 15px"
+                      type="checkbox"
+                      id="remember-me"
+                    />
+                  </td>
+                  <td>
+                    <span
+                      class="iconify orders"
+                      data-icon="emojione:bread"
+                      data-inline="false"
+                    ></span>
+                    &nbsp; Bread
+                  </td>
+                  <td>130</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      style="width: 15px"
+                      type="checkbox"
+                      id="remember-me"
+                    />
+                  </td>
+                  <td>
+                    <span
+                      class="iconify orders"
+                      data-icon="noto-v1:carrot"
+                      data-inline="false"
+                    ></span>
+                    &nbsp; Carrot
+                  </td>
+                  <td>150.00</td>
+                  <td>250g</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      style="width: 15px"
+                      type="checkbox"
+                      id="remember-me"
+                    />
+                  </td>
+                  <td>
+                    <span
+                      class="iconify orders"
+                      data-icon="noto:red-apple"
+                      data-inline="false"
+                    ></span>
+                    &nbsp; Apple
+                  </td>
+                  <td>50.00</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      style="width: 15px"
+                      type="checkbox"
+                      id="remember-me"
+                    />
+                  </td>
+                  <td>
+                    <span
+                      class="iconify orders"
+                      data-icon="noto:lemon"
+                      data-inline="false"
+                    ></span>
+                    &nbsp; Lemon
+                  </td>
+                  <td>102.00</td>
+                  <td>250g</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
