@@ -1,39 +1,66 @@
-.ui-header {
-    color: red;
-}
-.icons {
-    height: 15px;
-    width: 15px;
-}
-
-.ui-grid-a{
-    margin-top: 14px
-    
+.ui-grid-a {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 6px;
+    padding: 10px;
 }
 
+    .ui-grid-a > div {
+        padding: 0 5px 0 5px;
+    }
+
+    .ui-block-a.heading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+      }
+
+    .filter-wrapper {
+        display: flex;
+        margin: -5px 1px 0px 1px;
+
+    }
+
+        .page-heading {
+            margin: 0;
+            padding: 0 0 10px 5px;
+        }
+        .iconify.filter {
+            height: 31px;
+            width: 30px;
+            color: black;
+        }
+        .filter-text {
+            margin: 6px;
+        }
     .ui-btn {
         border-radius: 1.5em 0 1.5em 0 !important;
         cursor: pointer;
     }
-        .ui-block-a a, .ui-block-b a {
-            width: 115px;
-            height: 185px;
-            background-color:white !important;
+        .ui-block-a.item a, .ui-block-b.item a  {
+            background-color: white;
+            width: 104px;
+            box-shadow: 0 0 4px 2px rgb(0, 0, 0, .1);
+        }
+        .ui-block-a.item a:focus, .ui-block-b.item a:focus  {
+            background-color: white !important;
+        }
+       
+        .ui-block-a.item, .ui-block-b.item  {
+            display: -webkit-inline-box;
         }
 
-        .product-img1 {
-            width: 100px;
-            height: 83px;
+        .ui-btn.product-item1, .ui-btn.product-item2 {
+            display: none;
         }
-        .product-img2 {
-            width: 89px;
-            height: 84px;
-        }
-
-        .btn-details {
-            margin-top: 13px;
-        }
-
+            .product-img1 {
+                width: 100px;
+                height: 83px;
+            }
+            .product-img2 {
+                width: 89px;
+                height: 84px;
+            }
             .product-name {
                 font-size: 18px;
                 font-family: "Open Sans";
@@ -43,72 +70,122 @@
                 font-size: 15px;
                 font-family: "Open Sans";
                 color: #8CC63F;
+                margin-top: -15px;
             }
-            p { 
-                margin:5px
+            .btn-details {
+                margin-top: -15px;
             }
-            .cart-btn {
-                height: 35px;
-                width: 55px !important;
-                background-color: #8CC63F !important;
-                margin-left: 27px;
+            .ui-btn.cart-btn {
+                background-color: #8CC63F;
+                width: 52px;
+                height: 29px;
+                margin: -9px 10px -4px 25px;
             }
-                .cart-icon {
-                    margin-top: -4px;
+            .ui-btn.cart-btn:focus {
+                background-color: #8CC63F;
+            }
+                .iconify.cart {
+                    color: white;
+                    height: 20px;
+                    width: 20px;
+                    margin: -5px 0 0 0;
                 }
 
+.ui-block-b.pagination {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+}
 ul {
     display: flex;
     background-color: white;
     border-radius: 1.5em 0 1.5em 0 !important;
-    box-shadow: 0 0 10px 5px rgb(0, 0, 0, .1);
-    width: 229px;
+    box-shadow: 0 0 8px 3px rgb(0, 0, 0, .1);
+    width: 199px;
     height: 39px;
-    margin-left: 38px;
+    margin-left: 36px;
 }
-
     ul li {
         position: relative;
         list-style: none;
         line-height: 24px;
-        margin: 8px;
         transition: 0.4s;
-        margin-left: -22px;
-        margin-top: 7px;
         font-family: "Open Sans";
+        margin: 6px -32px 0px -34px;
+    }
+    ul li.page_num {
+        width: 7px;
+        height: 50px;
+        text-align: center;
+        margin: 6px -2px 0 13px;
+    }
+    ul li a {
+        display: inline;
+        text-decoration: none;
+        color: black !important;
+        transition: 0.4s;
+    }
+    .iconify.backward {
+        margin-right: -23px;
+    }
+    ul li.page_num:hover a,
+    ul li.page_num.active {
+        background-color: #8CC63F;
+        color: white !important;
+        font-size: 18px;
+        display: table;
+        height: 20px !important;
+        width: 55px;
+        border-radius: 1.5em 0 1.5em 0 !important;
     }
 
-        ul li.page_num {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-        }
-        ul li a {
-            display: inline;
-            text-decoration: none;
-            color: black !important;
-            /* font-weight: 100; */
-            transition: 0.4s;
-        }
-        ul li.page_num:hover a,
-        ul li.page_num.active {
-            background-color: #8CC63F;
-            color: white !important;
-            font-size: 20px;
-            display: table;
-            height: 20px !important;
-            width: 55px;
-            border-radius: 1.5em 0 1.5em 0 !important;
-        }
-        ul li:first-child {
-            margin-right: 30px;
-            font-size: 30px;
-        }
-        ul li:last-child {
-            margin-left: 30px;
-            font-size: 30px;
-        }
-        ul li:first-child :hover,
-        ul li:last-child :hover {
-            transform: scale(1.25);
-        }
+    ul li:first-child {
+        margin-right: 30px;
+        font-size: 24px;
+    }
+    ul li:last-child {
+        margin-left: 30px;
+        font-size: 24px;
+    }
+    
+@media only screen and (min-width: 667px) {
+    .ui-btn.product-item1 {
+        display: block;
+        margin-left: 14px;
+    }
+    ul {
+        margin-left: 186px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ui-btn.product-item1 {
+        margin-left: 39px;
+    }
+    ul {
+        margin-left: 228px;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .ui-grid-a {
+        grid-template-columns: auto auto;
+    }
+.ui-block-a.item {
+    margin: 7px 5px 0 47px;
+}
+.ui-block-b.item {
+    margin: 7px 5px 0 -42px;
+}
+    .ui-btn.product-item2 {
+        display: block;
+        margin-left: 36px;
+    }
+    .ui-btn.product-item1 {
+        margin-left: 33px;
+    }
+    ul {
+        margin-left: 361px;
+    }
+}
