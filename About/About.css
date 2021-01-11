@@ -6,7 +6,9 @@ p {
     margin: 2px;
     padding: 5px 2px 5px 0px;
 }
-
+.page-details {
+    width: 90%;
+}
 .wrapper-our-numbers {
     width: 100%;
 }       
@@ -65,7 +67,7 @@ p {
     .outlets {
         width: 100%;
         display: block;
-        padding-top: 30px;
+        padding: 30px 0 20px 0;
     }
 
     .outlets div{
@@ -101,6 +103,13 @@ p {
                 height: 82px;
             }
 
+.about-video {
+    width: 338px;
+    height: 167px;
+    margin: 10px 0 10px 2px;
+    box-shadow: 0 0 7px 3px rgb(0, 0, 0, .1);
+}
+
 @media only screen and (min-width: 667px) {
     
     .iconify.shoppers, .iconify.van {
@@ -115,6 +124,11 @@ p {
     .location.store-3 {
         margin-left: 24px;
     } 
+    .about-video {
+        width: 436px;
+        height: 194px;
+        margin: 5px 30px 5px 97px;
+    }
 }
 
 @media (min-width: 768px), (min-width: 1024px) {
@@ -151,6 +165,21 @@ p {
     .outlets div {
         margin: 12px;
     }
+    .location.store-1, .location.store-2, .location.store-3 {
+        width: 134px;
+        height: 138px;
+    }
+    .outlet-city {
+        font-size: 17px;
+    }
+    .outlet-address{
+        font-size: 14px;
+    }
+    .about-video {
+        width: 644px;
+        height: 298px;
+        margin: 23px 30px 15px 42px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -165,5 +194,9 @@ p {
         margin: 15px;
         margin-left: 140px;
     }
-
+    .about-video {
+        width: 932px;
+        height: 420px;
+        margin: 23px 5px 15px 25px;
+    }
 }

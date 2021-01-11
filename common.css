@@ -16,3 +16,15 @@
             width: 100%;
             text-align: justify;
         }
+
+@media screen and (min-width: 768px) {
+    .page-heading{
+        font-size: 38px;
+    }
+    .sub-topic {
+        font-size: 21px;
+    }
+    .page-details {
+        font-size: 18px;
+    }
+}
