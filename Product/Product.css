@@ -33,6 +33,12 @@
   color: black;
 }
 
+.heart-iphone {
+  width: 10%;
+  margin-top: 8%;
+  margin-left: 90%;
+}
+
 .add-comment-iphone > .ui-btn {
   background-color: white;
   color: grey;
@@ -179,6 +185,12 @@
   color: #8cc63f;
 }
 
+.heart {
+  margin-top: 13%;
+  margin-left: 90%;
+  width: 10%;
+}
+
 #ipad-textarea {
   height: 80px !important;
   border-radius: 1em 0 1em 0 !important;
@@ -200,6 +212,10 @@
 
   .ipad-column1 img {
     margin-top: 17%;
+  }
+
+  .heart {
+    margin-top: 11%;
   }
 }
 
@@ -228,5 +244,9 @@
 
   .ipad-column1 img {
     margin-top: -3%;
+  }
+
+  .heart {
+    margin-top: 8%;
   }
 }
