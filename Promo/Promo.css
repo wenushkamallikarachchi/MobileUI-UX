@@ -136,6 +136,9 @@ height: 35px;
   width: 20px;
   margin: -5px 0 0 0;
 }
+.promoLine{
+display: none;
+}
 /* iphone landscape */
 @media only screen and (min-width: 667px) {
   .ui-btn.product-item1 {
@@ -187,6 +190,22 @@ height: 35px;
   .viewAll{
     display: block;
     margin-left: 44%;
-    margin-top: 50px;
+    margin-top: 100px;
+  }
+  a.view{
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans";
+    color: black !important;
+    text-decoration: none;
+    margin-top: -4px;
+  }
+  .promoLine{
+    display: block;
+    margin-top: -20px; 
+    font-size: 18px;
+    font-family: "Open Sans";
   }
 }
