@@ -64,6 +64,15 @@ ul {
   align-items: center;
   font-family: "Open Sans";
 }
+.viewAll{
+  display: none;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  width: 150px !important;
+height: 35px;
+}
 .ui-btn {
   border-radius: 1.5em 0 1.5em 0 !important;
   cursor: pointer;
@@ -133,6 +142,9 @@ ul {
     display: none;
     margin-left: -148px;
   }
+  .product-item2{
+    display: none;
+  }
   .item {
     margin-left: 156px;
   }
@@ -144,19 +156,11 @@ ul {
 /* ipad portrait */
 @media only screen and (min-width: 768px) {
   .ui-btn.product-item1 {
-    margin-left: 39px;
+    margin-right: -250px;
     display: block;
   }
-
-  ul {
-    width: 500px;
-    height: 200px;
-    margin-left: 140px;
-  }
-  .labalDeal {
-    margin-left: 250px;
-  }
-  a {
+  .item {
+    margin-left: 38px;
   }
 }
 /* ipad landscape */
@@ -172,12 +176,17 @@ ul {
   }
   .ui-btn.product-item2 {
     display: block;
-    margin-left: 36px;
+    margin-left: 150px
   }
   .ui-btn.product-item1 {
     margin-left: 33px;
   }
   ul {
-    margin-left: 361px;
+    margin-left: 420px;
+  }
+  .viewAll{
+    display: block;
+    margin-left: 44%;
+    margin-top: 50px;
   }
 }
