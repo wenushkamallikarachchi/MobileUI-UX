@@ -131,13 +131,14 @@ ul {
 @media only screen and (min-width: 667px) {
   .ui-btn.product-item1 {
     display: none;
-    margin-left: -140px;
+    margin-left: -148px;
   }
-.item{
-margin-left:151px;
+  .item {
+    margin-left: 156px;
   }
   ul {
-    margin-left: 186px;
+    margin-left: 35%;
+    margin-top: -2%;
   }
 }
 /* ipad portrait */
@@ -146,11 +147,14 @@ margin-left:151px;
     margin-left: 39px;
     display: block;
   }
-  .item{
 
-  }
   ul {
-    margin-left: 228px;
+    width: 500px;
+    height: 200px;
+    margin-left: 140px;
+  }
+  .labalDeal {
+    margin-left: 250px;
   }
   a {
   }
@@ -177,4 +181,3 @@ margin-left:151px;
     margin-left: 361px;
   }
 }
-
