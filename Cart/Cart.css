@@ -1,6 +1,12 @@
 .page-heading {
   margin: 2px 0 0 0;
 }
+.page-sub{
+  color:#e80057;
+  font-family: "Open Sans";
+  font-size: 12px;
+  
+}
 .filter {
   /* margin-top: 20px; */
   margin-bottom: -5px;
