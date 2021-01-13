@@ -1,3 +1,96 @@
 .page-heading {
-    margin: 2px 0 0 0;
-  }
+  margin: 2px 0 0 0;
+}
+
+body {
+  font-family: "Open Sans";
+}
+.lbl1 {
+  width: 140px;
+  height: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: "Proza Libre Regular";
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+.playPoint {
+  border-radius: 1.5em 0 1.5em 0 !important;
+  box-shadow: 0 0 10px 2px rgba(180, 37, 37, 0.1);
+  width: 289px;
+  height: 390px;
+  background-color: #fff;
+  /* margin-top: -100px; */
+}
+.popUp {
+  overflow: hidden;
+  margin: -50px 0px 0px 210px;
+  /* width: 60px;
+  height: 14px; */
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8cc63f;
+  border-radius: 16px !important;
+}
+
+h1,
+p {
+  margin: 0;
+}
+.Sharelbl {
+  font-family: Gilroy;
+  font-size: 15px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.share {
+  border-radius: 1.5em 0 1.5em 0 !important;
+  width: 125px;
+  height: 25px;
+  margin: 4px 18px 3px 19px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+  background-color: #8cc63f;
+}
+div.power_controls {
+  margin-right: 70px;
+}
+
+.arrow_down {
+  width: 30px;
+  height: 40px;
+  transform: rotate(-49deg);
+}
+.canvas {
+  margin: -80px 45px 0 0px;
+  transform: rotate(-48deg);
+}
+.bar {
+  background-color: #8cc63f;
+  color: white;
+}
+/* iphone landscape */
+@media only screen and (min-width: 667px) {
+}
+/* ipad portrait */
+@media only screen and (min-width: 768px) {
+}
+
+/* ipad landscape */
+@media only screen and (min-width: 1024px) {
+}

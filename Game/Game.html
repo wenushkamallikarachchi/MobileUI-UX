@@ -2,18 +2,20 @@
 <html>
   <head>
     <title>Game</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
+    <script type="text/javascript" src="Winwheel.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
     />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="Game.css" />
@@ -26,9 +28,129 @@
       </div>
       <div data-role="main" class="ui-content">
         <p class="page-heading">SPIN & WIN</p>
+        <img class="arrow_down" src="../icons/arrow_down.png" />
+        <a
+          href="#popupBasic"
+          data-rel="popup"
+          class="ui-btn ui-corner-all ui-shadow ui-btn-inline popUp"
+          data-transition="pop"
+          >Instruction</a
+        >
+        <div data-role="popup" id="popupBasic">
+          <p>1. Spin the wheel and try to get 100 points.</p>
+          <p>2.You will only get 4 spins per day.</p>
+          <p>
+            3.Once you collect 100 points, you can either share it with your
+            friend or redeem it at checkout.
+          </p>
+          <p>4.The points are valid only for 24 hours.</p>
+          <p>5.Reset after every spin.</p>
+        </div>
+        <canvas id="canvas" class="canvas" width="300" height="300">
+          <p style="color: white" align="center">
+            Sorry, your browser doesn't support canvas. Please try another.
+          </p>
+        </canvas>
 
-        
+        <button id="spin_button" alt="Spin" onClick="startSpin();">Spin</button>
+        <button onClick="resetWheel(); return false;">Reset</button>
+        <div class="playPoint">
+          <label class="lbl1">Play Point</label>
+
+          <label id="total"></label>
+          <div class="w3-light-grey w3-round">
+            <div
+              class="w3-container w3-round bar"
+              style="width: 25%; height: 8px"
+            ></div>
+          </div>
+          <br>
+          <div class="share">
+          <label class="Sharelbl">Share Credit</label>
+          </div>
+        </div>
       </div>
     </div>
+    <script>
+      // Create new wheel object specifying the parameters at creation time.
+      let theWheel = new Winwheel({
+        numSegments: 8, // Specify number of segments.
+        outerRadius: 100, // Set outer radius so wheel fits inside the background.
+        textFontSize: 28, // Set font size as desired.
+        // Define segments including colour and text.
+        segments: [
+          { fillStyle: "#fff", text: "" },
+          { fillStyle: "#8cc63f", text: "20" },
+          { fillStyle: "#fff", text: "" },
+          { fillStyle: "#8cc63f", text: "10" },
+          { fillStyle: "#fff", text: "" },
+          { fillStyle: "#8cc63f", text: "50" },
+          { fillStyle: "#fff", text: "" },
+          { fillStyle: "#8cc63f", text: "30" },
+        ],
+        // Specify the animation to use.
+        animation: {
+          type: "spinToStop",
+          duration: 5, // Duration in seconds.
+          spins: 4, // Number of complete spins.
+          callbackFinished: alertPrize,
+        },
+      });
+
+      // Vars used by the code in this page to do power controls.
+      let wheelPower = 1;
+      let wheelSpinning = false;
+
+      // -------------------------------------------------------
+      // Click handler for spin button.
+      // -------------------------------------------------------
+      function startSpin() {
+        // Ensure that spinning can't be clicked again while already running.
+        if (wheelSpinning == false) {
+          // Based on the power level selected adjust the number of spins for the wheel, the more times is has
+          // to rotate with the duration of the animation the quicker the wheel spins.
+          theWheel.animation.spins = 3;
+
+          // Begin the spin animation by calling startAnimation on the wheel object.
+          theWheel.startAnimation();
+
+          // Set to true so that power can't be changed and spin button re-enabled during
+          // the current animation. The user will have to reset before spinning again.
+          wheelSpinning = true;
+        }
+      }
+
+      // -------------------------------------------------------
+      // Function for reset button.
+      // -------------------------------------------------------
+      function resetWheel() {
+        theWheel.stopAnimation(false); // Stop the animation, false as param so does not call callback function.
+        theWheel.rotationAngle = 0; // Re-set the wheel angle to 0 degrees.
+        theWheel.draw(); // Call draw to render changes to the wheel.
+
+        wheelSpinning = false; // Reset to false to power buttons and spin can be clicked again.
+      }
+
+      // -------------------------------------------------------
+      // Called when the spin animation has finished by the callback feature of the wheel because I specified callback in the parameters
+      // note the indicated segment is passed in as a parmeter as 99% of the time you will want to know this to inform the user of their prize.
+      // -------------------------------------------------------
+      let numOr0 = (n) => (isNaN(n) ? 0 : n);
+      function alertPrize(indicatedSegment) {
+        var totalArray = [0];
+        let tot = 0;
+        var value = indicatedSegment.text;
+        totalArray.push(value);
+
+        console.log(totalArray);
+        console.log(value);
+        //alert("You have won " + indicatedSegment.text);
+        var x = totalArray.reduce((a, b) => numOr0(a) + numOr0(b));
+        document.getElementById("total").innerHTML = x + "/100";
+        console.log(x);
+
+        // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
+      }
+    </script>
   </body>
 </html>
