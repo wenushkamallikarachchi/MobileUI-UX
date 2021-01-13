@@ -1,22 +1,19 @@
+.page-heading {
+  margin: 2px 0 0 0;
+}
+.filter {
+  /* margin-top: 20px; */
+  margin-bottom: -5px;
+}
+.cart-delete {
+  margin-left: 188px;
+}
 .column {
   float: left;
-  width: 33%;
+  overflow: hidden;
+  width: 30%;
 }
-.columnSelect {
-  float: left;
-  width: 33%;
-  margin-left: 30px;
-}
-.column2 {
-  float: left;
-  width: 25%;
-  margin-left: 10px;
-}
-.column3 {
-  float: left;
-  width: 10%;
-  margin: -5px 0px 0px 25%;
-}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -98,14 +95,37 @@
   height: 33px;
 }
 .wrapper-grid3 .wrapper-amount p {
+  /* font-family: "Proza Libre Regular"; */
+  font-size: 15px;
+  color: black !important;
+  margin: 7px;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+.ui-btn.back {
+  background-color: #8cc63f;
+  color: white;
   font-family: "Proza Libre Regular";
   font-size: 15px;
   font-weight: 600;
-  color: black !important;
-  margin: 5px;
+  border-radius: 2em 0 2em 0 !important;
+  width: 130px;
+  height: 25px;
+  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
+  margin: 4px 0px 0px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper-grid3 .wrapper-amount p:last-child {
-  padding: 0 0 0 113px;
+  padding: 0 0 0 0px;
 }
 .total-count-wrapper {
   background-color: transparent;
@@ -128,6 +148,7 @@
 }
 
 /* Media query */
+/* iphone landscape */
 @media (min-width: 667px) {
   .total-count-wrapper {
     width: 57%;
@@ -142,10 +163,14 @@
     padding: 0 0 0 200px;
   }
   .ui-btn.back {
-    margin: -28px 0px 20px 192px;
+    margin: 4px 0px 0px 60px;
+    width: 120px;
+  }
+  .cart-delete {
+    margin-left: 480px;
   }
 }
-
+/* ipad portrait */
 @media (min-width: 768px) {
   .wrapper-delivery-detail,
   .wrapper-payment-detail {
@@ -175,14 +200,17 @@
     padding: 7px 0 0 245px;
   }
   .wrapper-grid3 .wrapper-amount p {
-    padding: 7px 0 0 30px;
+    padding: 4px 0 0 30px;
     font-size: 17px;
   }
   .ui-btn.back {
-    margin: -28px 0px 20px 248px;
+ margin: 7px 0px 0px 70px;
+  }
+  .cart-delete {
+    margin-left: 560px;
   }
 }
-
+/* ipad landscape */
 @media (min-width: 1024px) {
   .wrapper-delivery-detail,
   .wrapper-payment-detail {
@@ -203,7 +231,10 @@
     padding: 7px 0 0 48px;
   }
   .ui-btn.back {
-    width: 277px;
-    margin: -18px 0px 20px 343px;
+    /* width: 277px; */
+    margin: 6px 0px 0px 188px;
+  }
+  .cart-delete {
+    margin-left: 800px;
   }
 }

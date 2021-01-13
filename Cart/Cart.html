@@ -26,28 +26,21 @@
 
       <div data-role="main" class="ui-content">
         <p class="page-heading">CART</p>
-        <div class="row">
-          <div class="column">
-            <img src="../icons/filter.png" />
-          </div>
+        <img class="filter" src="../icons/filter.png" />
+        <span>Sort & Filter</span>
 
-          <div class="column2">
-            <label>Sort & Filter</label>
-          </div>
-          <div class="column3"><img src="../icons/cart_delete.png" /></div>
-        </div>
+        <img class="cart-delete" src="../icons/cart_delete.png" />
 
         <div class="wrapper-grid3">
           <div class="wrapper-order">
-              <div class="ui-corner-all ui-shadow" style="height: 200px;">
-                <table
+            <div class="ui-corner-all ui-shadow" style="height: 200px">
+              <table
                 data-role="table"
                 id="order-data"
                 data-mode="columtoggle"
                 class="ui-responsive"
-              
               >
-                <thead  style="margin-top: 10px;">
+                <thead style="margin-top: 10px">
                   <th>Select</th>
                   <th>Product Name</th>
                   <th style="white-space: nowrap">Unit Price</th>
@@ -95,8 +88,7 @@
                   <tr>
                     <td>
                       <input
-                        style="width: 15px;"
-                   
+                        style="width: 15px"
                         type="checkbox"
                         id="remember-me"
                       />
@@ -133,21 +125,27 @@
                   </tr>
                 </tbody>
               </table>
-              </div>
-              <div class="total-count-wrapper">
-                <table data-role="table" id="summary-data" data-mode="columtoggle" class="ui-responsive">
-                    <tbody>
-                        <tr>
-                            <td>Item Count</td>
-                            <td>4</td>
-                        </tr>
-                    </tbody>
-                </table>    
-                <br>
-                </div>
-              <div class="wrapper-amount">
-                <p>Total</p>
-                <p>Rs.1101.00</p>
+            </div>
+            <div class="total-count-wrapper">
+              <table
+                data-role="table"
+                id="summary-data"
+                data-mode="columtoggle"
+                class="ui-responsive"
+              >
+                <tbody>
+                  <tr>
+                    <td>Item Count</td>
+                    <td>4</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+            </div>
+            <div class="wrapper-amount">
+              <p>Total</p>
+              <p>Rs.1101.00</p>
+              <button class="ui-btn back">Checkout</button>
             </div>
           </div>
         </div>
