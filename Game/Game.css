@@ -16,6 +16,13 @@ body {
 
   color: #000000;
 }
+.timeLbl{
+  margin-top: -20px!important;
+  margin-left: 150px!important;
+  font-family: "Proza Libre Regular";
+  font-size: 13px !important;
+  color: #000000;
+}
 .playPoint {
   border-radius: 1.5em 0 1.5em 0 !important;
   box-shadow: 0 0 10px 2px rgba(180, 37, 37, 0.1);

@@ -30,6 +30,7 @@
         <p class="page-heading">SPIN & WIN</p>
         <img class="arrow_down" src="../icons/arrow_down.png" />
         <a
+          onclick="date()"
           href="#popupBasic"
           data-rel="popup"
           class="ui-btn ui-corner-all ui-shadow ui-btn-inline popUp"
@@ -77,6 +78,7 @@
             ></div>
           </div>
           <br />
+          <label id="date" class="timeLbl"></label>
           <button id="shareCredit" disabled class="share Sharelbl">
             Share Credit
           </button>
@@ -121,6 +123,16 @@
       </div>
     </div>
     <script>
+      function date() {
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+         time = n.getHours() + ":" + n.getMinutes() + ":" + n.getSeconds();
+
+        document.getElementById("date").innerHTML =
+          y + "/" + m + "/" + d + "-" + time;
+      }
       // Create new wheel object specifying the parameters at creation time.
       let theWheel = new Winwheel({
         numSegments: 8, // Specify number of segments.
