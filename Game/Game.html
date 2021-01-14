@@ -64,6 +64,23 @@
         <button class="reset resetlbl" onClick="resetWheel(); return false;">
           Reset
         </button>
+        <!-- Ipad -->
+        <div class="category-icon playPad">
+          <label class="lbl1">Play Point</label>
+          <img class="medal" src="../icons/medal.png" />
+          <label id="total" class="totallbl">/100</label>
+          <div class="w3-light-grey w3-round progressbar">
+            <div
+              id="progressbar"
+              class="w3-container w3-round bar"
+              style="width: 0%; height: 8px"
+            ></div>
+          </div>
+          <label id="date" class="timeLbl"></label>
+          <button id="shareCredit" disabled class="share Sharelbl">
+            Share Credit
+          </button>
+        </div>
 
         <div class="playPoint">
           <label class="lbl1">Play Point</label>
@@ -128,7 +145,7 @@
         y = n.getFullYear();
         m = n.getMonth() + 1;
         d = n.getDate();
-         time = n.getHours() + ":" + n.getMinutes() + ":" + n.getSeconds();
+        time = n.getHours() + ":" + n.getMinutes() + ":" + n.getSeconds();
 
         document.getElementById("date").innerHTML =
           y + "/" + m + "/" + d + "-" + time;
