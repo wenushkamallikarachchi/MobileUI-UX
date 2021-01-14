@@ -1,0 +1,148 @@
+.page-heading {
+  margin: 5%;
+  padding: 0 0 10px 5px;
+  font-size: 35px;
+}
+
+.page-sub-heading {
+  margin-top: -8%;
+  padding: 0 0 10px 25px;
+  opacity: 60%;
+  font-size: 15px;
+}
+
+.order-summary-section {
+  margin: 5%;
+  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
+  border-radius: 2em 0 0 0;
+  padding: 2%;
+}
+
+.section-title {
+  font-family: "Gilroy";
+  font-size: 15px;
+}
+
+.summary-table-heading th {
+  background-color: #8cc63f;
+  text-align: center;
+  font-family: "Proza Libre";
+  font-size: 12px;
+  color: white;
+  border-radius: 1.7em 0 1.7em 0;
+}
+
+.summary-table-content td {
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  font-family: "Open Sans";
+  font-size: 11px;
+}
+
+#unit-price {
+  color: #8cc63f;
+}
+
+.order-price-details {
+  background-color: #efefef;
+  margin-top: 2%;
+  border-radius: 2em 0 0 0;
+  font-size: 12px;
+}
+
+.label-block1 p {
+  margin-left: 12%;
+  font-family: "Open Sans";
+  font-size: 12px;
+}
+
+.price-block1 p {
+  text-align: right;
+  margin-right: 13.5%;
+  font-family: "Open Sans";
+  font-size: 12px;
+}
+
+.label-block2 p {
+  margin-left: 12%;
+  font-family: "Gilroy";
+  font-size: 13px;
+}
+
+.price-block2 p {
+  text-align: right;
+  margin-right: 13.5%;
+  font-family: "Gilroy";
+  font-size: 13px;
+}
+
+hr {
+  width: 90%;
+}
+
+@media (min-width: 667px) {
+  .summary-table-content td {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .page-sub-heading {
+    margin-top: -6%;
+    padding: 0 0 10px 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-price-details p {
+    font-size: 15px;
+  }
+
+  .summary-table-content td {
+    font-size: 14px;
+  }
+
+  .delivery-content > label {
+    font-size: 14px;
+  }
+
+  .summary-table-heading th {
+    font-size: 13px;
+  }
+
+  .page-heading {
+    font-size: 38px;
+  }
+  .page-sub-heading {
+    margin-top: -5.5%;
+    padding: 0 0 10px 46px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .order-price-details p {
+    font-size: 15px;
+  }
+
+  .summary-table-content td {
+    font-size: 14px;
+  }
+
+  .delivery-content > label {
+    font-size: 14px;
+  }
+
+  .summary-table-heading th {
+    font-size: 13px;
+  }
+
+  .page-heading {
+    font-size: 38px;
+  }
+  .page-sub-heading {
+    margin-top: -5.5%;
+    padding: 0 0 10px 57px;
+    font-size: 20px;
+  }
+}
