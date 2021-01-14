@@ -7,7 +7,7 @@
 }
 
 .product-name-iphone{
-  font-size: 16px;
+  font-size: 18px;
 }
 .product-image-iphone img {
   width: 100%;
@@ -23,7 +23,7 @@
 
 .product-info-iphone {
   color: black;
-  height: 70px;
+  height: 80px;
 }
 
 .comment-details-iphone {
@@ -32,9 +32,16 @@
 }
 
 .rating-heading,
-.description-heading,
+.description-heading
+ {
+  color: black;
+}
 .product-price {
   color: black;
+    margin: 2px 0 0 2px;
+    font-size: 15px;
+    font-family: Gilroy;
+    margin: 7px 0 5px 5px;
 }
 
 .heart-iphone {
@@ -114,7 +121,7 @@
 
 .user-name-iphone {
   font-family: "Open Sans" !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 .user-comment-iphone {
@@ -208,7 +215,7 @@
 }
 
 .product-name-block p {
-  margin-top: -0.5%;
+  margin: 5px;
 }
 
 .product-name{
@@ -420,4 +427,13 @@
   color: white;
   font-weight: 600;
   font-size: 13px;
+}
+
+.product-rating {
+  background-color: #8cc63f;
+  color: white;
+  font-family: Proza Libre Regular;
+  font-size: 15px;
+  font-weight: 200;
+  border-radius: 7px 8px 7px 7px !important;
 }
