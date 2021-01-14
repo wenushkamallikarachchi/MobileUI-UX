@@ -5,7 +5,11 @@
 .outlets {
   width: 100%;
 }
-
+.next{
+  overflow: hidden;
+  text-align: right;
+  margin-top: 80px!important;
+}
 .outlets div {
   padding: 10px;
   display: inline-block;
@@ -165,6 +169,10 @@ display: none;
   .item {
     margin-left: 38px;
   }
+  .next{
+    margin-left: 260px;
+    margin-top: 90px !important;
+  }
 }
 /* ipad landscape */
 @media only screen and (min-width: 1024px) {
@@ -207,5 +215,9 @@ display: none;
     margin-top: -20px; 
     font-size: 18px;
     font-family: "Open Sans";
+  }
+  .next{
+   display: none;
+  
   }
 }
