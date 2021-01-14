@@ -209,6 +209,7 @@
 
 .product-name-block p {
   margin-top: -0.5%;
+  font-size: 22px;
 }
 
 .flexbox {
@@ -291,6 +292,10 @@
 
   #ipad-grid {
     display: block;
+  }
+
+  .product-name-block p {
+    font-size: 18px;
   }
 
   .ipad-column1 img {
