@@ -59,9 +59,8 @@ p {
 #map {
     height: 200px;
     width: 341px;
-    margin: 0;
     padding: 0;
-    margin-top: 15px;
+    margin: 15px 0 0 0;
 }
 
     .outlets {
@@ -146,6 +145,8 @@ p {
             color: #707070
         }
     
+    
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -180,6 +181,10 @@ p {
         height: 298px;
         margin: 23px 30px 15px 42px;
     }
+    #map {
+        height: 275px;
+        margin: 15px 0 0 3px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -198,5 +203,8 @@ p {
         width: 932px;
         height: 420px;
         margin: 23px 5px 15px 25px;
+    }
+    #map {
+        margin: 15px 0 0 10px;
     }
 }
