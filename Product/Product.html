@@ -16,6 +16,9 @@
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
     type='text/css'>
   <link href="http://s.w.org/wp-includes/css/dashicons.css?20150710" rel="stylesheet" type="text/css">
+  <!-- type='text/css'> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="../common.css" />
   <link rel="stylesheet" href="Product.css" />
   <link rel="stylesheet" href="../Rating/Rating.css" />
@@ -78,32 +81,8 @@
               data-transition="pop">Write a comment</a>
           </div>
           <div class="comment-display-iphone">
-            <ul data-role="listview">
-                  <li class="comment-details-iphone">
-                <fieldset class="ui-grid-a product-detail-section-iphone">
-                   <div class="ui-block-a avatar-iphone">
-                    <img class="user-avatar-iphone" src="../images/user-picture.jpg">
-                  </div>
-                  <div class="ui-block-b user-comment-display">
-                    <p class="user-name-iphone">John Peter</p>
-                    <div class="rating-iphone"></div>
-                    <p class="user-comment-iphone">“Good Product!”</p>
-                  </div>
-                </fieldset>
-              </li>
-              <br>
-               <li class="comment-details-iphone">
-                <fieldset class="ui-grid-a product-detail-section-iphone">
-                   <div class="ui-block-a avatar-iphone">
-                    <img class="user-avatar-iphone" src="../images/user-picture.jpg">
-                  </div>
-                  <div class="ui-block-b user-comment-display">
-                    <p class="user-name-iphone">John Peter</p>
-                    <div class="rating-iphone"></div>
-                    <p class="user-comment-iphone">“Good Product!”</p>
-                  </div>
-                </fieldset>
-              </li>
+            <ul data-role="listview" id="review-card">
+                  
             </ul>
           </div>
 
@@ -300,14 +279,6 @@
       }
 
       var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
-      var msg = "";
-      if (ratingValue > 1) {
-        msg = "Thanks! You rated this " + ratingValue + " stars.";
-      }
-      else {
-        msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
-      }
-      // responseMessage(msg);
 
     });
   });
@@ -330,3 +301,7 @@
 
 </html>
 </script>
+</script>
+<script type="text/javascript" src="../data.json" ></script>
+  <script type="text/javascript" src="../script.js" ></script>
+</html>
