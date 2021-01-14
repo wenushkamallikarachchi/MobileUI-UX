@@ -25,6 +25,23 @@ body {
   background-color: #fff;
   /* margin-top: -100px; */
 }
+.column1 {
+  float: left;
+  width: 50%;
+  margin-left: 25px;
+}
+.column2 {
+  float: right;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  margin-bottom: -10px;
+  content: "";
+  display: flex;
+  clear: both;
+}
 .popUp {
   margin: -50px 0px 0px 210px;
   /* width: 60px;
@@ -48,8 +65,8 @@ p {
 .medal {
   width: 26px;
   height: 26px;
-margin-left: 20px;
-padding-top: -90px;
+  margin-left: 20px;
+  padding-top: -90px;
 }
 .totallbl {
   /* margin-left: 120px; */
@@ -64,6 +81,12 @@ padding-top: -90px;
   text-align: center;
   color: #ffffff;
 }
+.resetlbl {
+  font-family: Gilroy;
+  font-size: 15px;
+  text-align: center;
+  color: #000000;
+}
 .share {
   border-radius: 1.5em 0 1.5em 0 !important;
   width: 125px;
@@ -71,6 +94,22 @@ padding-top: -90px;
   margin: 4px 18px 3px 19px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
   background-color: #8cc63f;
+}
+.spin {
+  border-radius: 1.5em 0 1.5em 0 !important;
+  width: 125px;
+  height: 25px;
+  margin: -50px 0px 0px 19px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+  background-color: #8cc63f;
+}
+.reset {
+  border-radius: 1.5em 0 1.5em 0 !important;
+  width: 125px;
+  height: 25px;
+  margin: -50px 0px 0px 150px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+  background-color: #e1e1e1;
 }
 /* div.power_controls {
   margin-right: 70px;
@@ -197,15 +236,12 @@ padding-top: -90px;
 /* Media query */
 /* iphone landscape */
 @media (min-width: 667px) {
-  
   .wrapper-grid3 .wrapper-amount p:last-child {
     padding: 0 0 0 200px;
   }
-
 }
 /* ipad portrait */
 @media (min-width: 768px) {
-
   .iconify.orders {
     display: inline;
     width: 20px;
@@ -233,7 +269,6 @@ padding-top: -90px;
     padding: 4px 0 0 30px;
     font-size: 17px;
   }
-
 }
 /* ipad landscape */
 @media (min-width: 1024px) {

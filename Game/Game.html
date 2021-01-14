@@ -51,20 +51,27 @@
             Sorry, your browser doesn't support canvas. Please try another.
           </p>
         </canvas>
-        <div class="share">
-          <label
-            class="Sharelbl"
-            id="spin_button"
-            alt="Spin"
-            onClick="startSpin();"
-            >Spin</label
-          >
+        <div class="row">
+          <div class="column1">
+            <div class="spin">
+              <label
+                class="Sharelbl"
+                id="spin_button"
+                alt="Spin"
+                onClick="startSpin();"
+                >Spin</label
+              >
+            </div>
+          </div>
+          <div class="column1">
+            <div class="reset">
+              <label class="resetlbl" onClick="resetWheel(); return false;"
+                >Reset</label
+              >
+            </div>
+          </div>
         </div>
-        <div class="share">
-          <label class="Sharelbl" onClick="resetWheel(); return false;"
-            >Reset</label
-          >
-        </div>
+
         <div class="playPoint">
           <label class="lbl1">Play Point</label>
 
