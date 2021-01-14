@@ -209,6 +209,9 @@
 
 .product-name-block p {
   margin-top: -0.5%;
+}
+
+.product-name{
   font-size: 22px;
 }
 
@@ -222,7 +225,7 @@
 
 .fav-btn {
   height: 100%;
-  width: 10%;
+  width: 100%;
   justify-content: right;
   align-items: flex-end;
 }
@@ -294,7 +297,7 @@
     display: block;
   }
 
-  .product-name-block p {
+  .product-name {
     font-size: 18px;
   }
 
@@ -315,7 +318,9 @@
   #ipad-grid {
     display: block;
   }
-
+.product-name{
+  font-size: 22px;
+}
   .ipad-column1 img {
     margin-top: 17%;
   }
@@ -329,12 +334,19 @@
     display: none;
   }
 
+  .product-name{
+    font-size: 22px;
+  }
   #ipad-grid {
     display: block;
   }
 
   .ipad-column1 img {
     margin-top: -3%;
+  }
+
+  .fav-btn{
+    width: 120%;
   }
 
   .flexbox {
