@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="OrderHistory.css" />
+  </head>
+
+  <body>
+    <div data-role="page" id="page-body">
+      <div data-role="header">
+        <h1 class="ui-header">include header elements</h1>
+      </div>
+
+      <div class="main" class="ui-content">
+        <p class="page-heading">Orders</p>
+        <p class="page-sub-heading sub-topic">Order History</p>
+
+        <!--IPHONE-->
+
+        <div class="grid-container" id="iphone-grid">
+          <div class="order-summary-section">
+            <div class="section-title">
+              <p class="section-heading">Order Id - 1234 90934</p>
+            </div>
+            <div class="delivery-content">
+              <table
+                data-role="table"
+                id="order-data"
+                data-mode="columtoggle"
+                class="ui-responsive"
+              >
+                <thead class="summary-table-heading">
+                  <th class="product-name-heading">Product</th>
+                  <th class="price-heading">Price</th>
+                  <th class="quantity-heading">Qty</th>
+                </thead>
+                <tbody class="summary-table-content">
+                  <tr>
+                    <td>
+                      <span
+                        class="iconify orders"
+                        data-icon="emojione:bread"
+                        data-inline="false"
+                      ></span>
+                      &nbsp; Bread
+                    </td>
+                    <td id="unit-price">Rs.130.00/Unit</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span
+                        class="iconify orders"
+                        data-icon="noto-v1:carrot"
+                        data-inline="false"
+                      ></span>
+                      &nbsp; Carrot
+                    </td>
+                    <td id="unit-price">Rs.150.00/kg</td>
+                    <td>250g</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span
+                        class="iconify orders"
+                        data-icon="noto:red-apple"
+                        data-inline="false"
+                      ></span>
+                      &nbsp; Apple
+                    </td>
+                    <td id="unit-price">Rs.50.00/Unit</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span
+                        class="iconify orders"
+                        data-icon="noto:lemon"
+                        data-inline="false"
+                      ></span>
+                      &nbsp; Lemon
+                    </td>
+                    <td id="unit-price">Rs.102.00/kg</td>
+                    <td>250g</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="order-price-details">
+                <div class="ui-grid-a">
+                  <div class="ui-block-a label-block1">
+                    <p class="total-price-label">Item count</p>
+                  </div>
+                  <div class="ui-block-b price-block1">
+                    <p class="price">4</p>
+                  </div>
+                  <hr />
+                </div>
+
+                <div class="ui-grid-a">
+                  <div class="ui-block-a label-block2">
+                    <p class="total-price-label">Total</p>
+                  </div>
+                  <div class="ui-block-b price-block2">
+                    <p class="price">Rs.530.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
