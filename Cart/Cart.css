@@ -1,11 +1,27 @@
 .page-heading {
   margin: 2px 0 0 0;
 }
-.page-sub{
-  color:#e80057;
-  font-family: "Open Sans";
+.page-sub {
+  color: #e80057;
+  font-family: "Proza Libre";
   font-size: 12px;
-  
+  font-size: 10px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  margin-top: -20px;
+  margin-left: 30px;
+}
+.sort{
+  font-family: "Open Sans";
+}
+.noti {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 0;
 }
 .filter {
   /* margin-top: 20px; */
@@ -210,7 +226,7 @@
     font-size: 17px;
   }
   .ui-btn.back {
- margin: 7px 0px 0px 70px;
+    margin: 7px 0px 0px 70px;
   }
   .cart-delete {
     margin-left: 560px;
