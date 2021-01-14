@@ -51,22 +51,71 @@
             Sorry, your browser doesn't support canvas. Please try another.
           </p>
         </canvas>
-
-        <button id="spin_button" alt="Spin" onClick="startSpin();">Spin</button>
-        <button onClick="resetWheel(); return false;">Reset</button>
+        <div class="share">
+          <label
+            class="Sharelbl"
+            id="spin_button"
+            alt="Spin"
+            onClick="startSpin();"
+            >Spin</label
+          >
+        </div>
+        <div class="share">
+          <label class="Sharelbl" onClick="resetWheel(); return false;"
+            >Reset</label
+          >
+        </div>
         <div class="playPoint">
           <label class="lbl1">Play Point</label>
 
-          <label id="total"></label>
-          <div class="w3-light-grey w3-round">
+          <img class="medal" src="../icons/medal.png" />
+          <label id="total" class="totallbl">/100</label>
+          <div class="w3-light-grey w3-round progressbar">
             <div
+              id="progressbar"
               class="w3-container w3-round bar"
-              style="width: 25%; height: 8px"
+              style="width: 0%; height: 8px"
             ></div>
           </div>
-          <br>
+          <br />
           <div class="share">
-          <label class="Sharelbl">Share Credit</label>
+            <label class="Sharelbl">Share Credit</label>
+          </div>
+          <br />
+          <div class="wrapper-grid3">
+            <div class="wrapper-order">
+              <div class="ui-corner-all">
+                <table
+                  data-role="table"
+                  id="order-data"
+                  data-mode="columtoggle"
+                  class="ui-responsive"
+                >
+                  <thead style="margin-top: 10px">
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Points</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>John Doe</td>
+                      <td>80/100</td>
+                    </tr>
+                    <tr>
+                      <td>2.</td>
+                      <td>Nadeera</td>
+                      <td>70/100</td>
+                    </tr>
+                    <tr>
+                      <td>3.</td>
+                      <td>David</td>
+                      <td>60/100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -135,21 +184,18 @@
       // Called when the spin animation has finished by the callback feature of the wheel because I specified callback in the parameters
       // note the indicated segment is passed in as a parmeter as 99% of the time you will want to know this to inform the user of their prize.
       // -------------------------------------------------------
+      var count = 0;
       let numOr0 = (n) => (isNaN(n) ? 0 : n);
       function alertPrize(indicatedSegment) {
-        var totalArray = [0];
-        let tot = 0;
-        var value = indicatedSegment.text;
-        totalArray.push(value);
+        var value = parseInt(indicatedSegment.text);
+        var test1 = numOr0(value);
+        count = count + test1;
 
-        console.log(totalArray);
-        console.log(value);
-        //alert("You have won " + indicatedSegment.text);
-        var x = totalArray.reduce((a, b) => numOr0(a) + numOr0(b));
-        document.getElementById("total").innerHTML = x + "/100";
-        console.log(x);
+        console.log(count);
 
-        // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
+        document.getElementById("total").innerHTML = count + "/100";
+        $("#progressbar").css("width", count + "%");
+        localStorage.setItem("points", count);
       }
     </script>
   </body>
