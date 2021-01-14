@@ -22,6 +22,7 @@ body {
   width: 289px;
   height: 350px;
   margin-left: 25px;
+  margin-top: 6px !important ;
   background-color: #fff;
   /* margin-top: -100px; */
 }
@@ -43,7 +44,7 @@ body {
   clear: both;
 }
 .popUp {
-  margin: -50px 0px 0px 210px;
+  margin: -50px 0px 0px 250px;
   /* width: 60px;
   height: 14px; */
   font-family: Gilroy;
@@ -81,36 +82,57 @@ p {
   text-align: center;
   color: #ffffff;
 }
-.resetlbl {
+.resetlbl,.spnlbl {
   font-family: Gilroy;
   font-size: 15px;
   text-align: center;
   color: #000000;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
 }
 .share {
   border-radius: 1.5em 0 1.5em 0 !important;
-  width: 125px;
+  width: 125px!important;
   height: 25px;
-  margin: 4px 18px 3px 19px;
+  margin: -4px 18px 3px 19px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
-  background-color: #8cc63f;
+  background-color: #8cc63f!important;
+  display: flex;
+  justify-content: center;
+  color: #ffffff !important;
+  align-items: center;
+}
+.spnlbl{
+  color: #ffffff !important;
 }
 .spin {
   border-radius: 1.5em 0 1.5em 0 !important;
-  width: 125px;
+  width: 120px !important ;
   height: 25px;
-  margin: -50px 0px 0px 19px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
-  background-color: #8cc63f;
+  margin: -35px 0px 0px 50px;
+  text-align: center;
+  /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23); */
+  background-color: #8cc63f !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .reset {
   border-radius: 1.5em 0 1.5em 0 !important;
-  width: 125px;
+  width: 120px !important ;
   height: 25px;
-  margin: -50px 0px 0px 150px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+  margin: -25px 0px 0px 180px;
+  /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23); */
   background-color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 /* div.power_controls {
   margin-right: 70px;
 } */
@@ -120,6 +142,7 @@ p {
 }
 .arrow_down {
   width: 30px;
+  margin-left: 49px;
   height: 40px;
   transform: rotate(-49deg);
 }

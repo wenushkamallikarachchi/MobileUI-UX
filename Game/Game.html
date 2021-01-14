@@ -51,26 +51,18 @@
             Sorry, your browser doesn't support canvas. Please try another.
           </p>
         </canvas>
-        <div class="row">
-          <div class="column1">
-            <div class="spin">
-              <label
-                class="Sharelbl"
-                id="spin_button"
-                alt="Spin"
-                onClick="startSpin();"
-                >Spin</label
-              >
-            </div>
-          </div>
-          <div class="column1">
-            <div class="reset">
-              <label class="resetlbl" onClick="resetWheel(); return false;"
-                >Reset</label
-              >
-            </div>
-          </div>
-        </div>
+        <button
+          class="spin spnlbl"
+          id="spin_button"
+          alt="Spin"
+          onClick="startSpin();"
+        >
+          Spin
+        </button>
+
+        <button class="reset resetlbl" onClick="resetWheel(); return false;">
+          Reset
+        </button>
 
         <div class="playPoint">
           <label class="lbl1">Play Point</label>
@@ -85,9 +77,10 @@
             ></div>
           </div>
           <br />
-          <div class="share">
-            <label class="Sharelbl">Share Credit</label>
-          </div>
+          <button id="shareCredit" disabled class="share Sharelbl">
+            Share Credit
+          </button>
+
           <br />
           <div class="wrapper-grid3">
             <div class="wrapper-order">
@@ -173,6 +166,7 @@
           // Set to true so that power can't be changed and spin button re-enabled during
           // the current animation. The user will have to reset before spinning again.
           wheelSpinning = true;
+          click();
         }
       }
 
@@ -201,8 +195,25 @@
         console.log(count);
 
         document.getElementById("total").innerHTML = count + "/100";
-        $("#progressbar").css("width", count + "%");
-        localStorage.setItem("points", count);
+        if (count < 100) {
+          $("#progressbar").css("width", count + "%");
+          localStorage.setItem("points", count);
+        } else if (count >= 100) {
+          count == 100;
+          $("#progressbar").css("width", count + "%");
+
+          document.getElementById("shareCredit").disabled = false;
+        }
+      }
+      var counter = 0;
+      function click() {
+        if (counter > 2) {
+          document.getElementById("spin_button").disabled = true;
+          counter++;
+        } else {
+          document.getElementById("spin_button").disabled = false;
+          counter++;
+        }
       }
     </script>
   </body>
