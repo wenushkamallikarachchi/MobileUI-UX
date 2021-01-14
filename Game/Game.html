@@ -47,6 +47,17 @@
           <p>4.The points are valid only for 24 hours.</p>
           <p>5.Reset after every spin.</p>
         </div>
+        <div class="intro">
+          <label class="lbl1">Instruction</label>
+          <p>1. Spin the wheel and try to get 100 points.</p>
+          <p>2.You will only get 4 spins per day.</p>
+          <p>
+            3.Once you collect 100 points, you can either share it with your
+            friend or redeem it at checkout.
+          </p>
+          <p>4.The points are valid only for 24 hours.</p>
+          <p>5.Reset after every spin.</p>
+        </div>
         <canvas id="canvas" class="canvas" width="300" height="300">
           <p style="color: white" align="center">
             Sorry, your browser doesn't support canvas. Please try another.
@@ -64,27 +75,46 @@
         <button class="reset resetlbl" onClick="resetWheel(); return false;">
           Reset
         </button>
-        <!-- Ipad -->
-        <div class="category-icon playPad">
-          <label class="lbl1">Play Point</label>
-          <img class="medal" src="../icons/medal.png" />
-          <label id="total" class="totallbl">/100</label>
-          <div class="w3-light-grey w3-round progressbar">
-            <div
-              id="progressbar"
-              class="w3-container w3-round bar"
-              style="width: 0%; height: 8px"
-            ></div>
+        <div class="leaderboard">
+          <label class="lbl1">Lucky leaderboard</label>
+          <div class="wrapper-grid3">
+            <div class="wrapper-order">
+              <div class="ui-corner-all">
+                <table
+                  data-role="table"
+                  id="order-data"
+                  data-mode="columtoggle"
+                  class="ui-responsive"
+                >
+                  <thead style="margin-top: 10px">
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Points</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>John Doe</td>
+                      <td>80/100</td>
+                    </tr>
+                    <tr>
+                      <td>2.</td>
+                      <td>Nadeera</td>
+                      <td>70/100</td>
+                    </tr>
+                    <tr>
+                      <td>3.</td>
+                      <td>David</td>
+                      <td>60/100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          <label id="date" class="timeLbl"></label>
-          <button id="shareCredit" disabled class="share Sharelbl">
-            Share Credit
-          </button>
         </div>
-
         <div class="playPoint">
           <label class="lbl1">Play Point</label>
-
           <img class="medal" src="../icons/medal.png" />
           <label id="total" class="totallbl">/100</label>
           <div class="w3-light-grey w3-round progressbar">
@@ -158,13 +188,13 @@
         // Define segments including colour and text.
         segments: [
           { fillStyle: "#fff", text: "" },
-          { fillStyle: "#8cc63f", text: "20" },
+          { fillStyle: "#8cc63f", text: "25" },
           { fillStyle: "#fff", text: "" },
-          { fillStyle: "#8cc63f", text: "10" },
+          { fillStyle: "#8cc63f", text: "25" },
           { fillStyle: "#fff", text: "" },
-          { fillStyle: "#8cc63f", text: "50" },
+          { fillStyle: "#8cc63f", text: "25" },
           { fillStyle: "#fff", text: "" },
-          { fillStyle: "#8cc63f", text: "30" },
+          { fillStyle: "#8cc63f", text: "25" },
         ],
         // Specify the animation to use.
         animation: {

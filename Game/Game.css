@@ -16,9 +16,9 @@ body {
 
   color: #000000;
 }
-.timeLbl{
-  margin-top: -20px!important;
-  margin-left: 150px!important;
+.timeLbl {
+  margin-top: -20px !important;
+  margin-left: 150px !important;
   font-family: "Proza Libre Regular";
   font-size: 13px !important;
   color: #000000;
@@ -31,7 +31,7 @@ body {
   margin-left: 25px;
   margin-top: 6px !important ;
   background-color: #fff;
-  display: block;
+
   /* margin-top: -100px; */
 }
 .column1 {
@@ -90,7 +90,8 @@ p {
   text-align: center;
   color: #ffffff;
 }
-.resetlbl,.spnlbl {
+.resetlbl,
+.spnlbl {
   font-family: Gilroy;
   font-size: 15px;
   text-align: center;
@@ -103,17 +104,17 @@ p {
 }
 .share {
   border-radius: 1.5em 0 1.5em 0 !important;
-  width: 125px!important;
+  width: 125px !important;
   height: 25px;
   margin: -4px 18px 3px 19px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
-  background-color: #8cc63f!important;
+  background-color: #8cc63f !important;
   display: flex;
   justify-content: center;
   color: #ffffff !important;
   align-items: center;
 }
-.spnlbl{
+.spnlbl {
   color: #ffffff !important;
 }
 .spin {
@@ -143,12 +144,33 @@ p {
 .category-icon {
   display: none;
   border-radius: 20px 0px;
-  border-top: 5px solid #8CC63F;
-  border-left: 5px solid #8CC63F;
+  border-top: 5px solid #8cc63f;
+  border-left: 5px solid #8cc63f;
   box-shadow: 3px 3px 7px #888888;
   padding: 10px 0;
-  width: 350px!important;
-  height: 200px!important;
+  width: 300px !important;
+  height: 180px !important;
+}
+
+.intro {
+  display: none;
+  border-radius: 20px 0px;
+  border-top: 5px solid #8cc63f;
+  border-left: 5px solid #8cc63f;
+  box-shadow: 3px 3px 7px #888888;
+  padding: 10px 0;
+  width: 350px !important;
+  height: 230px !important;
+}
+.leaderboard{
+  display: none;
+  border-radius: 20px 0px;
+  border-top: 5px solid #8cc63f;
+  border-left: 5px solid #8cc63f;
+  box-shadow: 3px 3px 7px #888888;
+  padding: 10px 0;
+  width: 350px !important;
+  height: 230px !important;
 }
 .item2 {
   width: 38.86px;
@@ -172,6 +194,7 @@ p {
   transform: rotate(-48deg);
 }
 .bar {
+  
   background-color: #8cc63f;
   color: white;
 }
@@ -283,15 +306,16 @@ p {
   .wrapper-grid3 .wrapper-amount p:last-child {
     padding: 0 0 0 200px;
   }
-  .playPoint{
-    overflow: hidden;
+  .playPoint {
     height: 300px;
     margin: -280px 0 0 340px !important;
   }
-  .popUp{
-    margin-left: 450px!important;
+  .popUp {
+    margin-left: 450px !important;
   }
+
 }
+
 /* ipad portrait */
 @media (min-width: 768px) {
   .iconify.orders {
@@ -321,33 +345,60 @@ p {
     padding: 4px 0 0 30px;
     font-size: 17px;
   }
-  .category-icon{
+  .category-icon {
     margin-top: 20px;
     display: block;
   }
-  .playPoint{
-    display: none;
-    overflow: hidden;
-    height: 300px;
-    margin: -280px 0 0 390px !important;
+  .playPoint {
+    margin-top: -200px !important;
+    margin-left: 360px !important;
+    width: 350px;
+    height: 190px;
   }
-  .playPad{
+  .lbl1 {
+    display: block;
+  }
 
-  }
-  .lbl1{
-
-  }
-  .totallbl{
+  .totallbl {
     margin: -30px 90px 0 0 !important ;
   }
-  .progressbar{
+  .progressbar {
     margin-top: 20px;
   }
-  .share{
-    margin-top: 20px;
+  .share {
+    margin-top: -20px;
   }
-  .timeLbl{
+  .timeLbl {
     margin-top: 8px !important;
+  }
+  .wrapper-grid3 th {
+    color: white;
+    background-color: #8cc63f;
+  }
+
+  .intro {
+    display: block;
+    margin-left: 350px !important;
+    margin-bottom: -100px !important;
+  }
+  .leaderboard {
+    display: block;
+   margin-top: 20px !important;
+  }
+  .popUp {
+    display: none;
+  }
+  .canvas {
+    margin-top: -180px !important;
+    transform: rotate(-40deg);
+  }
+  .intro p {
+    font-family: "Open Sans";
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  .playPoint table{
+    display: none;
   }
 }
 /* ipad landscape */
@@ -376,5 +427,26 @@ p {
   }
   .cart-delete {
     margin-left: 800px;
+  }
+  .intro {
+    display: block;
+    margin-left: 350px !important;
+    margin-bottom: -100px !important;
+    width: 500px !important;
+height: 250px !important;
+  }
+  .intro p{
+  
+    font-size: 20px;
+  }
+  .leaderboard {
+   width: 600px !important;
+   margin-top: 20px !important;
+  }
+  .playPoint {
+    margin-top: -200px !important;
+    margin-left: 650px !important;
+    width: 290px;
+    height: 190px;
   }
 }
