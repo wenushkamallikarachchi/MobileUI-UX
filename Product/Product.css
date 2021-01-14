@@ -52,6 +52,10 @@
   margin-top: -3%;
 }
 
+.user-comment-display{
+  margin-left: -13% !important;
+}
+
 #popupComment {
   border-radius: 2em 0 2em 0 !important ;
 }
@@ -164,13 +168,17 @@
 .comment-display-grid1 {
   width: 40% !important;
 }
+ 
+.comment-display-grid2{
+  margin-left: -15% !important;
+}
 
 .comment-details-ipad img {
   width: 50%;
 }
 
 .avatar-ipad {
-  width: 40% !important;
+  width: 10% !important;
 }
 
 .avatar-ipad img {
