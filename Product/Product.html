@@ -16,8 +16,8 @@
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
     type='text/css'>
   <link href="http://s.w.org/wp-includes/css/dashicons.css?20150710" rel="stylesheet" type="text/css">
-  <!-- type='text/css'> -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link rel="stylesheet" href="../common.css" />
   <link rel="stylesheet" href="Product.css" />
@@ -26,13 +26,14 @@
 
 <body>
   <div data-role="page" id="page-body">
-    <div data-role="header">
-      <!-- <div class="header-section"> <span class="material-icons back-icon"> navigate_before </span>
-        <div class="Logo"> <img src="../images/Logo.png"> </div>
-      </div>
-      <div class="search"> <span class="material-icons search-icon"> search </span>
-        <input type="text" class="product-search" data-role="none">
-      </div> -->
+    <div class="header"> <span class="material-icons back-icon"> navigate_before </span>
+      <div class="Logo"> <img src="../images/Logo.png"> </div>
+    </div>
+    <div class="search">
+
+      <div class="wrapper"> <span class="material-icons search-icon"> search </span>
+        <input type="text" class="product-search" data-role="none"></div>
+
     </div>
 
     <div class="main" class="ui-content">
@@ -58,6 +59,10 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="star-rating-avg">
+            <span class="stars" id="star-descrip" data-rating=4 data-num-stars="5"></span> <span
+              class="product-rating">0.4</span>
           </div>
           <p class="product-price sub-topic">Rs.55.00/KG</p>
         </div>
@@ -133,7 +138,7 @@
                 </div>
               </div>
               <div class="ui-field-contain comment-btn">
-                <button type="submit" class="ui-btn ui-corner-all ui-shadow">Submit</button>
+                <button type="submit" class="ui-btn ui-corner-all ui-shadow popup-btn">Submit</button>
               </div>
             </div>
           </div>
@@ -161,7 +166,9 @@
                   </div>
                 </div>
               </div>
-
+              <div class="star-rating-avg">
+                <span class="stars" data-rating=4 data-num-stars="5"></span> <span class="product-rating">0.4</span>
+              </div>
               <p class="product-price sub-topic">Rs.55.00/KG</p><br>
               <p class="description-heading sub-topic">Description</p>
               <p class="product-description page-details">Beetroots are a good source of nutrients, fibre, and many
@@ -258,31 +265,64 @@
           </fieldset>
         </div>
       </div>
+
+
+    </div>
+
+    <div class="page-footer">
+      <img id="footer-iphone-portrait" src="../images/navigation-iphone-portrait.jpg" />
+      <img id="footer-iphone-landscape" src="../images/navigation-iphone-landscape.jpg" />
+      <img id="footer-ipad-portrait" src="../images/navigation-ipad-portrait.jpg" />
+      <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
+    </div>
+
+    <div data-role="footer" data-id="foo1" data-position="fixed">
+
+      <div class="product-nav">
+        <!-- <a href="" class="ui-btn" id="cart-btn-iphone">
+          <img src="../icons/cart-icon.png" width="5%"> &nbsp; <span>Add to cart</span>
+        </a> -->
+        <div class="share-favourites" disabled> <img src="../icons/cart-icon.png">&nbsp; <span>Add to cart</span>
+        </div>
+        <div data-role="navbar" id="navbar">
+          <div class="navigation">
+            <div class="nav-active">
+              <img class="nav-account-icon" src="../images/home-white.png" />
+              <span class="nav-account-text">Home</span>
+            </div>
+            <img src="../images/cart.png" />
+            <img src="../images/offer.png" />
+            <img src="../images/rubic.png" />
+            <img src="../images/user.png" />
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
+
+  <div id="success-toast">
+    <p data-role="none">Successfully transferred 100 points!</p>
   </div>
+  <div id="error-toast"> <span class="material-icons error-icon">cancel</span>
+    <p data-role="none">Email not delivered!</p>
   </div>
 </body>
 
 <script>
-  $(document).ready(function () {
-    $('#stars li').on('click', function () {
-      var onStar = parseInt($(this).data('value'), 10);
-      var stars = $(this).parent().children('li.star');
-
-      for (i = 0; i < stars.length; i++) {
-        $(stars[i]).removeClass('selected');
-      }
-
-      for (i = 0; i < onStar; i++) {
-        $(stars[i]).addClass('selected');
-      }
-
-      var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
-
-    });
+  $(".share-favourites").click(function () {
+    showSuccessToast();
   });
-  // Favorite Button - Heart
+
+
+  function showSuccessToast() {
+    var x = document.getElementById("success-toast");
+    x.className = "show";
+    setTimeout(function () {
+      x.className = x.className.replace("show", "");
+    }, 3000);
+  }
+
   $('.favme').click(function () {
     $(this).toggleClass('active');
     localStorage.setItem("favorites", "beetroot");
@@ -302,6 +342,7 @@
 </html>
 </script>
 </script>
-<script type="text/javascript" src="../data.json" ></script>
-  <script type="text/javascript" src="../script.js" ></script>
+<script type="text/javascript" src="../data.json"></script>
+<script type="text/javascript" src="../script.js"></script>
+
 </html>
