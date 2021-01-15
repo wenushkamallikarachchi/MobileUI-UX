@@ -1,371 +1,426 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>About</title>
-    <meta charset="utf-8" />
-    <title>Checkout</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../images/Logo.png" />
-    <link
-      rel="stylesheet"
-      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
-    />
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <link rel="stylesheet" href="../common.css" />
-    <link rel="stylesheet" href="Checkout.css" />
-  </head>
 
-  <body>
-    <div data-role="page" id="page-body">
-      <div data-role="header">
-        <h1 class="ui-header">include header elements</h1>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <title>Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../images/Logo.png" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../common.css" />
+  <link rel="stylesheet" href="Checkout.css" />
+</head>
 
-      <div class="main" class="ui-content">
-        <p class="page-heading">CHECKOUT</p>
-
-        <!--IPHONE-->
-
-        <div class="grid-container" id="iphone-grid">
-          <div class="delivery-details-section">
-            <div class="section-title">
-              <p class="section-heading">Delivery Details</p>
-            </div>
-            <div class="delivery-content">
-              <label for="text-basic">Name:</label>
-              <input type="text" name="text-basic" id="text-basic" value="" />
-
-              <label for="text-basic">Phone number:</label>
-              <input type="text" name="text-basic" id="text-basic" value="" />
-
-              <label for="text-basic">Address:</label>
-              <input type="text" name="text-basic" id="text-basic" value="" />
-            </div>
-          </div>
-          <div class="play-points-section">
-            <div class="section-title" id="play-points">
-              <p class="section-heading">Play Points</p>
-            </div>
-            <div class="delivery-content"></div>
-          </div>
-          <div class="order-summary-section">
-            <div class="section-title">
-              <p class="section-heading">Order Summary</p>
-            </div>
-            <div class="delivery-content">
-              <table
-                data-role="table"
-                id="order-data"
-                data-mode="columtoggle"
-                class="ui-responsive"
-              >
-                <thead class="summary-table-heading">
-                  <th class="product-name-heading">Product</th>
-                  <th class="price-heading">Price</th>
-                  <th class="quantity-heading">Qty</th>
-                </thead>
-                <tbody class="summary-table-content">
-                  <tr>
-                    <td>
-                      <span
-                        class="iconify orders"
-                        data-icon="emojione:bread"
-                        data-inline="false"
-                      ></span>
-                      &nbsp; Bread
-                    </td>
-                    <td id="unit-price">Rs.130.00/Unit</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span
-                        class="iconify orders"
-                        data-icon="noto-v1:carrot"
-                        data-inline="false"
-                      ></span>
-                      &nbsp; Carrot
-                    </td>
-                    <td id="unit-price">Rs.150.00/kg</td>
-                    <td>250g</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span
-                        class="iconify orders"
-                        data-icon="noto:red-apple"
-                        data-inline="false"
-                      ></span>
-                      &nbsp; Apple
-                    </td>
-                    <td id="unit-price">Rs.50.00/Unit</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span
-                        class="iconify orders"
-                        data-icon="noto:lemon"
-                        data-inline="false"
-                      ></span>
-                      &nbsp; Lemon
-                    </td>
-                    <td id="unit-price">Rs.102.00/kg</td>
-                    <td>250g</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="order-price-details">
-                <div class="ui-grid-a">
-                  <div class="ui-block-a label-block1">
-                    <p class="total-price-label">Item count</p>
-                  </div>
-                  <div class="ui-block-b price-block1">
-                    <p class="price">4</p>
-                  </div>
-                  <hr />
-                </div>
-
-                <div class="ui-grid-a">
-                  <div class="ui-block-a label-block1">
-                    <p class="total-price-label">Sub Total</p>
-                  </div>
-                  <div class="ui-block-b price-block1">
-                    <p class="price">Rs.500.00</p>
-                  </div>
-                  <hr />
-                </div>
-
-                <div class="ui-grid-a">
-                  <div class="ui-block-a label-block1">
-                    <p class="total-price-label">Delivery Charges</p>
-                  </div>
-                  <div class="ui-block-b price-block1">
-                    <p class="price">Rs.50.00</p>
-                  </div>
-                  <hr />
-                </div>
-
-                <div class="ui-grid-a">
-                  <div class="ui-block-a label-block1">
-                    <p class="total-price-label play-point-label">
-                      Play points
-                    </p>
-                  </div>
-                  <div class="ui-block-b price-block1">
-                    <p class="price play-point-price">Rs.00.00</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="total-price">
-                <div class="ui-grid-a">
-                  <div class="ui-block-a label-block">
-                    <p class="total-price-label">Total</p>
-                  </div>
-                  <div class="ui-block-b price-block">
-                    <p class="price">Rs.530.00</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="ui-field-contain pay-btn">
-                <button  type="submit" class="ui-btn ui-corner-all ui-shadow">
-                  Pay Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--IPAD-->
-
-        <div class="grid-container" id="ipad-grid">
-          <div class="ui-grid-a">
-            <div class="ui-block-a user-details-block">
-              <div class="delivery-details-section">
-                <div class="section-title">
-                  <p class="section-heading">Delivery Details</p>
-                </div>
-                <div class="delivery-content">
-                  <label for="text-basic">Name:</label>
-                  <input
-                    type="text"
-                    name="text-basic"
-                    id="text-basic"
-                    value=""
-                  />
-
-                  <label for="text-basic">Phone number:</label>
-                  <input
-                    type="text"
-                    name="text-basic"
-                    id="text-basic"
-                    value=""
-                  />
-
-                  <label for="text-basic">Address:</label>
-                  <input
-                    type="text"
-                    name="text-basic"
-                    id="text-basic"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div class="play-points-section">
-                <div class="section-title" id="play-points">
-                  <p class="section-heading">Play Points</p>
-                </div>
-                <div class="delivery-content"></div>
-              </div>
-            </div>
-            <div class="ui-block-b summary-block">
-              <div class="order-summary-section">
-                <div class="section-title">
-                  <p class="section-heading">Order Summary</p>
-                </div>
-                <div class="delivery-content">
-                  <table
-                    data-role="table"
-                    id="order-data"
-                    data-mode="columtoggle"
-                    class="ui-responsive"
-                  >
-                    <thead class="summary-table-heading">
-                      <th class="product-name-heading">Product</th>
-                      <th class="price-heading">Price</th>
-                      <th class="quantity-heading">Qty</th>
-                    </thead>
-                    <tbody class="summary-table-content">
-                      <tr>
-                        <td>
-                          <span
-                            class="iconify orders"
-                            data-icon="emojione:bread"
-                            data-inline="false"
-                          ></span>
-                          &nbsp; Bread
-                        </td>
-                        <td id="unit-price">Rs.130.00/Unit</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <span
-                            class="iconify orders"
-                            data-icon="noto-v1:carrot"
-                            data-inline="false"
-                          ></span>
-                          &nbsp; Carrot
-                        </td>
-                        <td id="unit-price">Rs.150.00/kg</td>
-                        <td>250g</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <span
-                            class="iconify orders"
-                            data-icon="noto:red-apple"
-                            data-inline="false"
-                          ></span>
-                          &nbsp; Apple
-                        </td>
-                        <td id="unit-price">Rs.50.00/Unit</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <span
-                            class="iconify orders"
-                            data-icon="noto:lemon"
-                            data-inline="false"
-                          ></span>
-                          &nbsp; Lemon
-                        </td>
-                        <td id="unit-price">Rs.102.00/kg</td>
-                        <td>250g</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <div class="order-price-details">
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a label-block1">
-                        <p class="total-price-label">Item count</p>
-                      </div>
-                      <div class="ui-block-b price-block1">
-                        <p class="price">4</p>
-                      </div>
-                      <hr />
-                    </div>
-
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a label-block1">
-                        <p class="total-price-label">Sub Total</p>
-                      </div>
-                      <div class="ui-block-b price-block1">
-                        <p class="price">Rs.500.00</p>
-                      </div>
-                      <hr />
-                    </div>
-
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a label-block1">
-                        <p class="total-price-label">Delivery Charges</p>
-                      </div>
-                      <div class="ui-block-b price-block1">
-                        <p class="price">Rs.50.00</p>
-                      </div>
-                      <hr />
-                    </div>
-
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a label-block1">
-                        <p class="total-price-label play-point-label">
-                          Play points
-                        </p>
-                      </div>
-                      <div class="ui-block-b price-block1">
-                        <p class="price play-point-price">Rs.00.00</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="total-price">
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a label-block">
-                        <p class="total-price-label">Total</p>
-                      </div>
-                      <div class="ui-block-b price-block">
-                        <p class="price">Rs.530.00</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="ui-field-contain pay-btn">
-                    <button
-                      type="submit"
-                      class="ui-btn ui-corner-all ui-shadow"
-                    >
-                      Pay Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+  <div data-role="page" id="page-body">
+    <div class="header"> <span class="material-icons back-icon"> navigate_before </span>
+      <div class="Logo"><img src="../images/Logo.png"> </div>
     </div>
-  </body>
+
+    <div class="main" class="ui-content">
+      <p class="page-heading">CHECKOUT</p>
+
+      <!--IPHONE-->
+
+      <div class="grid-container" id="iphone-grid">
+        <div class="delivery-details-section">
+          <div class="section-title">
+            <p class="section-heading">Delivery Details</p>
+          </div>
+          <div class="delivery-content">
+            <label for="text-basic">Name:</label>
+            <input type="text" name="text-basic" id="text-basic" value="David Spade" />
+
+            <label for="text-basic">Phone number:</label>
+            <input type="text" name="text-basic" id="text-basic" value="0772234514" />
+
+            <label for="text-basic">Address:</label>
+            <input type="text" name="text-basic" id="text-basic" value="No.34, Hillwood street, Colombo 01" />
+          </div>
+        </div>
+        <div class="play-points-section">
+          <div class="section-title-play" id="play-points">
+            <p class="section-heading">Play Points</p>
+          </div>
+          <div class="delivery-content">
+            <div class="points-label">
+              <span class="medal"><img id="medal-iphone" src="../icons/medal-disabled.png" width="10%"> </span>
+              <span id="points-iphone"></span>
+            </div>
+            <div class="w3-light-grey w3-round progressbar">
+              <div id="progressbar-iphone" class="w3-container w3-round bar-iphone" style="width: 0%; height: 8px">
+              </div>
+            </div>
+            <div class="instruction-section">
+              <p class="instructions" id="instruction-iphone">Redeem your points to get a discount</p>
+            </div>
+            <div class="ui-field-contain redeem-btn">
+              <button type="submit" class="ui-btn ui-corner-all ui-shadow" id="redeem-iphone" disabled>
+                Redeem
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <div class="order-summary-section">
+          <div class="section-title">
+            <p class="section-heading">Order Summary</p>
+          </div>
+          <div class="delivery-content">
+            <table data-role="table" id="order-data" data-mode="columtoggle" class="ui-responsive">
+              <thead class="table-headings">
+                <th> Product</th>
+                <th> Unit Price </th>
+                <th> Qty </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="iconify orders" data-icon="emojione:bread" data-inline="false"></span> &nbsp; Bread
+                  </td>
+                  <td id="price">Rs.130.00</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td><span class="iconify orders" data-icon="noto-v1:carrot" data-inline="false"></span> &nbsp; Carrot
+                  </td>
+                  <td id="price">Rs.150.00</td>
+                  <td>250g</td>
+                </tr>
+                <tr>
+                  <td><span class="iconify orders" data-icon="noto:red-apple" data-inline="false"></span> &nbsp; Apple
+                  </td>
+                  <td id="price">Rs.50.00</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td><span class="iconify orders" data-icon="noto:lemon" data-inline="false"></span> &nbsp; Lemon</td>
+                  <td id="price">Rs.102.00</td>
+                  <td>250g</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="order-price-details">
+
+
+              <div class="ui-grid-a">
+                <div class="ui-block-a label-block1">
+                  <p class="total-price-label">Item count</p>
+                </div>
+                <div class="ui-block-b price-block1">
+                  <p class="price">4</p>
+                </div>
+              </div>
+
+              <div class="ui-grid-a ">
+                <div class="ui-block-a label-block1">
+                  <p class="total-price-label">Sub Total</p>
+                </div>
+                <div class="ui-block-b price-block1">
+                  <p class="price">Rs.500.00</p>
+                </div>
+              </div>
+              <div class="ui-grid-a">
+                <div class="ui-block-a label-block1">
+                  <p class="total-price-label">Delivery Charges</p>
+                </div>
+                <div class="ui-block-b price-block1">
+                  <p class="price">Rs.50.00</p>
+                </div>
+              </div>
+              <div class="ui-grid-a">
+                <div class="ui-block-a label-block1">
+                  <p class="total-price-label play-point-label">
+                    Play points
+                  </p>
+                </div>
+                <div class="ui-block-b price-block1">
+                  <p class="price play-point-price">Rs.00.00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="total-price">
+              <div class="ui-grid-a">
+                <div class="ui-block-a label-block">
+                  <p class="total-price-label">Total</p>
+                </div>
+                <div class="ui-block-b price-block">
+                  <p class="price">Rs.530.00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-field-contain pay-btn">
+              <button type="submit" class="ui-btn ui-corner-all ui-shadow">
+                Pay Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--IPAD-->
+
+      <div class="grid-container" id="ipad-grid">
+        <div class="ui-grid-a">
+          <div class="ui-block-a user-details-block">
+            <div class="delivery-details-section">
+              <div class="section-title">
+                <p class="section-heading">Delivery Details</p>
+              </div>
+              <div class="delivery-content">
+                <label for="text-basic">Name:</label>
+                <input type="text" name="text-basic" id="text-basic" value="David Spade" />
+
+                <label for="text-basic">Phone number:</label>
+                <input type="text" name="text-basic" id="text-basic" value="0772234514" />
+
+                <label for="text-basic">Address:</label>
+                <input type="text" name="text-basic" id="text-basic" value="No.34, Hillwood street, Colombo 01" />
+              </div>
+            </div>
+            <div class="play-points-section">
+              <div class="section-title-play" id="play-points">
+                <p class="section-heading">Play Points</p>
+              </div>
+              <div class="delivery-content">
+                <div class="points-label">
+                  <span class="medal"><img id="medal-ipad" src="../icons/medal-disabled.png" width="10%"> </span>
+                  <span id="points-ipad"></span>
+                </div>
+                <div class="w3-light-grey w3-round progressbar">
+                  <div id="progressbar-ipad" class="w3-container w3-round bar-ipad" style="width: 0%; height: 8px">
+                  </div>
+                </div>
+                <div class="instruction-section">
+                  <p class="instructions" id="instructions-ipad">Redeem your points to get a discount</p>
+                </div>
+                <div class="ui-field-contain redeem-btn">
+                  <button type="submit" class="ui-btn ui-corner-all ui-shadow" id="redeem-ipad" disabled>
+                    Redeem
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="ui-block-b summary-block">
+            <div class="order-summary-section">
+              <div class="section-title">
+                <p class="section-heading">Order Summary</p>
+              </div>
+              <div class="delivery-content">
+                <!-- <table data-role="table" id="order-data" data-mode="columtoggle" class="ui-responsive">
+                  <thead class="summary-table-heading">
+                    <th class="product-name-heading">Product</th>
+                    <th class="price-heading">Price</th>
+                    <th class="quantity-heading">Qty</th>
+                  </thead>
+                  <tbody class="summary-table-content">
+                    <tr>
+                      <td>
+                        <span class="iconify orders" data-icon="emojione:bread" data-inline="false"></span>
+                        &nbsp; Bread
+                      </td>
+                      <td id="unit-price">Rs.130.00/Unit</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="iconify orders" data-icon="noto-v1:carrot" data-inline="false"></span>
+                        &nbsp; Carrot
+                      </td>
+                      <td id="unit-price">Rs.150.00/kg</td>
+                      <td>250g</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="iconify orders" data-icon="noto:red-apple" data-inline="false"></span>
+                        &nbsp; Apple
+                      </td>
+                      <td id="unit-price">Rs.50.00/Unit</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="iconify orders" data-icon="noto:lemon" data-inline="false"></span>
+                        &nbsp; Lemon
+                      </td>
+                      <td id="unit-price">Rs.102.00/kg</td>
+                      <td>250g</td>
+                    </tr>
+                  </tbody>
+                </table> -->
+
+                <table data-role="table" id="order-data" data-mode="columtoggle" class="ui-responsive">
+                  <thead class="table-headings">
+                    <th> Product</th>
+                    <th> Unit Price </th>
+                    <th> Qty </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="iconify orders" data-icon="emojione:bread" data-inline="false"></span> &nbsp;
+                        Bread
+                      </td>
+                      <td id="price">Rs.130.00</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td><span class="iconify orders" data-icon="noto-v1:carrot" data-inline="false"></span> &nbsp;
+                        Carrot
+                      </td>
+                      <td id="price">Rs.150.00</td>
+                      <td>250g</td>
+                    </tr>
+                    <tr>
+                      <td><span class="iconify orders" data-icon="noto:red-apple" data-inline="false"></span> &nbsp;
+                        Apple
+                      </td>
+                      <td id="price">Rs50.00</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td><span class="iconify orders" data-icon="noto:lemon" data-inline="false"></span> &nbsp; Lemon
+                      </td>
+                      <td id="price">Rs.102.00</td>
+                      <td>250g</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="order-price-details">
+                  <div class="ui-grid-a">
+                    <div class="ui-block-a label-block1">
+                      <p class="total-price-label">Item count</p>
+                    </div>
+                    <div class="ui-block-b price-block1">
+                      <p class="price">4</p>
+                    </div>
+                    <hr />
+                  </div>
+
+                  <div class="ui-grid-a">
+                    <div class="ui-block-a label-block1">
+                      <p class="total-price-label">Sub Total</p>
+                    </div>
+                    <div class="ui-block-b price-block1">
+                      <p class="price">Rs.500.00</p>
+                    </div>
+                    <hr />
+                  </div>
+
+                  <div class="ui-grid-a">
+                    <div class="ui-block-a label-block1">
+                      <p class="total-price-label">Delivery Charges</p>
+                    </div>
+                    <div class="ui-block-b price-block1">
+                      <p class="price">Rs.50.00</p>
+                    </div>
+                    <hr />
+                  </div>
+
+                  <div class="ui-grid-a">
+                    <div class="ui-block-a label-block1">
+                      <p class="total-price-label play-point-label">
+                        Play points
+                      </p>
+                    </div>
+                    <div class="ui-block-b price-block1">
+                      <p class="price play-point-price">Rs.00.00</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="total-price">
+                  <div class="ui-grid-a">
+                    <div class="ui-block-a label-block">
+                      <p class="total-price-label">Total</p>
+                    </div>
+                    <div class="ui-block-b price-block">
+                      <p class="price">Rs.530.00</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ui-field-contain pay-btn">
+                  <button type="submit" class="ui-btn ui-corner-all ui-shadow">
+                    Pay Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <img id="footer-iphone-portrait" src="../images/navigation-iphone-portrait.jpg" />
+        <img id="footer-iphone-landscape" src="../images/navigation-iphone-landscape.jpg" />
+        <img id="footer-ipad-portrait" src="../images/navigation-ipad-portrait.jpg" />
+        <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
+      </div>
+
+      <div data-role="footer" data-id="foo1" data-position="fixed">
+
+        <div class="product-nav">
+          <div data-role="navbar" id="navbar">
+            <div class="navigation">
+              <img src="../images/home.png" />
+              <div class="nav-active">
+                <img class="nav-account-icon" src="../images/cart-white.png" />
+                <span class="nav-account-text">Cart</span>
+              </div>
+              <img src="../images/offer.png" />
+              <img src="../images/rubic.png" />
+              <img src="../images/user.png" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+</body>
+
+<script>
+  $(document).ready(function () {
+    // var points = localStorage.get("points");
+
+    let points = 100;
+
+    document.getElementById("points-iphone").innerHTML = points + "/100";
+
+    document.getElementById("points-ipad").innerHTML = points + "/100";
+
+
+    $("#progressbar-ipad").css("width", points + "%");
+    $("#progressbar-iphone").css("width", points + "%");
+
+    if (points == 100) {
+      $(".section-title-play").css('background-color', '#8CC63F');
+      //Iphone changes
+      document.getElementById("redeem-iphone").disabled = false;
+      $("#medal-iphone").attr("src", "../icons/medal.png");
+      $(".bar-iphone").css('background-color', '#8CC63F');
+
+      //ipad changes
+      document.getElementById("redeem-ipad").disabled = false;
+
+      $("#medal-ipad").attr("src", "../icons/medal.png");
+      $(".bar-ipad").css('background-color', '#8CC63F');
+
+    }
+
+  });
+</script>
+
 </html>

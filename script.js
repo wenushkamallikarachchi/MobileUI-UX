@@ -69,7 +69,7 @@ function commentsCard() {
         '" data-num-stars="5" ></span>';
       review += '<div class="rating-iphone"></div>';
       review +=
-        '<p class="user-comment-iphone"> + “' +
+        '<p class="user-comment-iphone">“' +
         addedArray[i].comment +
         "”  </p> </div> </fieldset> </li> <br>";
     }

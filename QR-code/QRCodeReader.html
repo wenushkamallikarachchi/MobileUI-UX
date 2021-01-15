@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../images/Logo.png" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type="text/css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://s.w.org/wp-includes/css/dashicons.css?20150710" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="QRCodeReader.css" />
+</head>
+
+<body>
+    <div class="iphone-cam">
+        <a href="#popupVideo" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+            data-position-to="window">Share Credit</a>
+
+        <div data-role="popup" id="popupVideo" data-theme="a" class="ui-corner-all">
+               <a href="#" data-rel="back"
+                class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            <div class="popup-heading">
+                <h2>QR Scan</h2>
+            </div>
+            <div class="video-wrap">
+                <video id="video" playsinline autoplay></video>
+            </div>
+            <div class="scan-btn">
+                <button class="modal-button" id="scan-btn" data-role="none" type="submit">Scan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-toast">
+        <p data-role="none">Successfully transferred 100 points!</p>
+    </div>
+    <div id="error-toast"> <span class="material-icons error-icon">cancel</span>
+        <p data-role="none">Email not delivered!</p>
+    </div>
+</body>
+
+<script>
+
+    $(document).ready(function () {
+        $("#scan-btn").click(function () {
+            document.getElementById("popupVideo").style.display = 'none';
+            showSuccessToast();
+            closeWebcam();
+        });
+    });
+
+    function showSuccessToast() {
+        var x = document.getElementById("success-toast");
+        x.className = "show";
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    }
+    "use strict";
+    const video = document.getElementById("video");
+    const constraints = {
+        video: {
+            width: 300,
+            height: 250,
+        },
+    };
+    //access webcam
+    async function init() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            handleSuccess(stream);
+        } catch (e) {
+            console.error();
+        }
+    }
+    //success
+    function handleSuccess(stream) {
+        window.stream = stream;
+        video.srcObject = stream;
+    }
+
+    function closeWebcam() {
+        // can also use getAudioTracks() or getVideoTracks()
+        var track = stream.getTracks()[0];  // if only one media track
+        // ...
+        track.stop();
+
+    }
+
+    // load init function
+    init();
+</script>
+
+</html>
