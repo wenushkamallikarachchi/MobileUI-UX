@@ -16,9 +16,6 @@
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="Rating.css">
-
-
-
 </head>
 
 
@@ -46,11 +43,10 @@
         </ul>
       </div>
 
-      <div class='success-box'>
-        <div class='clearfix'></div>
-        <span class="iconify" data-icon="teenyicons:tick-circle-solid" data-inline="false"></span>
-        <div class='text-message'></div>
-      </div>
+      <!-- <div class='success-box'> -->
+        <!-- <div class='clearfix'></div> -->
+        <!-- <div class='text-message'> Thanks For visiting our Store ! </div>
+      </div> -->
     </section>
 
   </div>
@@ -70,23 +66,22 @@
         }
 
         var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
-        var msg = "";
-        if (ratingValue > 1) {
-          msg = "Thanks! You rated this " + ratingValue + " stars.";
-        }
-        else {
-          msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
-        }
-        responseMessage(msg);
-
+        // var msg = "";
+        // if (ratingValue > 1) {
+        //   msg = '<span class="iconify" data-icon="teenyicons:tick-circle-solid" data-inline="false"></span>'  +'<span class="rating-text">Thanks! You rated this '  + ratingValue + ' stars. </span>';
+        // }
+        // else {
+        //   msg ='<span class="iconify" data-icon="emojione:warning" data-inline="false"></span>' + "We will improve. Thank you!";
+        // }
+        // responseMessage(msg);
       });
     });
 
 
-    function responseMessage(msg) {
-      $('.success-box').fadeIn(200);
-      $('.success-box div.text-message').html("<span>" + msg + "</span>");
-    }
+    // function responseMessage(msg) {
+    //   $('.success-box').fadeIn(200);
+    //   $('.success-box div.text-message').html("<span>" + msg + "</span>");
+    // }
   </script>
 </body>
 
