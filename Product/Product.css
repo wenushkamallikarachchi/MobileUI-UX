@@ -7,7 +7,11 @@
 }
 
 .product-name-iphone {
+<<<<<<< HEAD
   font-size: 16px;
+=======
+  font-size: 18px;
+>>>>>>> ui/products-page
 }
 .product-image-iphone img {
   width: 100%;
@@ -17,13 +21,13 @@
 .product-info-iphone,
 .comment-section-iphone {
   background-color: #f7f7f7;
-  padding: 3%;
+  padding: 4%;
   border-radius: 1em;
 }
 
 .product-info-iphone {
   color: black;
-  height: 70px;
+  height: 80px;
 }
 
 .comment-details-iphone {
@@ -32,9 +36,14 @@
 }
 
 .rating-heading,
-.description-heading,
+.description-heading {
+  color: black;
+}
 .product-price {
   color: black;
+  font-size: 15px;
+  font-family: Gilroy;
+  margin: 7px 0 5px 5px;
 }
 
 .heart-iphone {
@@ -53,7 +62,11 @@
 }
 
 .user-comment-display {
+<<<<<<< HEAD
   margin-left: -13% !important;
+=======
+  margin-left: -10% !important;
+>>>>>>> ui/products-page
 }
 
 #popupComment {
@@ -114,7 +127,7 @@
 
 .user-name-iphone {
   font-family: "Open Sans" !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 .user-comment-iphone {
@@ -148,7 +161,7 @@
 }
 
 .rating-heading {
-  text-align: center;
+  text-align: left;
 }
 
 .ui-btn.comment-btn-ipad {
@@ -194,7 +207,7 @@
   font-family: "PT Serif" !important;
   font-style: italic;
   font-size: 11px !important;
-  color: #8cc63f;
+  color: black;
 }
 
 #ipad-textarea {
@@ -208,7 +221,7 @@
 }
 
 .product-name-block p {
-  margin-top: -0.5%;
+  margin: 5px;
 }
 
 .product-name {
@@ -419,3 +432,16 @@
   font-weight: 600;
   font-size: 13px;
 }
+<<<<<<< HEAD
+=======
+
+.product-rating {
+  background-color: #8cc63f;
+  color: white;
+  font-family: Proza Libre Regular;
+  font-size: 15px;
+  font-weight: 200;
+  border-radius: 7px 8px 7px 7px !important;
+  padding: 3%;
+}
+>>>>>>> ui/products-page
