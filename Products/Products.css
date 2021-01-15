@@ -99,9 +99,10 @@
   grid-column-end: 3;
   width: 100%;
 }
+/*wenushka's starts css*/
 .sort {
   width: 163px;
-  height: 215px;
+  height: 200px;
   background-color: #ffffff;
 }
 .popUp {
@@ -169,16 +170,19 @@
   border: solid 1px #8cc63f;
 }
 .column {
+  margin-top: 15px;
   float: left;
   width: 50%;
 }
 
 /* Clear floats after the columns */
 .row:after {
+  
   content: "";
   display: table;
   clear: both;
 }
+/**Wenushka css ends**/
 ul {
   display: flex;
   background-color: white;

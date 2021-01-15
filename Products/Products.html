@@ -37,30 +37,24 @@
                 data-icon="bx:bx-filter"
                 data-inline="true"
               ></span>
-         
               <a
                 href="#popupBasic"
                 data-rel="popup"
                 class="popUp"
                 data-transition="popup"
-              
                 >Sort & Filter</a
               >
               <div data-role="popup" id="popupBasic" class="sort">
                 <label class="sortLbl">Sort</label>
                 <div class="hr1"></div>
-                <label class="lblfilter">Alphabetical</label>
-                <label class="lblfilter">A-Z </label>
-                <label class="lblfilter"> Z-A</label>
-                <label class="sortLbl">Filter</label>
+                <label class="lblfilter">Category</label>
+                <label class="lblfilter" id="vegitable">Vegetables</label>
+                <label class="lblfilter" id="meat"> Meat</label>
+                <label class="lblfilter" id="fruits"> Fruits</label>
                 <div class="hr1"></div>
                 <div class="row">
-                  <div class="column"><button class="maxBt">Max</button></div>
-                  <div class="column"><button class="maxBt">Min</button></div>
-                </div>
-                <div class="row">
                   <div class="column">
-                    <button class="fltr">Filter</button>
+                    <button class="fltr" onclick="">Filter</button>
                   </div>
                   <div class="column"><button class="reset">Reset</button></div>
                 </div>
