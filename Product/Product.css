@@ -6,7 +6,7 @@
   margin: 5%;
 }
 
-.product-name-iphone{
+.product-name-iphone {
   font-size: 18px;
 }
 .product-image-iphone img {
@@ -17,7 +17,7 @@
 .product-info-iphone,
 .comment-section-iphone {
   background-color: #f7f7f7;
-  padding: 3%;
+  padding: 4%;
   border-radius: 1em;
 }
 
@@ -32,16 +32,14 @@
 }
 
 .rating-heading,
-.description-heading
- {
+.description-heading {
   color: black;
 }
 .product-price {
   color: black;
-    margin: 2px 0 0 2px;
-    font-size: 15px;
-    font-family: Gilroy;
-    margin: 7px 0 5px 5px;
+  font-size: 15px;
+  font-family: Gilroy;
+  margin: 7px 0 5px 5px;
 }
 
 .heart-iphone {
@@ -59,8 +57,8 @@
   margin-top: -3%;
 }
 
-.user-comment-display{
-  margin-left: -13% !important;
+.user-comment-display {
+  margin-left: -10% !important;
 }
 
 #popupComment {
@@ -128,7 +126,7 @@
   font-family: "PT Serif" !important;
   font-style: italic;
   font-size: 11px !important;
-  color: #8cc63f;
+  color: black;
 }
 
 /*i-pad styles*/
@@ -155,7 +153,7 @@
 }
 
 .rating-heading {
-  text-align: center;
+  text-align: left;
 }
 
 .ui-btn.comment-btn-ipad {
@@ -175,8 +173,8 @@
 .comment-display-grid1 {
   width: 40% !important;
 }
- 
-.comment-display-grid2{
+
+.comment-display-grid2 {
   margin-left: -15% !important;
 }
 
@@ -201,7 +199,7 @@
   font-family: "PT Serif" !important;
   font-style: italic;
   font-size: 11px !important;
-  color: #8cc63f;
+  color: black;
 }
 
 #ipad-textarea {
@@ -218,7 +216,7 @@
   margin: 5px;
 }
 
-.product-name{
+.product-name {
   font-size: 22px;
 }
 
@@ -236,7 +234,6 @@
   justify-content: right;
   align-items: flex-end;
 }
-
 
 @keyframes favme-anime {
   0% {
@@ -325,9 +322,9 @@
   #ipad-grid {
     display: block;
   }
-.product-name{
-  font-size: 22px;
-}
+  .product-name {
+    font-size: 22px;
+  }
   .ipad-column1 img {
     margin-top: 17%;
   }
@@ -341,7 +338,7 @@
     display: none;
   }
 
-  .product-name{
+  .product-name {
     font-size: 22px;
   }
   #ipad-grid {
@@ -352,7 +349,7 @@
     margin-top: -3%;
   }
 
-  .fav-btn{
+  .fav-btn {
     width: 120%;
   }
 
@@ -361,12 +358,11 @@
   }
 }
 
-}
 .navigation {
   width: 100%;
 }
 .share-favourites {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -393,7 +389,7 @@
   padding-top: 20px;
 }
 .nav-active {
-  background-color: #8CC63F;
+  background-color: #8cc63f;
   height: 30px;
   margin-top: 15px;
   border-radius: 15px;
@@ -436,4 +432,5 @@
   font-size: 15px;
   font-weight: 200;
   border-radius: 7px 8px 7px 7px !important;
+  padding: 3%;
 }
