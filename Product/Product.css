@@ -251,6 +251,9 @@
   align-items: flex-end;
 }
 
+#page-body {
+  background-color: white;
+}
 @keyframes favme-anime {
   0% {
     opacity: 1;
