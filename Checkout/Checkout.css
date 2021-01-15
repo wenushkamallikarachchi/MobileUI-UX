@@ -37,8 +37,13 @@
 }
 
 input {
+<<<<<<< HEAD
   background-color: #f0f0f0 !important;
   font-size: 13px !important;
+=======
+  background-color: grey !important;
+  opacity: 10%;
+>>>>>>> f7e7c128bbf1bed5fb33e86d54aeff7aa6cb85e8
 }
 
 .total-price {
@@ -142,6 +147,7 @@ input {
   font-size: 12px;
 }
 
+<<<<<<< HEAD
 .ui-grid-a {
   padding: 0;
 }
@@ -412,6 +418,10 @@ hr {
 
 #footer-ipad-portrait {
   display: none;
+=======
+hr {
+  width: 90%;
+>>>>>>> f7e7c128bbf1bed5fb33e86d54aeff7aa6cb85e8
 }
 
 @media (min-width: 667px) {
@@ -424,6 +434,7 @@ hr {
     padding-top: 2%;
     padding-bottom: 2%;
   }
+<<<<<<< HEAD
 
   .Logo > img {
     margin-left: 45% !important;
@@ -447,6 +458,8 @@ hr {
   #footer-iphone-landscape {
     display: block;
   }
+=======
+>>>>>>> f7e7c128bbf1bed5fb33e86d54aeff7aa6cb85e8
 }
 
 @media (min-width: 768px) {
@@ -462,6 +475,7 @@ hr {
     font-size: 14px;
   }
 
+<<<<<<< HEAD
   #footer-iphone-landscape {
     display: none;
   }
@@ -492,6 +506,11 @@ hr {
     background-color: black;
     margin-top: -1% !important;
   }
+=======
+  .summary-table-heading th {
+    font-size: 13px;
+  }
+>>>>>>> f7e7c128bbf1bed5fb33e86d54aeff7aa6cb85e8
 }
 
 @media (min-width: 1024px) {
@@ -503,6 +522,7 @@ hr {
     display: block;
   }
 
+<<<<<<< HEAD
   #footer-iphone-landscape {
     display: none;
   }
@@ -527,6 +547,8 @@ hr {
     margin-bottom: 7% !important;
   }
 
+=======
+>>>>>>> f7e7c128bbf1bed5fb33e86d54aeff7aa6cb85e8
   .section-heading {
     padding-left: 5%;
     padding-top: 2.5%;
@@ -548,6 +570,7 @@ hr {
     margin: 5%;
     padding: 0 0 0 5px;
   }
+<<<<<<< HEAD
 
   hr {
     width: 90%;
@@ -556,4 +579,6 @@ hr {
     background-color: black;
     margin-top: -1% !important;
   }
+=======
+>>>>>>> f7e7c128bbf1bed5fb33e86d54aeff7aa6cb85e8
 }
