@@ -3,6 +3,7 @@
   <head>
     <title>Products</title>
 
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -80,6 +81,32 @@
                 ></span>
               </button>
             </a>
+=======
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="Products.css">
+        <link rel="stylesheet" href="../common.css">
+    </head>
+
+    <body>
+        
+        <div data-role="page" id="page-body">
+                <div class="header"> 
+                    <span class="material-icons back-icon"> navigate_before </span>
+                    <div class="Logo"> <img src="../images/Logo.png"> </div>
+                </div>
+                <div class="search"> <span class="material-icons search-icon"> search </span>
+                    <input type="text" class="product-search" data-role="none">
+                </div>
+>>>>>>> 41ae22c7669cca4fe27c3d1537a40d1ea9292554
 
             <a href="#" class="ui-btn ui-shadow product-item1">
               <img
@@ -351,6 +378,7 @@
                 </li>
               </ul>
 
+<<<<<<< HEAD
               <script>
                 $(document).ready(function () {
                   $(".ui-pagination .page_num a").on("click", function () {
@@ -383,10 +411,80 @@
                   });
                 });
               </script>
+=======
+                          <a href="#" class="ui-btn ui-shadow product-item1">
+                            <img class="product-img2" src="../images/lemon.png" alt="lemon">
+                            <div class="btn-details">
+                                <p class="product-name"> Lemon </p>
+                                <p class="product-detail"> Rs. 102.00/500g</p>
+                            </div>
+                            <button class="ui-btn cart-btn">
+                                <span class="iconify cart" data-icon="ic:outline-add-shopping-cart" data-inline="false"></span>
+                            </button>
+                          </a>
+                    </div>
+                    
+                    <div class="ui-block-b pagination">
+                        <div class="ui-pagination">
+                            <ul>
+                                <li class="prev"> <a href="#"> <span class="iconify backward" data-icon="fa-solid:backward" data-inline="false"></span></span></a></li>
+                                <li class="page_num active"> <a href="#">1</a> </li>
+                                <li class="page_num"> <a href="#">2</a> </li>
+                                <li class="page_num"> <a href="#">3</a> </li>
+                                <li class="page_num"> <a href="#">4</a> </li>
+                                <li class="page_num"> <a href="#">5</a> </li>
+                                <li class="next"> <a href="#"> <span class="iconify forward" data-icon="fa-solid:forward" data-inline="false"></span> </a></li>
+                            </ul>
+        
+                            <script>
+                                $(document).ready(function() {
+                                    $(".ui-pagination .page_num a").on("click", function(){
+                                        if(!$(this).parent().hasClass("active")) {
+                                            $(".ui-pagination .page_num.active").removeClass("active");
+                                            $(this).parent().addClass("active")
+                                        }
+                                    })
+                                    $(".next").on("click", function() {
+                                        $(".ui-pagination").find(".page_num.active").next().addClass("active");
+                                        $(".ui-pagination").find(".page_num.active").prev().removeClass("active");
+                                    })
+                                    $(".prev").on("click", function() {
+                                        $(".ui-pagination").find(".page_num.active").prev().addClass("active");
+                                        $(".ui-pagination").find(".page_num.active").next().removeClass("active");
+                                    })
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <img id="footer-iphone-portrait" src="../images/navigation-iphone-portrait.jpg" />
+                    <img id="footer-iphone-landscape" src="../images/navigation-iphone-landscape.jpg" />
+                    <img id="footer-ipad-portrait" src="../images/navigation-ipad-portrait.jpg" />
+                    <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
+                </div>         
+>>>>>>> 41ae22c7669cca4fe27c3d1537a40d1ea9292554
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   </body>
 </html>
+=======
+        <div data-role="footer" class="ui-bar">
+            <div class="navigation">
+                <div class="nav-active">
+                <img class="nav-account-icon" src="../images//home-white.png" />
+                <span class="nav-account-text">Home</span>
+                </div>
+                <img src="../images/cart.png" />
+                <img src="../images/offer.png" />
+                <img src="../images/rubic.png" />
+                <img src="../images/user.png" />
+            </div>
+        </div>
+    </body>
+</html>
+>>>>>>> 41ae22c7669cca4fe27c3d1537a40d1ea9292554
