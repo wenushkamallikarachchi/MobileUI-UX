@@ -13,6 +13,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <link rel="stylesheet" href="Products.css">
         <link rel="stylesheet" href="../common.css">
     </head>
@@ -20,9 +22,13 @@
     <body>
         
         <div data-role="page" id="page-body">
-            <div data-role="header" > 
-                <h1 class="ui-header">  include header elements</h1>
-            </div>
+                <div class="header"> 
+                    <span class="material-icons back-icon"> navigate_before </span>
+                    <div class="Logo"> <img src="../images/Logo.png"> </div>
+                </div>
+                <div class="search"> <span class="material-icons search-icon"> search </span>
+                    <input type="text" class="product-search" data-role="none">
+                </div>
 
             <div data-role="main" class="ui-content">
 
@@ -239,7 +245,25 @@
                             </script>
                         </div>
                     </div>
+                </div>
+                <div class="footer">
+                    <img id="footer-iphone-portrait" src="../images/navigation-iphone-portrait.jpg" />
+                    <img id="footer-iphone-landscape" src="../images/navigation-iphone-landscape.jpg" />
+                    <img id="footer-ipad-portrait" src="../images/navigation-ipad-portrait.jpg" />
+                    <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
                 </div>         
+            </div>
+        </div>
+        <div data-role="footer" class="ui-bar">
+            <div class="navigation">
+                <img src="../images//home.png" />
+                <img src="../images/cart.png" />
+                <img src="../images/offer.png" />
+                <img src="../images/rubic.png" />
+                <div class="nav-active">
+                  <img class="nav-account-icon" src="../images/user-white.png" />
+                  <span class="nav-account-text">Account</span>
+                </div>
             </div>
         </div>
     </body>
