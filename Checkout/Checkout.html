@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <title>About</title>
   <meta charset="utf-8" />
   <title>Checkout</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,14 +14,15 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../common.css" />
   <link rel="stylesheet" href="Checkout.css" />
 </head>
 
 <body>
   <div data-role="page" id="page-body">
-    <div data-role="header">
-      <h1 class="ui-header">include header elements</h1>
+    <div class="header"> <span class="material-icons back-icon"> navigate_before </span>
+      <div class="Logo"> <img src="../images/Logo.png"> </div>
     </div>
 
     <div class="main" class="ui-content">
@@ -47,22 +47,23 @@
           </div>
         </div>
         <div class="play-points-section">
-          <div class="section-title" id="play-points">
+          <div class="section-title-play" id="play-points">
             <p class="section-heading">Play Points</p>
           </div>
           <div class="delivery-content">
             <div class="points-label">
-              <span class="medal"><img src="../icons/medal.png" width="10%"> </span>
-              <span class="points">100/100</span>
+              <span class="medal"><img id="medal-iphone" src="../icons/medal-disabled.png" width="10%"> </span>
+              <span id="points-iphone"></span>
             </div>
             <div class="w3-light-grey w3-round progressbar">
-              <div id="progressbar" class="w3-container w3-round bar" style="width: 0%; height: 8px"></div>
+              <div id="progressbar-iphone" class="w3-container w3-round bar-iphone" style="width: 0%; height: 8px">
+              </div>
             </div>
             <div class="instruction-section">
-              <p class="instructions">Redeem your points to get a discount</p>
+              <p class="instructions" id="instruction-iphone">Redeem your points to get a discount</p>
             </div>
             <div class="ui-field-contain redeem-btn">
-              <button type="submit" class="ui-btn ui-corner-all ui-shadow">
+              <button type="submit" class="ui-btn ui-corner-all ui-shadow" id="redeem-iphone" disabled>
                 Redeem
               </button>
             </div>
@@ -74,48 +75,6 @@
             <p class="section-heading">Order Summary</p>
           </div>
           <div class="delivery-content">
-            <!-- <table data-role="table" id="order-data" data-mode="columtoggle" class="ui-responsive">
-              <thead class="summary-table-heading">
-                <th class="product-name-heading">Product</th>
-                <th class="price-heading">Price</th>
-                <th class="quantity-heading">Qty</th>
-              </thead>
-              <tbody class="summary-table-content">
-                <tr>
-                  <td>
-                    <span class="iconify orders" data-icon="emojione:bread" data-inline="false"></span>
-                    &nbsp; Bread
-                  </td>
-                  <td id="unit-price">Rs.130.00/Unit</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>
-                    <span class="iconify orders" data-icon="noto-v1:carrot" data-inline="false"></span>
-                    &nbsp; Carrot
-                  </td>
-                  <td id="unit-price">Rs.150.00/kg</td>
-                  <td>250g</td>
-                </tr>
-                <tr>
-                  <td>
-                    <span class="iconify orders" data-icon="noto:red-apple" data-inline="false"></span>
-                    &nbsp; Apple
-                  </td>
-                  <td id="unit-price">Rs.50.00/Unit</td>
-                  <td>4</td>
-                </tr>
-                <tr>
-                  <td>
-                    <span class="iconify orders" data-icon="noto:lemon" data-inline="false"></span>
-                    &nbsp; Lemon
-                  </td>
-                  <td id="unit-price">Rs.102.00/kg</td>
-                  <td>250g</td>
-                </tr>
-              </tbody>
-            </table> -->
-
             <table data-role="table" id="order-data" data-mode="columtoggle" class="ui-responsive">
               <thead class="table-headings">
                 <th> Product</th>
@@ -231,21 +190,22 @@
             </div>
             <div class="play-points-section">
               <div class="section-title-play" id="play-points">
-                <p class="section-heading-play">Play Points</p>
+                <p class="section-heading">Play Points</p>
               </div>
               <div class="delivery-content">
                 <div class="points-label">
-                  <span class="medal"><img id="medal-img" src="../icons/medal-disable.jpg" width="10%"> </span>
-                  <span class="points">100/100</span>
+                  <span class="medal"><img id="medal-ipad" src="../icons/medal-disabled.png" width="10%"> </span>
+                  <span id="points-ipad"></span>
                 </div>
                 <div class="w3-light-grey w3-round progressbar">
-                  <div id="progressbar" class="w3-container w3-round bar" style="width: 0%; height: 8px"></div>
+                  <div id="progressbar-ipad" class="w3-container w3-round bar-ipad" style="width: 0%; height: 8px">
+                  </div>
                 </div>
                 <div class="instruction-section">
-                  <p class="instructions">Redeem your points to get a discount</p>
+                  <p class="instructions" id="instructions-ipad">Redeem your points to get a discount</p>
                 </div>
                 <div class="ui-field-contain redeem-btn">
-                  <button type="submit" class="ui-btn ui-corner-all ui-shadow" id="redeem" disabled="disabled">
+                  <button type="submit" class="ui-btn ui-corner-all ui-shadow" id="redeem-ipad" disabled>
                     Redeem
                   </button>
                 </div>
@@ -402,23 +362,68 @@
         </div>
       </div>
     </div>
+
+    <div class="page-footer">
+      <img src="../images/navigation-iphone-portrait.jpg">
+    </div>
+
+    <div data-role="footer" data-id="foo1" data-position="fixed">
+
+      <div class="product-nav">
+        <!-- <a href="" class="ui-btn" id="cart-btn-iphone">
+          <img src="../icons/cart-icon.png" width="5%"> &nbsp; <span>Add to cart</span>
+        </a> -->
+        <div data-role="navbar" id="navbar">
+          <div class="navigation">
+
+            <!-- <div class="nav-active">
+              <img class="nav-account-icon" src="../images/home-white.png" />
+              <span class="nav-account-text">Home</span>
+            </div> -->
+            <!-- <img src="../images/home.png" />
+            <img src="../images/cart.png" />
+            <img src="../images/offer.png" />
+            <img src="../images/rubic.png" />
+            <img src="../images/user.png" /> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </body>
 
 <script>
   $(document).ready(function () {
     var points = localStorage.get("points");
-    var point = 80;
 
-    if (point == 100) {
+    // let points = 100;
+
+    document.getElementById("points-iphone").innerHTML = points + "/100";
+
+    document.getElementById("points-ipad").innerHTML = points + "/100";
+
+
+    $("#progressbar-ipad").css("width", points + "%");
+    $("#progressbar-iphone").css("width", points + "%");
+
+    if (points == 100) {
       $(".section-title-play").css('background-color', '#8CC63F');
-      $('#redeem').attr("disabled", false);
-      $("#progressbar").css("width", point + "%");
-      $("#progressbar").css("background-color", '8CC63F');
-      $('#medal-img').attr("src", "../icons/medal.png");
-    }
-  });
+      //Iphone changes
+      document.getElementById("redeem-iphone").disabled = false;
+      $("#medal-iphone").attr("src", "../icons/medal.png");
+      $(".bar-iphone").css('background-color', '#8CC63F');
 
+      //ipad changes
+      document.getElementById("redeem-ipad").disabled = false;
+
+      $("#medal-ipad").attr("src", "../icons/medal.png");
+      $(".bar-ipad").css('background-color', '#8CC63F');
+
+    }
+
+  });
 </script>
 
 </html>

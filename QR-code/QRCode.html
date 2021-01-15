@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Product</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../images/Logo.png" />
-    <link
-      rel="stylesheet"
-      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
-    />
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="easy.qrcode.js"></script>
-    <link
-      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="http://s.w.org/wp-includes/css/dashicons.css?20150710"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="../common.css" />
-    <link rel="stylesheet" href="QRCode.css" />
-  </head>
-  <body>
-    <div data-role="page" id="page-body">
-      <div data-role="header">
-        <h1 class="ui-header">include header elements</h1>
-      </div>
 
-      <div class="main" class="ui-content">
-        <p class="page-heading">QR CODE</p>
+<head>
+  <meta charset="utf-8" />
+  <title>QR Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../images/Logo.png" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="easy.qrcode.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+    type="text/css" />
+  <link href="http://s.w.org/wp-includes/css/dashicons.css?20150710" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../common.css" />
+  <link rel="stylesheet" href="QRCode.css" />
+</head>
 
-        <div class="main-container-iphone">
-          <h2>David Spade</h2>
-          <div class="qrcode-display">
-            <div id="qrcode"></div>
-          </div>
+<body>
+  <div data-role="page" id="page-body">
 
-          <div class="message-content">
-            <p class="message">
-              You will recieve points when your friend scans your QR code
-            </p>
-          </div>
+    <div class="header"> <span class="material-icons back-icon"> navigate_before </span>
+      <div class="Logo"> <img src="../images/Logo.png"> </div>
+    </div>
+
+
+    <div class="main" class="ui-content">
+      <p class="page-heading">QR CODE</p>
+
+      <div class="main-container-iphone">
+        <h2>David Spade</h2>
+        <div class="qrcode-display">
+          <div id="qrcode"></div>
         </div>
 
-        <div class="main-container-ipad">
-          <h2>David Spade</h2>
-          <div class="qrcode-display">
-            <div id="qrcode-ipad"></div>
-          </div>
+        <div class="message-content">
+          <p class="message">
+            You will recieve points when your friend scans your QR code
+          </p>
+        </div>
+      </div>
 
-          <div class="message-content">
-            <p class="message">
-              You will recieve points when your friend scans your QR code
-            </p>
-          </div>
+      <div class="main-container-ipad">
+        <h2>David Spade</h2>
+        <div class="qrcode-display">
+          <div id="qrcode-ipad"></div>
+        </div>
+
+        <div class="message-content">
+          <p class="message">
+            You will recieve points when your friend scans your QR code
+          </p>
         </div>
       </div>
     </div>
-  </body>
 
-  <script src="../scripts/qrcode.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // let username = localStorage.getItem("username");
-      let username = "David Spade";
+    <div data-role="footer" data-id="foo1" data-position="fixed">
 
-      var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width: 170,
-        height: 170,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H,
-      });
+      <div class="product-nav">
+        <!-- <a href="" class="ui-btn" id="cart-btn-iphone">
+              <img src="../icons/cart-icon.png" width="5%"> &nbsp; <span>Add to cart</span>
+            </a> -->
+        <div data-role="navbar" id="navbar">
+          <div class="navigation">
+            <img src="../images/home.png" />
+            <img src="../images/cart.png" />
+            <img src="../images/offer.png" />
+            <img src="../images/rubic.png" />
+            <div class="nav-active">
+              <img class="nav-account-icon" src="../images/user-white.png" />
+              <span class="nav-account-text">Account</span>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
 
-      qrcode.makeCode(username);
-      var qrcodeIPad = new QRCode(document.getElementById("qrcode-ipad"), {
-        width: 270,
-        height: 270,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H,
-      });
+<script src="../scripts/qrcode.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // let username = localStorage.getItem("username");
+    let username = "David Spade";
 
-      qrcodeIPad.makeCode(username);
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      width: 170,
+      height: 170,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H,
     });
-  </script>
+
+    qrcode.makeCode(username);
+    var qrcodeIPad = new QRCode(document.getElementById("qrcode-ipad"), {
+      width: 270,
+      height: 270,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H,
+    });
+
+    qrcodeIPad.makeCode(username);
+  });
+</script>
+
 </html>

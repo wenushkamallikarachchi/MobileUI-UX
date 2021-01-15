@@ -7,11 +7,7 @@
 }
 
 .product-name-iphone {
-<<<<<<< HEAD
-  font-size: 16px;
-=======
-  font-size: 18px;
->>>>>>> ui/products-page
+  font-size: 20px;
 }
 .product-image-iphone img {
   width: 100%;
@@ -33,6 +29,7 @@
 .comment-details-iphone {
   padding: 1%;
   box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
+  background-color: white;
 }
 
 .rating-heading,
@@ -41,9 +38,9 @@
 }
 .product-price {
   color: black;
-  font-size: 15px;
+  font-size: 18px;
   font-family: Gilroy;
-  margin: 7px 0 5px 5px;
+  margin-left: 2%;
 }
 
 .heart-iphone {
@@ -62,11 +59,7 @@
 }
 
 .user-comment-display {
-<<<<<<< HEAD
   margin-left: -13% !important;
-=======
-  margin-left: -10% !important;
->>>>>>> ui/products-page
 }
 
 #popupComment {
@@ -122,7 +115,8 @@
 }
 
 .avatar-iphone img {
-  margin-top: 2% !important;
+  margin-top: 10% !important;
+  margin-left: 5% !important;
 }
 
 .user-name-iphone {
@@ -221,7 +215,20 @@
 }
 
 .product-name-block p {
-  margin: 5px;
+  margin: 2px;
+  margin-top: -3%;
+}
+
+.star-rating-avg {
+  margin-top: 5px;
+}
+
+.star-rating-avg > span {
+  width: 10px;
+}
+
+.stars {
+  font-size: 12px !important;
 }
 
 .product-name {
@@ -234,6 +241,7 @@
   width: 10%;
   justify-content: right;
   align-items: center;
+  margin-top: -2%;
 }
 
 .fav-btn {
@@ -432,16 +440,81 @@
   font-weight: 600;
   font-size: 13px;
 }
-<<<<<<< HEAD
-=======
 
 .product-rating {
   background-color: #8cc63f;
   color: white;
-  font-family: Proza Libre Regular;
-  font-size: 15px;
-  font-weight: 200;
-  border-radius: 7px 8px 7px 7px !important;
-  padding: 3%;
+  font-family: Proza Libre;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 14px !important;
+  height: 10px !important;
+  padding: 2%;
 }
->>>>>>> ui/products-page
+
+/*product navbar */
+
+.product-nav {
+  background-color: #8cc63f;
+}
+.product-nav > a {
+  width: 100% !important;
+  background-color: #8cc63f !important;
+  border: 0;
+  text-align: center;
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: bold;
+  font-family: "Opens Sans";
+}
+
+#navbar li {
+  height: 50px !important;
+}
+
+#navbar a {
+  height: 50px;
+}
+
+.page-footer {
+  margin-bottom: 17% !important;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper span {
+  position: absolute;
+  left: 10px;
+  margin-top: -0.5% !important;
+  opacity: 50%;
+}
+
+.share-favourites {
+  grid-area: share-favourites;
+  background-color: #8cc63f;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  padding: 2%;
+}
+.share-favourites > span {
+  font-family: normalText;
+  margin-top: 2% !important;
+}
+
+.share-favourites {
+  height: 90px;
+}
+.share-favourites > img {
+  vertical-align: middle;
+  width: 25px;
+}
+.share-favourites > span {
+  font-size: 18px;
+  padding-top: 3% !important;
+}
