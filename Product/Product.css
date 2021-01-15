@@ -6,7 +6,7 @@
   margin: 5%;
 }
 
-.product-name-iphone{
+.product-name-iphone {
   font-size: 16px;
 }
 .product-image-iphone img {
@@ -52,7 +52,7 @@
   margin-top: -3%;
 }
 
-.user-comment-display{
+.user-comment-display {
   margin-left: -13% !important;
 }
 
@@ -168,8 +168,8 @@
 .comment-display-grid1 {
   width: 40% !important;
 }
- 
-.comment-display-grid2{
+
+.comment-display-grid2 {
   margin-left: -15% !important;
 }
 
@@ -211,7 +211,7 @@
   margin-top: -0.5%;
 }
 
-.product-name{
+.product-name {
   font-size: 22px;
 }
 
@@ -229,7 +229,6 @@
   justify-content: right;
   align-items: flex-end;
 }
-
 
 @keyframes favme-anime {
   0% {
@@ -318,9 +317,9 @@
   #ipad-grid {
     display: block;
   }
-.product-name{
-  font-size: 22px;
-}
+  .product-name {
+    font-size: 22px;
+  }
   .ipad-column1 img {
     margin-top: 17%;
   }
@@ -334,7 +333,7 @@
     display: none;
   }
 
-  .product-name{
+  .product-name {
     font-size: 22px;
   }
   #ipad-grid {
@@ -345,7 +344,7 @@
     margin-top: -3%;
   }
 
-  .fav-btn{
+  .fav-btn {
     width: 120%;
   }
 
@@ -354,12 +353,11 @@
   }
 }
 
-}
 .navigation {
   width: 100%;
 }
 .share-favourites {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -386,7 +384,7 @@
   padding-top: 20px;
 }
 .nav-active {
-  background-color: #8CC63F;
+  background-color: #8cc63f;
   height: 30px;
   margin-top: 15px;
   border-radius: 15px;
