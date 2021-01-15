@@ -81,70 +81,19 @@ hr {
   width: 90%;
 }
 
-@media (min-width: 667px) {
-  .summary-table-content td {
-    padding-top: 2%;
-    padding-bottom: 2%;
-  }
-
-  .page-sub-heading {
-    margin-top: -6%;
-    padding: 0 0 10px 40px;
-  }
+#footer-iphone-landscape {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  .order-price-details p {
-    font-size: 15px;
-  }
-
-  .summary-table-content td {
-    font-size: 14px;
-  }
-
-  .delivery-content > label {
-    font-size: 14px;
-  }
-
-  .summary-table-heading th {
-    font-size: 13px;
-  }
-
-  .page-heading {
-    font-size: 38px;
-  }
-  .page-sub-heading {
-    margin-top: -5.5%;
-    padding: 0 0 10px 46px;
-    font-size: 20px;
-  }
+#footer-ipad-landscape {
+  display: none;
 }
 
-@media (min-width: 1024px) {
-  .order-price-details p {
-    font-size: 15px;
-  }
-
-  .summary-table-content td {
-    font-size: 14px;
-  }
-
-  .delivery-content > label {
-    font-size: 14px;
-  }
-
-  .summary-table-heading th {
-    font-size: 13px;
-  }
-
-  .page-heading {
-    font-size: 38px;
-  }
-  .page-sub-heading {
-    margin-top: -5.5%;
-    padding: 0 0 10px 57px;
-    font-size: 20px;
-  }
+#footer-ipad-portrait {
+  display: none;
+}
+.page-footer {
+  margin-bottom: 17% !important;
 }
 
 /*nav */
@@ -268,6 +217,117 @@ hr {
   margin-right: 3%;
 }
 
-.page-footer {
-  margin-bottom: 17% !important;
+@media (min-width: 667px) {
+  .summary-table-content td {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .page-sub-heading {
+    margin-top: -6%;
+    padding: 0 0 10px 40px;
+  }
+
+  #footer-iphone-portrait {
+    display: none;
+  }
+  #footer-iphone-landscape {
+    display: block;
+  }
+
+  .page-footer {
+    margin-bottom: 10% !important;
+  }
+
+  .Logo > img {
+    margin-left: 45% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-price-details p {
+    font-size: 15px;
+  }
+
+  .summary-table-content td {
+    font-size: 14px;
+  }
+
+  .delivery-content > label {
+    font-size: 14px;
+  }
+
+  .summary-table-heading th {
+    font-size: 13px;
+  }
+
+  #footer-iphone-portrait {
+    display: none;
+  }
+  #footer-iphone-landscape {
+    display: none;
+  }
+
+  #footer-ipad-portrait {
+    display: block;
+  }
+
+  .page-heading {
+    font-size: 38px;
+  }
+  .page-sub-heading {
+    margin-top: -5.5%;
+    padding: 0 0 10px 46px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .order-price-details p {
+    font-size: 15px;
+  }
+
+  .summary-table-content td {
+    font-size: 14px;
+  }
+
+  .delivery-content > label {
+    font-size: 14px;
+  }
+
+  .summary-table-heading th {
+    font-size: 13px;
+  }
+
+  .Logo > img {
+    margin-left: 46% !important;
+  }
+
+  #footer-iphone-portrait {
+    display: none;
+  }
+  #footer-iphone-landscape {
+    display: none;
+  }
+
+  #footer-ipad-portrait {
+    display: none;
+  }
+
+  .page-footer {
+    margin-bottom: 6% !important;
+  }
+
+  #footer-ipad-landscape {
+    display: block;
+  }
+
+  .page-heading {
+    font-size: 38px;
+  }
+  .page-sub-heading {
+    margin-top: -5.5%;
+    padding: 0 0 10px 57px;
+    font-size: 20px;
+  }
 }

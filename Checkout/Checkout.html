@@ -37,13 +37,13 @@
           </div>
           <div class="delivery-content">
             <label for="text-basic">Name:</label>
-            <input type="text" name="text-basic" id="text-basic" value="" />
+            <input type="text" name="text-basic" id="text-basic" value="David Spade" />
 
             <label for="text-basic">Phone number:</label>
-            <input type="text" name="text-basic" id="text-basic" value="" />
+            <input type="text" name="text-basic" id="text-basic" value="0772234514" />
 
             <label for="text-basic">Address:</label>
-            <input type="text" name="text-basic" id="text-basic" value="" />
+            <input type="text" name="text-basic" id="text-basic" value="No.34, Hillwood street, Colombo 01" />
           </div>
         </div>
         <div class="play-points-section">
@@ -179,13 +179,13 @@
               </div>
               <div class="delivery-content">
                 <label for="text-basic">Name:</label>
-                <input type="text" name="text-basic" id="text-basic" value="" />
+                <input type="text" name="text-basic" id="text-basic" value="David Spade" />
 
                 <label for="text-basic">Phone number:</label>
-                <input type="text" name="text-basic" id="text-basic" value="" />
+                <input type="text" name="text-basic" id="text-basic" value="0772234514" />
 
                 <label for="text-basic">Address:</label>
-                <input type="text" name="text-basic" id="text-basic" value="" />
+                <input type="text" name="text-basic" id="text-basic" value="No.34, Hillwood street, Colombo 01" />
               </div>
             </div>
             <div class="play-points-section">
@@ -361,44 +361,41 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="page-footer">
-      <img src="../images/navigation-iphone-portrait.jpg">
-    </div>
-
-    <div data-role="footer" data-id="foo1" data-position="fixed">
-
-      <div class="product-nav">
-        <!-- <a href="" class="ui-btn" id="cart-btn-iphone">
-          <img src="../icons/cart-icon.png" width="5%"> &nbsp; <span>Add to cart</span>
-        </a> -->
-        <div data-role="navbar" id="navbar">
-          <div class="navigation">
-
-            <!-- <div class="nav-active">
-              <img class="nav-account-icon" src="../images/home-white.png" />
-              <span class="nav-account-text">Home</span>
-            </div> -->
-            <!-- <img src="../images/home.png" />
-            <img src="../images/cart.png" />
-            <img src="../images/offer.png" />
-            <img src="../images/rubic.png" />
-            <img src="../images/user.png" /> -->
-          </div>
-        </div>
-
+      <div class="page-footer">
+        <img id="footer-iphone-portrait" src="../images/navigation-iphone-portrait.jpg" />
+        <img id="footer-iphone-landscape" src="../images/navigation-iphone-landscape.jpg" />
+        <img id="footer-ipad-portrait" src="../images/navigation-ipad-portrait.jpg" />
+        <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
       </div>
-    </div>
 
-  </div>
+      <div data-role="footer" data-id="foo1" data-position="fixed">
+
+        <div class="product-nav">
+          <div data-role="navbar" id="navbar">
+            <div class="navigation">
+              <img src="../images/home.png" />
+              <div class="nav-active">
+                <img class="nav-account-icon" src="../images/cart-white.png" />
+                <span class="nav-account-text">Cart</span>
+              </div>
+              <img src="../images/offer.png" />
+              <img src="../images/rubic.png" />
+              <img src="../images/user.png" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
 </body>
 
 <script>
   $(document).ready(function () {
-    var points = localStorage.get("points");
+    // var points = localStorage.get("points");
 
-    // let points = 100;
+    let points = 100;
 
     document.getElementById("points-iphone").innerHTML = points + "/100";
 

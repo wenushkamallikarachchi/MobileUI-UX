@@ -37,8 +37,8 @@
 }
 
 input {
-  background-color: grey !important;
-  opacity: 10%;
+  background-color: #f0f0f0 !important;
+  font-size: 13px !important;
 }
 
 .total-price {
@@ -202,99 +202,7 @@ hr {
 #price {
   color: #8cc63f;
 }
-@media (min-width: 667px) {
-  .section-heading {
-    padding-left: 3.5%;
-    padding-top: 1.5%;
-  }
 
-  .summary-table-content td {
-    padding-top: 2%;
-    padding-bottom: 2%;
-  }
-
-  hr {
-    width: 90%;
-    margin-left: 5%;
-    color: black;
-    background-color: black;
-    margin-top: -1% !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .order-price-details p {
-    font-size: 15px;
-  }
-
-  .summary-table-content td {
-    font-size: 14px;
-  }
-
-  .delivery-content > label {
-    font-size: 14px;
-  }
-
-  #order-data td {
-    font-size: 13px;
-  }
-
-  .instructions-iphone {
-    font-size: 13px;
-  }
-
-  .redeem-btn-iphone > button {
-    font-size: 17px;
-  }
-
-  hr {
-    width: 90%;
-    margin-left: 5%;
-    color: black;
-    background-color: black;
-    margin-top: -1% !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  #iphone-grid {
-    display: none;
-  }
-
-  #ipad-grid {
-    display: block;
-  }
-
-  .section-heading {
-    padding-left: 5%;
-    padding-top: 2.5%;
-  }
-
-  .order-price-details p {
-    font-size: 12px;
-  }
-
-  .summary-table-content td {
-    font-size: 11px;
-  }
-
-  .delivery-content > label {
-    font-size: 12px;
-  }
-
-  .page-heading {
-    margin: 5%;
-    padding: 0 0 0 5px;
-  }
-
-  hr {
-    width: 90%;
-    margin-left: 5%;
-    color: black;
-    background-color: black;
-    margin-top: -1% !important;
-  }
-}
 .medal {
   display: inline;
 }
@@ -368,34 +276,13 @@ hr {
   color: white;
 }
 
-.product-nav {
-  background-color: #8cc63f;
-}
-.product-nav > a {
-  width: 100% !important;
-  background-color: #8cc63f !important;
-  border: 0;
-  text-align: center;
-  color: white !important;
-  font-size: 15px !important;
-  font-weight: bold;
-  font-family: "Opens Sans";
-}
-
-#navbar li {
-  height: 50px !important;
-}
-
-#navbar a {
-  height: 50px;
-}
-
 .page-footer {
   margin-bottom: 17% !important;
 }
 
 /* Navigation */
 
+/* Header */
 /* Header */
 
 .header {
@@ -427,6 +314,7 @@ hr {
   text-align: center;
   grid-template-columns: 1fr 3fr;
   background-color: white;
+  margin-left: 5% !important;
 }
 .product-search {
   margin-top: 5px;
@@ -469,13 +357,14 @@ hr {
   box-shadow: 0 0 8px 3px rgb(0, 0, 0, 0.1);
 }
 .navigation > img {
-  display: block;
-  /* width: 19px;
-  height: 19px;
+  width: 19px;
+  height: 39px;
   margin-left: auto;
   margin-right: auto;
   vertical-align: middle;
-  padding-top: 50px; */
+  padding-top: 20px;
+  z-index: -1;
+  position: relative;
 }
 .nav-active {
   background-color: #8cc63f;
@@ -483,25 +372,23 @@ hr {
   margin-top: 15px;
   border-radius: 15px;
   width: 90px;
-  margin-left: 4%;
-  /* margin-left: auto;
-  margin-right: auto; */
+  margin-right: 4%;
 }
 .nav-cart-icon {
   width: 19px;
   height: 19px;
   padding-top: 5px;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 .nav-cart-text {
   float: right;
-  padding-right: 15px;
-  padding-top: 5px;
+  margin-right: 20px !important;
+  padding-top: 3px;
   color: white;
   font-weight: 600;
 }
 .nav-account-icon {
-  width: 19px;
+  width: 26px;
   height: 19px;
   padding-top: 5px;
   padding-left: 10px;
@@ -512,5 +399,161 @@ hr {
   padding-top: 8px;
   color: white;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
+}
+
+#footer-iphone-landscape {
+  display: none;
+}
+
+#footer-ipad-landscape {
+  display: none;
+}
+
+#footer-ipad-portrait {
+  display: none;
+}
+
+@media (min-width: 667px) {
+  .section-heading {
+    padding-left: 3.5%;
+    padding-top: 1.5%;
+  }
+
+  .summary-table-content td {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .Logo > img {
+    margin-left: 45% !important;
+  }
+
+  hr {
+    width: 90%;
+    margin-left: 5%;
+    color: black;
+    background-color: black;
+    margin-top: -1% !important;
+  }
+  .page-footer {
+    margin-bottom: 10% !important;
+  }
+
+  #footer-iphone-portrait {
+    display: none;
+  }
+
+  #footer-iphone-landscape {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-price-details p {
+    font-size: 15px;
+  }
+
+  .summary-table-content td {
+    font-size: 14px;
+  }
+
+  .delivery-content > label {
+    font-size: 14px;
+  }
+
+  #footer-iphone-landscape {
+    display: none;
+  }
+
+  #footer-iphone-portrait {
+    display: none;
+  }
+  #footer-ipad-portrait {
+    display: block;
+  }
+
+  #order-data td {
+    font-size: 13px;
+  }
+
+  .instructions-iphone {
+    font-size: 13px;
+  }
+
+  .redeem-btn-iphone > button {
+    font-size: 17px;
+  }
+
+  hr {
+    width: 90%;
+    margin-left: 5%;
+    color: black;
+    background-color: black;
+    margin-top: -1% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #iphone-grid {
+    display: none;
+  }
+
+  #ipad-grid {
+    display: block;
+  }
+
+  #footer-iphone-landscape {
+    display: none;
+  }
+
+  #footer-iphone-portrait {
+    display: none;
+  }
+
+  #footer-ipad-portrait {
+    display: none;
+  }
+
+  #footer-ipad-landscape {
+    display: block;
+  }
+
+  .Logo > img {
+    margin-left: 46% !important;
+  }
+
+  .page-footer {
+    margin-bottom: 7% !important;
+  }
+
+  .section-heading {
+    padding-left: 5%;
+    padding-top: 2.5%;
+  }
+
+  .order-price-details p {
+    font-size: 12px;
+  }
+
+  .summary-table-content td {
+    font-size: 11px;
+  }
+
+  .delivery-content > label {
+    font-size: 12px;
+  }
+
+  .page-heading {
+    margin: 5%;
+    padding: 0 0 0 5px;
+  }
+
+  hr {
+    width: 90%;
+    margin-left: 5%;
+    color: black;
+    background-color: black;
+    margin-top: -1% !important;
+  }
 }

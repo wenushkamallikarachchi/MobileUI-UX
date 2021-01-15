@@ -48,84 +48,6 @@ h2 {
   background-color: #efefef;
 }
 
-@media (min-width: 667px) {
-  h2 {
-    padding-top: 6%;
-    font-size: 18px;
-  }
-
-  .main-container-iphone {
-    margin-top: -3% !important;
-  }
-
-  .qrcode-display {
-    margin-left: 30% !important;
-    width: 220px !important;
-  }
-
-  #qrcode {
-    margin-left: 12% !important;
-    margin-top: -12% !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .main-container-iphone {
-    display: none;
-  }
-
-  .main-container-ipad {
-    display: block;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-  .qrcode-display {
-    margin-left: 22% !important;
-    width: 340px !important;
-    height: 280px !important;
-  }
-
-  #qrcode-ipad {
-    margin-left: 10% !important;
-    margin-top: -8% !important;
-  }
-
-  .message {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .main-container-iphone {
-    display: none;
-  }
-
-  .main-container-ipad {
-    display: block;
-    margin-top: -2% !important;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-  .qrcode-display {
-    margin-left: 29% !important;
-    width: 350px !important;
-    height: 280px !important;
-  }
-
-  #qrcode-ipad {
-    margin-left: 11% !important;
-    margin-top: -10% !important;
-  }
-
-  .message {
-    font-size: 16px;
-  }
-}
-
 /* Navigation */
 
 .navigation {
@@ -243,4 +165,90 @@ h2 {
   padding-top: 10px;
   margin-left: 8px;
   font-size: 32px;
+}
+
+@media (min-width: 667px) {
+  h2 {
+    padding-top: 6%;
+    font-size: 18px;
+  }
+
+  .main-container-iphone {
+    margin-top: -3% !important;
+  }
+
+  .qrcode-display {
+    margin-left: 30% !important;
+    width: 220px !important;
+  }
+
+  .Logo > img {
+    margin-left: 45% !important;
+  }
+
+  #qrcode {
+    margin-left: 12% !important;
+    margin-top: -12% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container-iphone {
+    display: none;
+  }
+
+  .main-container-ipad {
+    display: block;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .qrcode-display {
+    margin-left: 22% !important;
+    width: 340px !important;
+    height: 280px !important;
+  }
+
+  #qrcode-ipad {
+    margin-left: 10% !important;
+    margin-top: -8% !important;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container-iphone {
+    display: none;
+  }
+
+  .main-container-ipad {
+    display: block;
+    margin-top: -2% !important;
+  }
+
+  .Logo > img {
+    margin-left: 46% !important;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .qrcode-display {
+    margin-left: 29% !important;
+    width: 350px !important;
+    height: 280px !important;
+  }
+
+  #qrcode-ipad {
+    margin-left: 11% !important;
+    margin-top: -10% !important;
+  }
+
+  .message {
+    font-size: 16px;
+  }
 }
