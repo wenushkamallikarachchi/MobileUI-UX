@@ -137,7 +137,7 @@
     border-radius: 0 0 1.5em 0 !important;
     background-color: #CAC9C7;
     margin: 6px 0 0px 25px;
-    width: 298px;
+    width: 291px;
     height: 33px;
 }
     .wrapper-grid3 .wrapper-amount p {
@@ -163,7 +163,14 @@
     margin: -28px 0px 21px 53px;
     height: 38px;
 }
+.footer {
+    margin: 5px 0 75px 0px;
+  }
 
+  .nav-active {
+    width: 73px;
+
+  }
 @media (min-width: 667px) {
     .total-count-wrapper {
         width: 57%;
@@ -172,7 +179,7 @@
     }
     .wrapper-amount {
         margin: 5px 0px 0px 122px;
-        width: 386px;
+        width: 380px;
     }
     .wrapper-grid3 .wrapper-amount p:last-child {
         padding: 0 0 0 200px;
@@ -203,7 +210,7 @@
         }
     .wrapper-amount {
         margin: 5px 0px 0px 144px;
-        width: 441px;
+        width: 436px;
         height: 38px;
     }
         .wrapper-grid3 .wrapper-amount p:last-child {
@@ -215,6 +222,9 @@
         }
     .ui-btn.back {
         margin: -28px 0px 20px 248px;
+    }
+    .nav-active {
+        width: 73px;
     }
 }
 
@@ -228,7 +238,7 @@
     }
     .wrapper-amount {
         margin: 5px 0px 0px 199px;
-        width: 588px;
+        width: 583px;
     }
         .wrapper-grid3 .wrapper-amount p:last-child {
             padding: 7px 0 0 345px;
