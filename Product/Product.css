@@ -6,12 +6,9 @@
   margin: 5%;
 }
 
-<<<<<<< HEAD
-=======
-.product-name-iphone{
+.product-name-iphone {
   font-size: 16px;
 }
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
 .product-image-iphone img {
   width: 100%;
   padding: 3%;
@@ -26,18 +23,11 @@
 
 .product-info-iphone {
   color: black;
-<<<<<<< HEAD
-}
-
-.comment-details-iphone {
-  padding: 2%;
-=======
   height: 70px;
 }
 
 .comment-details-iphone {
   padding: 1%;
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
   box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
 }
 
@@ -62,13 +52,10 @@
   margin-top: -3%;
 }
 
-<<<<<<< HEAD
-=======
-.user-comment-display{
+.user-comment-display {
   margin-left: -13% !important;
 }
 
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
 #popupComment {
   border-radius: 2em 0 2em 0 !important ;
 }
@@ -181,24 +168,17 @@
 .comment-display-grid1 {
   width: 40% !important;
 }
-<<<<<<< HEAD
-=======
- 
-.comment-display-grid2{
+
+.comment-display-grid2 {
   margin-left: -15% !important;
 }
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
 
 .comment-details-ipad img {
   width: 50%;
 }
 
 .avatar-ipad {
-<<<<<<< HEAD
-  width: 40% !important;
-=======
   width: 10% !important;
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
 }
 
 .avatar-ipad img {
@@ -217,15 +197,6 @@
   color: #8cc63f;
 }
 
-<<<<<<< HEAD
-.heart {
-  margin-top: 13%;
-  margin-left: 90%;
-  width: 10%;
-}
-
-=======
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
 #ipad-textarea {
   height: 80px !important;
   border-radius: 1em 0 1em 0 !important;
@@ -236,13 +207,11 @@
   margin-top: -3% !important;
 }
 
-<<<<<<< HEAD
-=======
 .product-name-block p {
   margin-top: -0.5%;
 }
 
-.product-name{
+.product-name {
   font-size: 22px;
 }
 
@@ -260,7 +229,6 @@
   justify-content: right;
   align-items: flex-end;
 }
-
 
 @keyframes favme-anime {
   0% {
@@ -319,7 +287,6 @@
   animation: favme-anime 0.3s;
 }
 
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
 @media (min-width: 667px) {
   #iphone-grid {
     display: none;
@@ -329,24 +296,19 @@
     display: block;
   }
 
-<<<<<<< HEAD
-=======
   .product-name {
     font-size: 18px;
   }
 
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
   .ipad-column1 img {
     margin-top: 17%;
   }
 
-<<<<<<< HEAD
   .heart {
     margin-top: 11%;
-=======
+  }
   .flexbox {
     margin-left: 85% !important;
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
   }
 }
 
@@ -358,22 +320,15 @@
   #ipad-grid {
     display: block;
   }
-<<<<<<< HEAD
-
-  .ipad-column1 img {
-    margin-top: 17%;
+  .product-name {
+    font-size: 22px;
   }
-=======
-.product-name{
-  font-size: 22px;
-}
   .ipad-column1 img {
     margin-top: 17%;
   }
   .flexbox {
     margin-left: 85% !important;
   }
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
 }
 
 @media (min-width: 1024px) {
@@ -381,12 +336,9 @@
     display: none;
   }
 
-<<<<<<< HEAD
-=======
-  .product-name{
+  .product-name {
     font-size: 22px;
   }
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
   #ipad-grid {
     display: block;
   }
@@ -395,13 +347,7 @@
     margin-top: -3%;
   }
 
-<<<<<<< HEAD
-  .heart {
-    margin-top: 8%;
-  }
-}
-=======
-  .fav-btn{
+  .fav-btn {
     width: 120%;
   }
 
@@ -410,12 +356,11 @@
   }
 }
 
-}
 .navigation {
   width: 100%;
 }
 .share-favourites {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -442,7 +387,7 @@
   padding-top: 20px;
 }
 .nav-active {
-  background-color: #8CC63F;
+  background-color: #8cc63f;
   height: 30px;
   margin-top: 15px;
   border-radius: 15px;
@@ -477,4 +422,3 @@
   font-weight: 600;
   font-size: 13px;
 }
->>>>>>> 5c3fe964e6cc464cc00ff16bd67e2a2eefdcdef8
