@@ -15,7 +15,12 @@
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
     />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--This is for progress bar and  this link will effect to nav bar  -->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="Game.css" />
@@ -23,8 +28,9 @@
   </head>
   <body>
     <div data-role="page" id="game">
-      <div data-role="header">
-        <h1 class="ui-header">include header elements</h1>
+      <div class="header">
+        <span class="material-icons back-icon"> navigate_before </span>
+        <div class="Logo"><img src="../images/Logo.png" /></div>
       </div>
       <div data-role="main" class="ui-content">
         <p class="page-heading">SPIN & WIN</p>
@@ -117,10 +123,10 @@
           <label class="lbl1">Play Point</label>
           <img class="medal" src="../icons/medal.png" />
           <label id="total" class="totallbl">/100</label>
-          <div class="w3-light-grey w3-round progressbar">
+          <div class="progressbar">
             <div
               id="progressbar"
-              class="w3-container w3-round bar"
+              class="bar"
               style="width: 0%; height: 8px"
             ></div>
           </div>
@@ -167,9 +173,65 @@
             </div>
           </div>
         </div>
+
+        <div class="footer">
+          <img
+            id="footer-iphone-portrait"
+            src="../images/navigation-iphone-portrait.jpg"
+          />
+          <img
+            id="footer-iphone-landscape"
+            src="../images/navigation-iphone-landscape.jpg"
+          />
+          <img
+            id="footer-ipad-portrait"
+            src="../images/navigation-ipad-portrait.jpg"
+          />
+          <img
+            id="footer-ipad-landscape"
+            src="../images/navigation-ipad-landscape.jpg"
+          />
+        </div>
       </div>
     </div>
+    <div data-role="footer" class="ui-bar">
+      <div class="navigation">
+        <img src="../images/home.png" id="home-icon" />
+        <img src="../images/cart.png" id="cart-icon" />
+        <img src="../images/offer.png" id="promo-icon" />
+        <div class="nav-active">
+          <img
+            class="nav-account-icon"
+            src="../images/rubic-white.png"
+            id="game-icon"
+          />
+          <span class="nav-carted-text">Game</span>
+        </div>
+        <img src="../images/user.png" id="user-icon" />
+      </div>
+    </div>
+
     <script>
+      // navigation
+      $("#home-icon").click(function () {
+        window.location = "/index.html";
+      });
+      $("#game-icon").click(function () {
+        window.location = "/Game/Game.html";
+      });
+      $("#promo-icon").click(function () {
+        window.location = "/Promo/Promo.html";
+      });
+
+      $("#cart-icon").click(function () {
+        window.location = "/Cart/Cart.html";
+      });
+
+      $("#user-icon").click(function () {
+        window.location = "/account.html";
+      });
+
+      //game implementation
       function date() {
         n = new Date();
         y = n.getFullYear();

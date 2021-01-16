@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
     />
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  /> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -21,136 +25,138 @@
   </head>
   <body>
     <div data-role="page" id="promo">
-      <div data-role="header">
-        <h1 class="ui-header">include header elements</h1>
-      </div>
+       <div class="header">
+        <span class="material-icons back-icon"> navigate_before </span>
+        <div class="Logo"><img src="../images/Logo.png" /></div>
+      </div> 
       <div data-role="main" class="ui-content">
         <p class="page-heading">PROMOS</p>
-        <p style="" class="promoLine">Browse Through The Lastest Promos</p>
+        <p  class="promoLine">Browse Through The Lastest Promos</p>
+        <div class="outlets">
+          <ul>
+            <img
+              onclick="changeDeals()"
+              class="arrow_back"
+              src="../icons/arrow_back.png"
+              alt="arrow"
+            />
+            <label class="labalDeal" id="deal"> Fresh Mart Deals</label>
+  
+            <img
+              onclick="changeDeals()"
+              class="arrow_forward"
+              src="../icons/arrow_forward.png"
+              alt="arrow"
+            />
+          </ul>
+        </div>
+        <img class="next" src="../icons/arrow_circle.png"/>
+        <div class="ui-block-a item">
+        
+          <a href="#" class="ui-btn ui-shadow">
+            <img
+              class="product-img1"
+              src="../images/beetroot.jpg"
+              alt="beetroot"
+            />
+            <div class="btn-details">
+              <p class="product-name">Beetroot</p>
+              <p class="product-detail">Rs. 55.00/500g</p>
+            </div>
+            <img
+              style="margin-left: -25px"
+              id="add"
+              src="../icons/min_circle.png"
+              alt=""
+            />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
+            <img
+              src="../icons/plus_circle.png"
+              id="minus"
+              onclick="qty()"
+              alt=""
+            />
+  
+            <button class="ui-btn cart-btn" >
+              <span
+              
+                class="iconify cart"
+                data-icon="ic:outline-add-shopping-cart"
+                data-inline="false"
+              ></span>
+            </button>
+          </a>
+  
+          <a href="#" class="ui-btn ui-shadow product-item1">
+            <img
+              class="product-img1"
+              src="../images/beetroot.jpg"
+              alt="beetroot"
+            />
+            <div class="btn-details">
+              <p class="product-name">Beetroot</p>
+              <p class="product-detail">Rs. 55.00/500g</p>
+            </div>
+            <img
+              style="margin-left: -25px"
+              id="add"
+              src="../icons/min_circle.png"
+              alt=""
+            />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
+            <img
+              src="../icons/plus_circle.png"
+              id="minus"
+              onclick="qty()"
+              alt=""
+            />
+            <button class="ui-btn cart-btn">
+              <span
+                class="iconify cart"
+                data-icon="ic:outline-add-shopping-cart"
+                data-inline="false"
+              ></span>
+            </button>
+          </a>
+  
+          <a
+            href="#"
+            class="ui-btn ui-shadow product-item2"
+            style="margin-left: 325px"
+          >
+            <img
+              class="product-img1"
+              src="../images/beetroot.jpg"
+              alt="beetroot"
+            />
+            <div class="btn-details">
+              <p class="product-name">Beetroot</p>
+              <p class="product-detail">Rs. 55.00/500g</p>
+            </div>
+            <img
+              style="margin-left: -25px"
+              id="add"
+              src="../icons/min_circle.png"
+              alt=""
+            />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
+            <img
+              src="../icons/plus_circle.png"
+              id="minus"
+              onclick="qty()"
+              alt=""
+            />
+            <button class="ui-btn cart-btn">
+              <span
+                class="iconify cart"
+                data-icon="ic:outline-add-shopping-cart"
+                data-inline="false"
+              ></span>
+            </button>
+          </a>
+        </div>
+        <button class="ui-btn ui-shadow viewAll">
+          <a class="view" href="../Products/Products.html"> View All</a>
+        </button>
       </div>
-      <div class="outlets">
-        <ul>
-          <img
-            onclick="changeDeals()"
-            class="arrow_back"
-            src="../icons/arrow_back.png"
-            alt="arrow"
-          />
-          <label class="labalDeal" id="deal"> Fresh Mart Deals</label>
-
-          <img
-            onclick="changeDeals()"
-            class="arrow_forward"
-            src="../icons/arrow_forward.png"
-            alt="arrow"
-          />
-        </ul>
-      </div>
-      <img class="next" src="../icons/arrow_circle.png"/>
-      <div class="ui-block-a item">
-      
-        <a href="#" class="ui-btn ui-shadow">
-          <img
-            class="product-img1"
-            src="../images/beetroot.jpg"
-            alt="beetroot"
-          />
-          <div class="btn-details">
-            <p class="product-name">Beetroot</p>
-            <p class="product-detail">Rs. 55.00/500g</p>
-          </div>
-          <img
-            style="margin-left: -25px"
-            id="add"
-            src="../icons/min_circle.png"
-            alt=""
-          />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-          <img
-            src="../icons/plus_circle.png"
-            id="minus"
-            onclick="qty()"
-            alt=""
-          />
-
-          <button class="ui-btn cart-btn" >
-            <span
-            
-              class="iconify cart"
-              data-icon="ic:outline-add-shopping-cart"
-              data-inline="false"
-            ></span>
-          </button>
-        </a>
-
-        <a href="#" class="ui-btn ui-shadow product-item1">
-          <img
-            class="product-img1"
-            src="../images/beetroot.jpg"
-            alt="beetroot"
-          />
-          <div class="btn-details">
-            <p class="product-name">Beetroot</p>
-            <p class="product-detail">Rs. 55.00/500g</p>
-          </div>
-          <img
-            style="margin-left: -25px"
-            id="add"
-            src="../icons/min_circle.png"
-            alt=""
-          />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-          <img
-            src="../icons/plus_circle.png"
-            id="minus"
-            onclick="qty()"
-            alt=""
-          />
-          <button class="ui-btn cart-btn">
-            <span
-              class="iconify cart"
-              data-icon="ic:outline-add-shopping-cart"
-              data-inline="false"
-            ></span>
-          </button>
-        </a>
-
-        <a
-          href="#"
-          class="ui-btn ui-shadow product-item2"
-          style="margin-left: 325px"
-        >
-          <img
-            class="product-img1"
-            src="../images/beetroot.jpg"
-            alt="beetroot"
-          />
-          <div class="btn-details">
-            <p class="product-name">Beetroot</p>
-            <p class="product-detail">Rs. 55.00/500g</p>
-          </div>
-          <img
-            style="margin-left: -25px"
-            id="add"
-            src="../icons/min_circle.png"
-            alt=""
-          />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-          <img
-            src="../icons/plus_circle.png"
-            id="minus"
-            onclick="qty()"
-            alt=""
-          />
-          <button class="ui-btn cart-btn">
-            <span
-              class="iconify cart"
-              data-icon="ic:outline-add-shopping-cart"
-              data-inline="false"
-            ></span>
-          </button>
-        </a>
-      </div>
-      <button class="ui-btn ui-shadow viewAll">
-        <a class="view" href="../Products/Products.html"> View All</a>
-      </button>
+     
     </div>
     <script>
       function changeDeals() {
