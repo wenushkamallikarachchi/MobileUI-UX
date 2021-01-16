@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FreshMart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/Logo.png">
+
+  <!-- the three things that jQuery Mobile needs to work -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lightslider.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/lightslider.js"></script>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="header">
+      <div class="Logo"> <img src="images/Logo.png"> </div>
+    </div>
+    <div class="search"> <span class="material-icons search-icon"> search </span>
+      <input type="text" class="product-search" data-role="none">
+    </div>
+    <div class="main-text">
+      <h1>WELCOME</h1>
+      <h2>A shop that has it all!</h2>
+      <p>Fresh Mart is the premier supermarket that offers all what you need, right now. We pride ourselves on enriching
+        your life with our products at exceptional value.</p>
+    </div>
+    <div class="carrousel" id="carrousel"> 
+      <span class="material-icons arrow-icon left-arrow " onClick="plusDivs(-1)"> keyboard_arrow_left </span> 
+        <span class="material-icons arrow-icon right-arrow" onClick="plusDivs(1)"> keyboard_arrow_right </span> 
+        <a href="Promo/Promo.html" data-ajax="false"><button class="start-shopping-btn" id="start-shopping-btn" data-role="none">Start Shopping</button></a>
+        <img class="slide" id="slide1" src="images/Slide1.png"> 
+        <img class="slide" id="slide2" src="images/Slide2.png"> 
+        <img class="slide"  id="slide3" src="images/Slide3.png"> 
+      </div>
+    <div class="categories-heading">
+      <h2> Categories </h2>
+    </div>
+    <div class="categories">
+      <div class="category-icon">
+        <div class="item1"> <img src="images/Vegetable.png" /> </div>
+      </div>
+      <div class="category-icon">
+        <div class="item2"> <img src="images/Meat.png" /> </div>
+      </div>
+      <div class="category-icon">
+        <div class="item3"> <img src="images/Snack.png" /> </div>
+      </div>
+      <div class="category-icon">
+        <div class="item4"> <img src="images/Beverages.png" /> </div>
+      </div>
+      <div class="category-icon-text">
+        <p>Vegetables</p>
+      </div>
+      <div class="category-icon-text">
+        <p>Meat</p>
+      </div>
+      <div class="category-icon-text">
+        <p>Snacks</p>
+      </div>
+      <div class="category-icon-text">
+        <p>Beverages</p>
+      </div>
+    </div>
+    <div class="best-sellers-heading">
+      <h2> Best Sellers </h2>
+    </div>
+    <div class="best-sellers">
+      <ul id="autoWidth" class="cs-hidden">
+        <!-- <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 1</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 2</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 3</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 4</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 5</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 6</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 7</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 8</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 9</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li>
+      <li class="item">
+        <section class="product">
+          <div class="product-image"> <img src="images/Carrot.jpg"> </div>
+          <div class="product-name">
+            <p>Carrot 10</p>
+          </div>
+          <div class="product-price">
+            <p>Rs 290.00 / KG</p>
+          </div>
+          <div class="product-quntity">
+            <button class="decrease-button" data-role="none"> <span class="material-icons decrease-icon"> remove_circle_outline </span></button>
+            <input type="text" class="count" data-role="none" value="1"/>
+            <button class="increase-button" data-role="none"> <span class="material-icons decrease-icon"> control_point </span></button>
+            <button class="add-to-cart-button" data-role="none"><img src="images/Icon material-add-shopping-cart.png"/></button>
+          </div>
+        </section>
+      </li> -->
+      </ul>
+    </div>
+    <div class="footer"> </div>
+    <div class="navigation">
+      <div class="nav-active">
+        <img class="nav-home-icon" src="images/home-white.png" />
+        <span class="nav-home-text">Home</span>
+      </div>
+      <img src="images/cart.png" />
+      <img src="images/offer.png" /> <img src="images/rubic.png" /> <img src="images/user.png" />
+    </div>
+  </div>
+  <script type="text/javascript" src="data/products.json"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
