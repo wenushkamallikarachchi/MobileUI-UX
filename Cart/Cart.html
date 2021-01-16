@@ -13,20 +13,25 @@
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="../common.css" />
     <link rel="stylesheet" href="Cart.css" />
   </head>
   <body>
-    <div data-role="page" id="Cart">
-      <div data-role="header">
-        <h1 class="ui-header">include header elements</h1>
+    <div data-role="page" id="page-body">
+      <div class="header">
+        <span class="material-icons back-icon"> navigate_before </span>
+        <div class="Logo"><img src="../images/Logo.png" /></div>
       </div>
 
       <div data-role="main" class="ui-content">
         <p class="page-heading">CART</p>
-        <img class="noti" src="../icons/noti.png">
+        <img class="noti" src="../icons/noti.png" />
         <p class="page-sub">11.11 Sale Starts in 01:00:00</p>
         <img class="filter" src="../icons/filter.png" />
         <span class="sort">Sort & Filter</span>
@@ -151,7 +156,58 @@
             </div>
           </div>
         </div>
+        <div class="footer">
+          <img
+            id="footer-iphone-portrait"
+            src="../images/navigation-iphone-portrait.jpg"
+          />
+          <img
+            id="footer-iphone-landscape"
+            src="../images/navigation-iphone-landscape.jpg"
+          />
+          <img
+            id="footer-ipad-portrait"
+            src="../images/navigation-ipad-portrait.jpg"
+          />
+          <img
+            id="footer-ipad-landscape"
+            src="../images/navigation-ipad-landscape.jpg"
+          />
+        </div>
+      </div>
+    
+    </div>
+    
+    <div data-role="footer" class="ui-bar">
+      <div class="navigation">
+        <img src="../images/home.png" id="home-icon" />
+        <div class="nav-active">
+          <img
+            class="nav-account-icon"
+            src="../images/cart-white.png"
+            id="cart-icon"
+          />
+          <span class="nav-carted-text">Cart</span>
+        </div>
+        <img src="../images/offer.png" id="promo-icon" />
+        <img src="../images/rubic.png" id="game-icon" />
+        <img src="../images/user.png" id="user-icon" />
       </div>
     </div>
+    <script>
+      $("#home-icon").click(function () {
+        window.location = "/index.html";
+      });
+      $("#game-icon").click(function () {
+        window.location = "/Game/Game.html";
+      });
+      $("#promo-icon").click(function () {
+        window.location = "/Promo/Promo.html";
+      });
+      $("#user-icon").click(function () {
+        window.location = "/account.html";
+      });
+      
+    </script>
   </body>
 </html>
