@@ -10,17 +10,4 @@ $(document).ready(function () {
       loc.substring(0, loc.lastIndexOf("/")) + "/login.html";
     localStorage.setItem("isuserLogged", false);
   });
-
-  //Shereen
-  var favouriteProducts = JSON.parse(localStorage.getItem("favourites"));
-  if (favouriteProducts != null) {
-    var storedFavouriteProducts = [];
-    storedFavouriteProducts = favouriteProducts;
-    storedFavouriteProducts.push("product2");
-    localStorage.setItem("favourites", JSON.stringify(storedFavouriteProducts));
-  } else {
-    var favouriteProducts = [];
-    favouriteProducts.push("product2");
-    localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
-  }
 });

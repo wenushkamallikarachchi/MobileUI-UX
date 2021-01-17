@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    localStorage.setItem("product", "product1");
+    // localStorage.setItem("product", "product1");
   
-    var selectedProductIdIpad = localStorage.getItem("product");
-    displayProductIpad(selectedProductIdIpad);
-    commentsCardIpad();
+    // var selectedProductIdIpad = localStorage.getItem("product");
+    // displayProductIpad(selectedProductIdIpad);
+    // commentsCardIpad();
 
 
 $('.favme').click(function() {

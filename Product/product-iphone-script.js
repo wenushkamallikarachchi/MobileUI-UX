@@ -3,9 +3,9 @@ $(document).ready(function () {
   // var productList = JSON.parse(data);
   // localStorage.setItem("productList",productList)
   var favouriteList =[];
-  localStorage.setItem("product", "product8");
+  // localStorage.setItem("product", "product8");
 
-  var selectedProductId = localStorage.getItem("product");
+  var selectedProductId = localStorage.getItem("product-page-item");
   displayProduct(selectedProductId);
 
 
@@ -16,12 +16,12 @@ $('.favme-iphone').click(function() {
   if(favouriteProducts != null){
     var storedFavouriteProducts = [];
     storedFavouriteProducts = favouriteProducts;
-      storedFavouriteProducts.push("product2");
+      storedFavouriteProducts.push(selectedProductId);
       localStorage.setItem("favourites", JSON.stringify(storedFavouriteProducts));
   }
   else{
     var favouriteProducts = [];
-      favouriteProducts.push("product2");
+      favouriteProducts.push(selectedProductId);
       localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
   }
   // if (favouriteProducts != null) {​​​​​
