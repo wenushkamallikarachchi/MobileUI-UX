@@ -1,4 +1,6 @@
 var qty = 1;
+var productList = JSON.parse(data);
+
 $(document).ready(function () {
   pagination();
   productListing();
@@ -6,8 +8,12 @@ $(document).ready(function () {
   // $(".iconify.increase").click(function() {
   //     alert('I got a click');
   // });
+
+  $(document).on("click", ".ui-block-a.item a", function () {
+    var product_id = $(this).attr("product-id");
+    localStorage.setItem("product-page-item", product_id);
+  });
 });
-var productList = JSON.parse(data);
 // reset funtion for sorting
 function resetSort() {
   $("#vegetable").css("text-align", "right");
@@ -53,14 +59,15 @@ function displaySorted() {
   }
   document.getElementById("ui-grid-a").innerHTML = product;
 }
-
 function productListing() {
   var product = "";
   if (productList != []) {
     for (var i = 0; i < productList.length; i++) {
-      console.log("Iphone portrait");
       product += '<div class="ui-block-a item">';
-      product += '<a href="#" class="ui-btn ui-shadow">';
+      product +=
+        '<a href="#" class="ui-btn ui-shadow" product-id=' +
+        productList[i].id +
+        ">";
       product +=
         '<img class="product-img1" src="' +
         productList[i].url +
