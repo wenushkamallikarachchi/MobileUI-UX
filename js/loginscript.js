@@ -14,6 +14,7 @@ function validateLoginForm() {
   var email = $('#email').val();
   var password = $('#password').val();
   console.log(email);
+  console.log(password);
   var isValid = false;
 
   $("span.error").remove();
@@ -28,7 +29,7 @@ function validateLoginForm() {
   if (email === "davidspade@gmail.com" && password === "david123") {
     localStorage.setItem("isuserLogged", true);
     var loc = window.location.pathname;
-    window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/index.html';
+    window.location = loc.substring(0, loc.lastIndexOf('/')) + '/account.html';
   }
   else {
     if (email === "") {
