@@ -153,7 +153,7 @@
             <div class="wrapper-amount">
               <p>Total</p>
               <p>Rs.1101.00</p>
-              <button class="ui-btn back">Checkout</button>
+              <button class="ui-btn back" id="checkout">Checkout</button>
             </div>
           </div>
         </div>
@@ -196,6 +196,10 @@
       </div>
     </div>
     <script>
+ 
+      $("#checkout").click(function () {
+        window.location = "/Checkout/Checkout.html";
+      });
       $("#home-icon").click(function () {
         window.location = "/index.html";
       });
