@@ -1,6 +1,5 @@
 var qty = 1;
 $(document).ready(function () {
- 
   pagination();
   productListing();
 
@@ -9,9 +8,17 @@ $(document).ready(function () {
   // });
 });
 var productList = JSON.parse(data);
-function resetSort(){
+// reset funtion for sorting
+function resetSort() {
+  $("#vegitable").css("text-align", "right");
+  $("#meat").css("text-align", "right");
+  $("#snack").css("text-align", "right");
+  $("#beverage").css("text-align", "right");
+
+  localStorage.setItem("type", "");
   productListing();
 }
+
 function displaySorted() {
   var product = "";
   console.log(productList);
