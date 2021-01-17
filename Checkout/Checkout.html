@@ -15,7 +15,7 @@
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="../common.css" /> -->
+  <link rel="stylesheet" href="../common.css" />
   <link rel="stylesheet" href="Checkout.css" />
 </head>
 
@@ -55,10 +55,13 @@
               <span class="medal"><img id="medal-iphone" src="../icons/medal-disabled.png" width="10%"> </span>
               <span id="points-iphone"></span>
             </div>
-            <div class="w3-light-grey w3-round progressbar">
-              <div id="progressbar-iphone" class="w3-container w3-round bar-iphone" style="width: 0%; height: 8px">
+            <div class="progressbar-iphone">	
+              <div
+              id="progressbar-iphone"
+              class="bar-iphone"
+              style="width: 0%; height: 8px"
+              ></div>
               </div>
-            </div>
             <div class="instruction-section">
               <p class="instructions" id="instruction-iphone">Redeem your points to get a discount</p>
             </div>
@@ -143,7 +146,7 @@
                   </p>
                 </div>
                 <div class="ui-block-b price-block1">
-                  <p class="price play-point-price">Rs.00.00</p>
+                  <p class="price play-point-price" id="play-price-iphone"></p>
                 </div>
               </div>
             </div>
@@ -159,9 +162,9 @@
               </div>
             </div>
 
-            <div class="ui-field-contain pay-btn">
+            <div class="ui-field-contain">
               <!-- <button type="submit" > -->
-                <span data-role="none"><a href="../payment.html" data-ajax="false" class="ui-btn ui-corner-all ui-shadow">Pay Now</a></span>
+                <span class="pay-btn"><a href="../payment.html" data-ajax="false" class="ui-btn ui-corner-all ui-shadow">Pay Now</a></span>
               <!-- </button> -->
             </div>
           </div>
@@ -197,10 +200,13 @@
                   <span class="medal"><img id="medal-ipad" src="../icons/medal-disabled.png" width="10%"> </span>
                   <span id="points-ipad"></span>
                 </div>
-                <div class="w3-light-grey w3-round progressbar">
-                  <div id="progressbar-ipad" class="w3-container w3-round bar-ipad" style="width: 0%; height: 8px">
+                <div class="progressbar-ipad">	
+                  <div
+                  id="progressbar-ipad"
+                  class="bar-ipad"
+                  style="width: 0%; height: 8px"
+                  ></div>
                   </div>
-                </div>
                 <div class="instruction-section">
                   <p class="instructions" id="instructions-ipad">Redeem your points to get a discount</p>
                 </div>
@@ -219,48 +225,6 @@
                 <p class="section-heading">Order Summary</p>
               </div>
               <div class="delivery-content">
-                <!-- <table data-role="table" id="order-data" data-mode="columtoggle" class="ui-responsive">
-                  <thead class="summary-table-heading">
-                    <th class="product-name-heading">Product</th>
-                    <th class="price-heading">Price</th>
-                    <th class="quantity-heading">Qty</th>
-                  </thead>
-                  <tbody class="summary-table-content">
-                    <tr>
-                      <td>
-                        <span class="iconify orders" data-icon="emojione:bread" data-inline="false"></span>
-                        &nbsp; Bread
-                      </td>
-                      <td id="unit-price">Rs.130.00/Unit</td>
-                      <td>2</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="iconify orders" data-icon="noto-v1:carrot" data-inline="false"></span>
-                        &nbsp; Carrot
-                      </td>
-                      <td id="unit-price">Rs.150.00/kg</td>
-                      <td>250g</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="iconify orders" data-icon="noto:red-apple" data-inline="false"></span>
-                        &nbsp; Apple
-                      </td>
-                      <td id="unit-price">Rs.50.00/Unit</td>
-                      <td>4</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="iconify orders" data-icon="noto:lemon" data-inline="false"></span>
-                        &nbsp; Lemon
-                      </td>
-                      <td id="unit-price">Rs.102.00/kg</td>
-                      <td>250g</td>
-                    </tr>
-                  </tbody>
-                </table> -->
-
                 <table data-role="table" id="order-data" data-mode="columtoggle" class="ui-responsive">
                   <thead class="table-headings">
                     <th> Product</th>
@@ -335,7 +299,7 @@
                       </p>
                     </div>
                     <div class="ui-block-b price-block1">
-                      <p class="price play-point-price">Rs.00.00</p>
+                      <p class="price play-point-price-ipad" id="play-price-ipad"></p>
                     </div>
                   </div>
                 </div>
@@ -351,10 +315,8 @@
                   </div>
                 </div>
 
-                <div class="ui-field-contain pay-btn">
-                  <button type="submit" class="ui-btn ui-corner-all ui-shadow">
-                    Pay Now
-                  </button>
+                <div class="ui-field-contain">
+                  <span class="pay-btn"><a href="../payment.html" data-ajax="false" class="ui-btn ui-corner-all ui-shadow">Pay Now</a></span>
                 </div>
               </div>
             </div>
@@ -369,19 +331,19 @@
         <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
       </div>
 
-      <div data-role="footer" data-id="foo1" data-position="fixed">
+      <div data-position="fixed">
 
         <div class="product-nav">
           <div data-role="navbar" id="navbar">
             <div class="navigation">
-              <img src="../images/home.png" />
+              <img id="home-icon" src="../images/home.png" />
               <div class="nav-active">
-                <img class="nav-account-icon" src="../images/cart-white.png" />
+                <img id="cart-icon"  class="nav-account-icon" src="../images/cart-white.png" />
                 <span class="nav-account-text">Cart</span>
               </div>
-              <img src="../images/offer.png" />
-              <img src="../images/rubic.png" />
-              <img src="../images/user.png" />
+              <img id="promo-icon" src="../images/offer.png" />
+              <img id="game-icon"  src="../images/rubic.png" />
+              <img id="user-icon"  src="../images/user.png" />
             </div>
           </div>
 
@@ -393,15 +355,51 @@
 
 <script>
   $(document).ready(function () {
-    // var points = localStorage.get("points");
 
-    let points = 100;
+  // localStorage.setItem("points","80");
+   var points = localStorage.getItem("points");
+
+   $('.back-icon').click(function () {
+      window.history.back();
+    });
+
+    $('#home-icon').click(function (){
+        window.location="../index.html";
+    });
+
+    $('#cart-icon').click(function (){
+        window.location="../Cart/Cart.html";
+    });
+
+    $('#promo-icon').click(function (){
+        window.location="../Promo/Promo.html";
+    });
+
+    $('#game-icon').click(function (){
+        window.location="../Game/Game.html";
+    });
+
+    $('#user-icon').click(function (){
+        var isUserLogged = localStorage.getItem("isuserLogged");
+        if(isUserLogged == "true") {
+            window.location="../account.html";
+        }
+        else {
+            window.location="../login.html";
+        }
+    });
+
+    //let points = 80;
+    let playPrice = 0;
+
+    document.getElementById("play-price-ipad").innerHTML = "Rs." + playPrice +".00";
+    document.getElementById("play-price-iphone").innerHTML = "Rs." + playPrice +".00";
 
     document.getElementById("points-iphone").innerHTML = points + "/100";
 
     document.getElementById("points-ipad").innerHTML = points + "/100";
 
-
+   
     $("#progressbar-ipad").css("width", points + "%");
     $("#progressbar-iphone").css("width", points + "%");
 
@@ -417,8 +415,31 @@
 
       $("#medal-ipad").attr("src", "../icons/medal.png");
       $(".bar-ipad").css('background-color', '#8CC63F');
-
     }
+
+    $("#redeem-iphone").click(function() {
+      playPrice = 100;
+      points = 0 ;
+      document.getElementById("play-price-iphone").innerHTML = "Rs." + playPrice +".00";
+      document.getElementById("redeem-iphone").disabled = true;
+      $(".section-title-play").css('background-color', 'black');
+      $(".bar-iphone").css('background-color', 'black');
+      $("#medal-iphone").attr("src", "../icons/medal-disabled.png");
+      $("#progressbar-ipad").css("width", points + "%");
+    })
+
+    $("#redeem-ipad").click(function() {
+      playPrice = 100;
+      points = 0 ;
+      document.getElementById("play-price-ipad").innerHTML = "Rs." + playPrice +".00";
+      document.getElementById("redeem-ipad").disabled = true;
+      $(".section-title-play").css('background-color', 'black');
+      $(".bar-ipad").css('background-color', 'black');
+      $("#medal-ipad").attr("src", "../icons/medal-disabled.png");
+      $("#progressbar-iphone").css("width", points + "%");
+    })
+
+   
 
   });
 </script>

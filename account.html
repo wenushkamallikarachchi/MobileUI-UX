@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="QR-code/QRCodeReader.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
 <script src="https://js.stripe.com/v3/"></script>
@@ -33,7 +34,7 @@
 	  <p class="user-name">David Spade</p>
 		<p class="user-email">davidspade@gmail.com</p>
 	  </div>
-	  <a href="QR-code/QRCode.html" data-ajax="false">
+	  <a href="" data-ajax="false">
 	  <div class="qr-code">
 	  <img src="images/qr.png" alt="qr-code">
 	  </div>
@@ -67,7 +68,8 @@
 	  </div>
 	</div>
 		</a>
-	<a href="QR-code/QRCodeReader.html" data-ajax="false">
+	<a href="#popupVideo" data-rel="popup"
+	data-position-to="window">
   <div class="share-credit">
 	<div class="share-credit-icon account-property-icon">
 	  <img src="images/shareCredit.png" alt="share-credit">
@@ -104,6 +106,23 @@
 	  <span class="material-icons">chevron_right</span>
 	  </div>
 	</div>
+
+	<div data-role="popup" id="popupVideo" data-theme="a" class="ui-corner-all">
+		   <a href="#" data-rel="back"
+			class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div class="popup-heading">
+			<h2>QR Scan</h2>
+		</div>
+		<div class="video-wrap">
+			<video id="video" playsinline autoplay></video>
+		</div>
+		<div class="scan-btn">
+			<button class="modal-button" id="scan-btn" data-role="none" type="submit">Scan</button>
+		</div>
+	</div>
+	<div id="qr-toast">
+        <p data-role="none">Successfully transferred 100 points!</p>
+    </div>
 <!--		</div>-->
 <!--	<div class="footer"></div>-->
   <div class="navigation">
@@ -119,5 +138,56 @@
 </div>
 <script type="text/javascript" src="js/accountscript.js" ></script>
 <script type="text/javascript" src="js/navigation.js" ></script>
+<script>
+
+    $(document).ready(function () {
+        $("#scan-btn").click(function () {
+            document.getElementById("popupVideo").style.display = 'none';
+            showSuccessToast();
+            closeWebcam();
+        });
+    });
+
+    function showSuccessToast() {
+        var x = document.getElementById("qr-toast");
+		x.className = "show";
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    }
+    "use strict";
+    const video = document.getElementById("video");
+    const constraints = {
+        video: {
+            width: 300,
+            height: 250,
+        },
+    };
+    //access webcam
+    async function init() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            handleSuccess(stream);
+        } catch (e) {
+            console.error();
+        }
+    }
+    //success
+    function handleSuccess(stream) {
+        window.stream = stream;
+        video.srcObject = stream;
+    }
+
+    function closeWebcam() {
+        // can also use getAudioTracks() or getVideoTracks()
+        var track = stream.getTracks()[0];  // if only one media track
+        // ...
+        track.stop();
+
+    }
+
+    // load init function
+    init();
+</script>
 </body>
 </html>

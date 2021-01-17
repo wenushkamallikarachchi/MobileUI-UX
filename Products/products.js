@@ -65,7 +65,7 @@ function productListing() {
     for (var i = 0; i < productList.length; i++) {
       product += '<div class="ui-block-a item">';
       product +=
-        '<a href="#" class="ui-btn ui-shadow" product-id=' +
+        '<a href="../Product/Product.html" data-ajax="false" class="ui-btn ui-shadow" product-id=' +
         productList[i].id +
         ">";
       product +=

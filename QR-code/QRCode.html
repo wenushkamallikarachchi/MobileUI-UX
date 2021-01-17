@@ -18,7 +18,6 @@
     type="text/css" />
   <link href="http://s.w.org/wp-includes/css/dashicons.css?20150710" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../common.css" />
   <link rel="stylesheet" href="QRCode.css" />
 </head>
 
@@ -54,26 +53,23 @@
 
         <div class="message-content">
           <p class="message">
-            You will recieve points when your friend scans your QR code
+            You will recieve points when your friends scan your QR code
           </p>
         </div>
       </div>
     </div>
 
-    <div data-role="footer" data-id="foo1" data-position="fixed">
+    <div data-position="fixed">
 
       <div class="product-nav">
-        <!-- <a href="" class="ui-btn" id="cart-btn-iphone">
-              <img src="../icons/cart-icon.png" width="5%"> &nbsp; <span>Add to cart</span>
-            </a> -->
         <div data-role="navbar" id="navbar">
           <div class="navigation">
-            <img src="../images/home.png" />
-            <img src="../images/cart.png" />
-            <img src="../images/offer.png" />
-            <img src="../images/rubic.png" />
+            <img id="home-icon" src="../images/home.png" />
+            <img id="cart-icon" src="../images/cart.png" />
+            <img id="promo-icon" src="../images/offer.png" />
+            <img id="game-icon" src="../images/rubic.png" />
             <div class="nav-active">
-              <img class="nav-account-icon" src="../images/user-white.png" />
+              <img id="user-icon" class="nav-account-icon" src="../images/user-white.png" />
               <span class="nav-account-text">Account</span>
             </div>
           </div>
@@ -105,6 +101,36 @@
     });
 
     qrcodeIPad.makeCode(username);
+
+    $('.back-icon').click(function () {
+      window.history.back();
+    });
+
+    $('#home-icon').click(function (){
+        window.location="../index.html";
+    });
+
+    $('#cart-icon').click(function (){
+        window.location="../Cart/Cart.html";
+    });
+
+    $('#promo-icon').click(function (){
+        window.location="../Promo/Promo.html";
+    });
+
+    $('#game-icon').click(function (){
+        window.location="../Game/Game.html";
+    });
+
+    $('#user-icon').click(function (){
+        var isUserLogged = localStorage.getItem("isuserLogged");
+        if(isUserLogged == "true") {
+            window.location="../account.html";
+        }
+        else {
+            window.location="../login.html";
+        }
+    });
   });
 </script>
 
