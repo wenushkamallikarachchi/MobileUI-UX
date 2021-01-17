@@ -56,8 +56,7 @@ $.fn.stars = function () {
 
 function commentsCard() {
   var review = "";
-  console.log("Printed");
-  if (addedArray.length != []) {
+  if (addedArray != []) {
     for (var i = 0; i < addedArray.length; i++) {
       $(function () {
         $(".stars").stars();

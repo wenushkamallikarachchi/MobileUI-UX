@@ -2,7 +2,7 @@
 $(document).ready(function () {
   var isUserLogged = localStorage.getItem("isuserLogged");
 
-  if(isUserLogged === "false") {
+  if(isUserLogged === "false" || isUserLogged === null) {
     var bannerElement = document.getElementById("slide1");
     var startShoppingButtonElement = document.getElementById("start-shopping-btn");
     if (bannerElement != null && startShoppingButtonElement != null) {
@@ -27,7 +27,6 @@ $(document).ready(function () {
   });
 	
 	$(".product-quntity .decrease-button").click(function () {
-    console.log("test");
       var text = $(this).parent().parent().parent().find('.count', '.product-quntity')
       if(parseInt(text.val()) > 1){
 			  text.val(parseInt(text.val()) - 1);  
@@ -85,7 +84,3 @@ function displayProducts() {
   }
   document.getElementById("autoWidth").innerHTML = output;
 }
-
-
-
-

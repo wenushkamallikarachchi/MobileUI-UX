@@ -26,7 +26,7 @@
     </div>
     <div class="card-name">
       <p>Name on Card</p>
-      <input type="text" class="text-box" data-role="none" required>
+      <input type="text" id="name" class="text-box" data-role="none">
     </div>
     <div class="card-details">
       <form action="/" method="post" id="payment-form" data-role="none">
@@ -40,17 +40,20 @@
         </div>
       </form>
     </div>
-    <div class="card-button">
-      <button class="payment-btn" id="submit" data-role="none">Pay Now</button>
+    <div class="card-button" id="card-button">
     </div>
     <div class="payment-image"> </div>
   </div>
-  <div class="navigation"> <img src="images/home.png" />
+  <div class="navigation"> 
+    <img src="images/home.png" id="home-icon"/>
     <div class="nav-active"> 
 		<img  class="nav-cart-icon" src="images/cart-white.png" /> 
 		<span class="nav-cart-text" >Cart</span> 
 	  </div>
-    <img src="images/offer.png" /> <img src="images/rubic.png" /> <img src="images/user.png" /> </div>
+    <img src="images/offer.png" id="promo-icon"/> 
+    <img src="images/rubic.png" id="game-icon"/> 
+    <img src="images/user.png" id="user-icon"/> 
+  </div>
   <div id="success-toast"> <span class="material-icons success-icon">check_circle</span>
     <p data-role="none">Payment successful !</p>
   </div>
@@ -59,5 +62,6 @@
   </div>
 </div>
 <script type="text/javascript" src="js/paymentscript.js" ></script>
+<script type="text/javascript" src="js/navigation.js" ></script>
 </body>
 </html>

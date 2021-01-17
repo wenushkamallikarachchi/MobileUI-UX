@@ -11,11 +11,11 @@ $(document).ready(function () {
     });
 
     $('#cart-icon').click(function (){
-        window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/cart.html';
+        window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/Cart/Cart.html';
     });
 
     $('#promo-icon').click(function (){
-        window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/promo.html';
+        window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/Promo/Promo.html';
     });
 
     $('#game-icon').click(function (){
@@ -24,12 +24,11 @@ $(document).ready(function () {
 
     $('#user-icon').click(function (){
         var isUserLogged = localStorage.getItem("isuserLogged");
-        if(isUserLogged == "true") {
-            window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/account.html';
-        }
-        else {
+        if(isUserLogged === "false" || isUserLogged === null) {
             window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/login.html';
         }
+        else {
+            window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/account.html';
+        }
     });
-
   });

@@ -492,6 +492,9 @@ ul {
   grid-area: card-button;
   background-color: white;
 }
+.payment-btn:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
 /* Account Page */
 .avatar {
   display: grid;
@@ -546,6 +549,10 @@ ul {
   grid-template-areas:
     "logout-icon logout-text logout-arrow";
   grid-area: logout;
+}
+/* Login Page */
+.signin-btn:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 /* Iphone Potrait */
 @media all and (device-width: 375px) {
