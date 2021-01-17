@@ -365,6 +365,7 @@ hr {
   width: 100%;
   height: 59px;
   box-shadow: 0 0 8px 3px rgb(0, 0, 0, 0.1);
+  margin-left: 1px;
 }
 .navigation > img {
   width: 19px;
@@ -405,8 +406,8 @@ hr {
 }
 .nav-account-text {
   float: right;
-  padding-right: 15px;
-  padding-top: 8px;
+  padding-right: 23px;
+  padding-top: 7px;
   color: white;
   font-weight: 600;
   font-size: 11px;

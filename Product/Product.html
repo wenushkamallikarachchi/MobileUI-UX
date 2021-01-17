@@ -13,13 +13,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
-    type='text/css'>
+  <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+    type='text/css'> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="http://s.w.org/wp-includes/css/dashicons.css?20150710" rel="stylesheet" type="text/css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 
- 
   <link rel="stylesheet" href="Product.css" />
   <link rel="stylesheet" href="../Rating/Rating.css" />
 </head>
@@ -39,60 +40,22 @@
     <div class="main" class="ui-content">
 
       <!--IPhone layout-->
-
       <div class="grid-container" id="iphone-grid">
-
-        <div class="product-image-iphone">
-          <img src="../images/beetroot.jpg" alt="beetroot">
-        </div>
-
-        <!--Product information-->
-        <div class="product-info-iphone">
-          <div class="ui-grid-a">
-            <div class="ui-block-a product-name-block">
-              <p class="product-name-iphone page-details">Beetroot</p>
-            </div>
-            <div class="ui-block-b">
-              <div class="flexbox">
-                <div class="fav-btn">
-                  <span href="" class="favme dashicons dashicons-heart"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="star-rating-avg">
-            <span class="stars" id="star-descrip" data-rating=4 data-num-stars="5"></span> <span
-              class="product-rating">0.4</span>
-          </div>
-          <p class="product-price sub-topic">Rs.55.00/KG</p>
-        </div>
-
-        <!--Product description-->
-        <div class="product-description-iphone">
-          <p class="description-heading sub-topic">Description</p>
-          <p class="page-details">Beetroots are a good source of nutrients, fibre, and many
-            plant compounds. Their health benefits include improved
-            heart health and enhanced exercise capacity, both of
-            which are attributed to their inorganic nitrate content.
-            Beets are sweet and especially delicious when mixed in
-            salads. </p>
-        </div>
-
-        <!--Comment section-->
+        <div class="product-image-iphone" id="product-image-iphone"></div>
+        <div class="product-info-iphone" id="product-info-iphone"></div>
+        <div class="product-description-iphone" id="product-description-iphone"></div>
         <div class="comment-section-iphone">
           <p class="rating-heading sub-topic">Comments</p>
           <div class="add-comment-iphone">
                 <a href="#popupComment" class="ui-btn ui-corner-all" data-rel="popup" data-position-to="window"
               data-transition="pop">Write a comment</a>
-          </div>
+          </div> 
           <div class="comment-display-iphone">
-            <ul data-role="listview" id="review-card">
-                  
-            </ul>
+            <ul data-role="listview" id="review-card"></ul>
           </div>
 
           <!--PopUp-->
-          <div data-role="popup" id="popupComment" data-theme="a" class="ui-corner-all" data-overlay-theme="b">
+          <div data-role="popup" id="popupComment" data-theme="a" class="ui-corner-all">
                 
             <a href="#" data-rel="back"
               class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
@@ -102,12 +65,12 @@
             <div class="rating-section">
 
               <div class="ui-field-contain">
-                <p class="page-details">Comment</p>
-                 <textarea id="popup-textarea" cols="40" rows="20" name="textarea-1" id="textarea-1"
+                <p class="popup-label">Comment</p>
+                 <textarea id="popup-textarea" cols="40" rows="20" name="textarea-1"
                   placeholder="Add your comment here.."></textarea>
               </div>
               <div class="ui-field-contain">
-                <p class="page-details">How is the product?</p>
+                <p class="popup-label">How is the product?</p>
                 <!--Rating stars-->
                 <div class="rating-stars">
                   <div class="inclass-div">
@@ -144,49 +107,19 @@
           </div>
         </div>
       </div>
+      <!--IPhone layout end-->
 
       <!--IPad layout-->
-
       <div class="grid-container" id="ipad-grid">
-        <fieldset class="ui-grid-a product-detail-section">
-           <div class="ui-block-a ipad-column1">
-            <img src="../images/beetroot.jpg" alt="beetroot">
-          </div>
-          <div class="ui-block-b ipad-column2">
-            <div class="product-details">
-              <div class="ui-grid-a">
-                <div class="ui-block-a product-name-block">
-                  <p class="product-name page-details">Beetroot</p>
-                </div>
-                <div class="ui-block-b">
-                  <div class="flexbox">
-                    <div class="fav-btn">
-                      <span href="" class="favme dashicons dashicons-heart"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="star-rating-avg">
-                <span class="stars" data-rating=4 data-num-stars="5"></span> <span class="product-rating">0.4</span>
-              </div>
-              <p class="product-price sub-topic">Rs.55.00/KG</p><br>
-              <p class="description-heading sub-topic">Description</p>
-              <p class="product-description page-details">Beetroots are a good source of nutrients, fibre, and many
-                plant compounds. Their health benefits include improved
-                heart health and enhanced exercise capacity, both of
-                which are attributed to their inorganic nitrate content.
-                Beets are sweet and especially delicious when mixed in
-                salads. </p>
-            </div>
-          </div>
-        </fieldset>
+        <div class="ui-grid-a product-detail-section" id="product-detail-ipad">
+        </div>
 
         <div class="grid-container">
           <fieldset class="ui-grid-a comment-section">
 
             <!--Rating section-->
              <div class="ui-block-a ipad-column1">
-              <p class="rating-heading sub-topic">Rate Us!</p>
+              <p class="rating-heading-ipad sub-topic">Rate Us!</p>
 
               <!--Rating stars-->
               <div class="rating-stars">
@@ -218,7 +151,7 @@
               </div>
               <form method="post"></form>
               <div class="ui-field-contain">
-                    <textarea id="ipad-textarea" cols="40" rows="20" name="comment" id="textarea-1"
+                    <textarea id="ipad-textarea" cols="40" rows="20" name="comment"
                   placeholder="What do you think of this product?"></textarea>
               </div>
               <div class="ui-field-contain">
@@ -232,32 +165,8 @@
             <!--Comment display section-->
             <div class="ui-block-b ipad-column2">
               <div class="comment-display">
-                <ul data-role="listview">
-                      <li class="comment-details-ipad">
-                    <fieldset class="ui-grid-a product-detail-section-ipad">
-                       <div class="ui-block-a comment-display-grid1">
-                        <img class="user-avatar-ipad" src="../images/user-picture.jpg">
-                      </div>
-                      <div class="ui-block-b comment-display-grid2">
-                        <p class="user-name-ipad">John Peter</p>
-                        <div class="rating-ipad"></div>
-                        <p class="user-comment-ipad">“Good Product!”</p>
-                      </div>
-                    </fieldset>
-                  </li><br>
-
-                  <li class="comment-details-ipad">
-                    <fieldset class="ui-grid-a product-detail-section-ipad">
-                       <div class="ui-block-a comment-display-grid1">
-                        <img class="user-avatar-ipad" src="../images/user-picture.jpg">
-                      </div>
-                      <div class="ui-block-b comment-display-grid2">
-                        <p class="user-name-ipad">John Peter</p>
-                        <div class="rating-ipad"></div>
-                        <p class="user-comment-ipad">“Good Product!”</p>
-                      </div>
-                    </fieldset>
-                  </li>
+                <ul data-role="listview" id="review-card-ipad">
+                     
                 </ul>
                  
               </div>
@@ -265,84 +174,114 @@
           </fieldset>
         </div>
       </div>
-
+      <!--IPad layout end-->
 
     </div>
 
+    <!--Page footer-->
     <div class="page-footer">
       <img id="footer-iphone-portrait" src="../images/navigation-iphone-portrait.jpg" />
       <img id="footer-iphone-landscape" src="../images/navigation-iphone-landscape.jpg" />
       <img id="footer-ipad-portrait" src="../images/navigation-ipad-portrait.jpg" />
       <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
     </div>
-
-    <div data-role="footer" data-id="foo1" data-position="fixed">
-
-      <div class="product-nav">
-        <!-- <a href="" class="ui-btn" id="cart-btn-iphone">
-          <img src="../icons/cart-icon.png" width="5%"> &nbsp; <span>Add to cart</span>
-        </a> -->
-        <div class="share-favourites" disabled> <img src="../icons/cart-icon.png">&nbsp; <span>Add to cart</span>
+    
+    <!-- <div class="share-favourites"><img src="images/forward-arrow-icon.png"> <span>Add to cart</span></div>  -->
+    <!--Navigation-->
+      
+    <div class="nav-bar">
+     <div class="add-to-cart" id="add-to-cart"><span>Add to cart</span></div>
+      <div class="nav-items">
+        <div class="nav-active">
+          <img id="home-icon" class="nav-account-icon" src="../images/home-white.png" />
+          <span class="nav-account-text">Home</span>
         </div>
-        <div data-role="navbar" id="navbar">
-          <div class="navigation">
-            <div class="nav-active">
-              <img class="nav-account-icon" src="../images/home-white.png" />
-              <span class="nav-account-text">Home</span>
-            </div>
-            <img src="../images/cart.png" />
-            <img src="../images/offer.png" />
-            <img src="../images/rubic.png" />
-            <img src="../images/user.png" />
-          </div>
-        </div>
+        <img id="cart-icon" src="../images/cart.png" />
+        <img id="promo-icon" src="../images/offer.png" />
+        <img id="game-icon" src="../images/rubic.png" />
+        <img id="user-icon" src="../images/user.png" />
 
-      </div>
     </div>
+      <!-- <div class="navigation" style="display: flex; flex-direction: row;">
+        
+          <div class="nav-active">
+            <img id="home-icon" class="nav-account-icon" src="../images/home-white.png" />
+            <span class="nav-account-text">Home</span>
+          </div>
+          <img id="cart-icon" src="../images/cart.png" />
+          <img id="promo-icon" src="../images/offer.png" />
+          <img id="game-icon" src="../images/rubic.png" />
+          <img id="user-icon" src="../images/user.png" />
+      </div> -->
+
+         
+          
+    <!--Navigation end-->
+
   </div>
 
   <div id="success-toast">
-    <p data-role="none">Successfully transferred 100 points!</p>
-  </div>
-  <div id="error-toast"> <span class="material-icons error-icon">cancel</span>
-    <p data-role="none">Email not delivered!</p>
+    <p data-role="none">Successfully added to the cart!</p>
   </div>
 </body>
 
 <script>
-  $(".share-favourites").click(function () {
-    showSuccessToast();
-  });
 
+  $(document).ready(function () {
+    $('.back-icon').click(function () {
+      window.history.back();
+    });
+
+    $('#home-icon').click(function (){
+        window.location="../index.html";
+    });
+
+    $('#cart-icon').click(function (){
+        window.location="../Cart/Cart.html";
+    });
+
+    $('#promo-icon').click(function (){
+        window.location="../Promo/Promo.html";
+    });
+
+    $('#game-icon').click(function (){
+        window.location="../Game/Game.html";
+    });
+
+    $('#user-icon').click(function (){
+        var isUserLogged = localStorage.getItem("isuserLogged");
+        if(isUserLogged == "true") {
+            window.location="../account.html";
+        }
+        else {
+            window.location="../login.html";
+        }
+    });
+
+
+
+
+  $('#add-to-cart').click(function () {
+    showSuccessToast();
+    });
+  });
 
   function showSuccessToast() {
-    var x = document.getElementById("success-toast");
-    x.className = "show";
-    setTimeout(function () {
-      x.className = x.className.replace("show", "");
-    }, 3000);
-  }
+  var x = document.getElementById("success-toast");
+  x.className = "show";
+  setTimeout(function () {
+    x.className = x.className.replace("show", "");
+    window.location="../Cart/Cart.html";
+  }, 3000);
+}
 
-  $('.favme').click(function () {
-    $(this).toggleClass('active');
-    localStorage.setItem("favorites", "beetroot");
-  });
 
-  /* when a user clicks, toggle the 'is-animating' class */
-  $(".favme").on('click touchstart', function () {
-    $(this).toggleClass('is_animating');
-  });
-
-  /*when the animation is over, remove the class*/
-  $(".favme").on('animationend', function () {
-    $(this).toggleClass('is_animating');
-  });
 </script>
 
-</html>
-</script>
-</script>
 <script type="text/javascript" src="../data.json"></script>
+<script type="text/javascript" src="../Product/data/products.json" ></script> 
 <script type="text/javascript" src="../script.js"></script>
+<script type="text/javascript" src="product-iphone-script.js"></script>
+<script type="text/javascript" src="product-ipad-script.js"></script>
 
 </html>

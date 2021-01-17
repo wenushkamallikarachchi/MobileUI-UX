@@ -2,6 +2,23 @@
   margin: 5%;
   padding: 0 0 10px 5px;
   font-size: 35px;
+  font-family: "Gilroy";
+}
+
+  .sub-topic {
+      font-family: "Proza Libre";
+      font-size: 18px;
+      color: #707070;
+  }
+  .page-details {
+      font-family: "Open Sans";
+      font-size: 15px;
+      width: 100%;
+      text-align: justify;
+  }
+
+#page-body {
+  background-color: white;
 }
 
 .page-sub-heading {

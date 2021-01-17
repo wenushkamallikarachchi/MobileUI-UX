@@ -3,6 +3,26 @@
   padding: 0 0 10px 5px;
 }
 
+#page-body {
+  background-color: white;
+}
+  .page-heading{
+      font-family: "Gilroy";
+      font-size: 35px;
+  }
+      .sub-topic {
+          font-family: "Proza Libre";
+          font-size: 18px;
+          color: #707070;
+      }
+      .page-details {
+          font-family: "Open Sans";
+          font-size: 15px;
+          width: 100%;
+          text-align: justify;
+      }
+
+
 h2 {
   text-align: center;
   padding-top: 10%;
@@ -175,6 +195,7 @@ h2 {
 
   .main-container-iphone {
     margin-top: -3% !important;
+    margin-bottom: 100px !important;
   }
 
   .qrcode-display {
@@ -228,6 +249,7 @@ h2 {
   .main-container-ipad {
     display: block;
     margin-top: -2% !important;
+    margin-bottom: 120px;
   }
 
   .Logo > img {
