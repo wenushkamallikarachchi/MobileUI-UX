@@ -84,7 +84,3 @@ function displayProducts() {
   }
   document.getElementById("autoWidth").innerHTML = output;
 }
-
-
-
-
