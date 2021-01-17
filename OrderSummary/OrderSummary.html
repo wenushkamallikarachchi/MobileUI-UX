@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> About </title>
+        <title> Order Summary </title>
+        <link rel="shortcut icon" href="../images/Logo.png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -172,7 +173,11 @@
                     </div>  
                     <div class="wrapper-grid4">
                         <button class="ui-btn back"> Back to Products </button>
-                        
+                        <script>
+                            $('.ui-btn.back').click(function(){
+                                window.location.href='../Products/Products.html';
+                            })
+                        </script>
                     </div>
                 </div>
                 <div class="footer">
