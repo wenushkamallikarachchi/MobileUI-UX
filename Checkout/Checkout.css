@@ -1,9 +1,20 @@
 /*iphone-styles*/
-.page-heading {
+/* .page-heading {
+  margin: 5%;
+  padding: 0 0 10px 5px;
+} */
+#page-body {
+  background-color: white;
+}
+.page-heading{
+  font-family: "Gilroy";
+  font-size: 35px;
   margin: 5%;
   padding: 0 0 10px 5px;
 }
-
+.play-points-section {
+  height: 230px;
+}
 .delivery-details-section,
 .play-points-section,
 .order-summary-section {
@@ -11,7 +22,6 @@
   box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
   border-radius: 2em 0 0 0;
 }
-
 .section-title {
   background-color: #8cc63f;
   font-family: "Proza Libre";
@@ -64,14 +74,14 @@ input {
   padding-right: 6%;
 }
 
-.pay-btn > button {
+.pay-btn > .ui-btn  {
   background-color: #8cc63f !important;
   color: white !important;
   font-family: "Proza Libre" !important;
   font-size: 14px;
   font-weight: 600;
   border-radius: 2em 0 2em 0 !important;
-  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
+  /* box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1); */
   height: 20%;
   width: 100%;
   /* margin: 0 0 0 5%; */
@@ -419,6 +429,9 @@ hr {
     padding-left: 3.5%;
     padding-top: 1.5%;
   }
+  .play-points-section {
+    height: 270px;
+  }
 
   .summary-table-content td {
     padding-top: 2%;
@@ -456,6 +469,10 @@ hr {
 
   .summary-table-content td {
     font-size: 14px;
+  }
+
+  .play-points-section {
+    height: 290px;
   }
 
   .delivery-content > label {
@@ -503,6 +520,9 @@ hr {
     display: block;
   }
 
+  .play-points-section {
+    height: 230px;
+  }
   #footer-iphone-landscape {
     display: none;
   }
