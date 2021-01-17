@@ -35,7 +35,23 @@
                         <p class="page-heading"> PRODUCTS </p>
                         <div class="filter-wrapper">
                             <span class="iconify filter" data-icon="bx:bx-filter" data-inline="true"></span> 
-                            <p class="filter-text"> Sort & Filter </p> 
+                            <a href="#popupBasic" data-rel="popup" class="popUp" data-transition="popup">Sort & Filter</a>
+                            <div data-role="popup" id="popupBasic" class="sort">
+                              <label class="sortLbl">Sort</label>
+                              <div class="hr1"></div>
+                          
+                              <label class="lblfilter" id="vegitable">Vegetables</label>
+                              <label class="lblfilter" id="meat"> Meat</label>
+                              <label class="lblfilter" id="snack"> Snacks</label>
+                              <label class="lblfilter" id="beverage"> Beverage</label>
+                              <div class="hr1"></div>
+                              <div class="row">
+                                <div class="column">
+                                  <button class="fltr" onclick="displaySorted()">Filter</button>
+                                </div>
+                                <div class="column"><button onclick="resetSort()" class="reset">Reset</button></div>
+                              </div>
+                            </div>
                         </div>
                     </div> </br></br></br></br></br>
                     <div id="ui-grid-a"></div>
@@ -73,6 +89,21 @@
             </div>
         </div>
     </body>
+    <script>
+     $("#vegitable").click(function () {
+    console.log("hello");
+    localStorage.setItem("type", "vegitable");
+  });
+  $("#meat").click(function () {
+    localStorage.setItem("type", "meat");
+  });
+  $("#snack").click(function () {
+    localStorage.setItem("type", "snack");
+  });
+  $("#beverage").click(function () {
+    localStorage.setItem("type", "beverage");
+  });
+    </script>
     <script type="text/javascript" src="../data.json"></script>
     <script type="text/javascript" src="./products.js"></script>
 </html>

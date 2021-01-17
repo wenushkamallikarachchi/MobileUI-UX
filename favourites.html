@@ -9,6 +9,7 @@
 <!-- the three things that jQuery Mobile needs to work -->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <link rel="stylesheet" href="css/style.css">
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -28,7 +29,23 @@
   </div>
   <div class="filter">
     <div class="product-filter"> <img class="filter-icon" src="images/filter.png"/>
-      <p>Sort & Filter</p>
+      <a href="#popupBasic" data-rel="popup" class="popUp" data-transition="popup">Sort & Filter</a>
+      <div data-role="popup" id="popupBasic" class="sort">
+        <label class="sortLbl">Sort</label>
+        <div class="hr1"></div>
+        <label class="lblfilter">Category</label>
+        <label class="lblfilter" id="vegitable">Vegetables</label>
+        <label class="lblfilter" id="meat"> Meat</label>
+        <label class="lblfilter" id="snack"> Fruits</label>
+        <label class="lblfilter" id="beverage"> Beverage</label>
+        <div class="hr1"></div>
+        <div class="row">
+          <div class="column">
+            <button class="fltr" onclick="displaySorted()">Filter</button>
+          </div>
+          <div class="column"><button class="reset">Reset</button></div>
+        </div>
+      </div>
       <p id="checkbox-label">Select All</p>
     </div>
     <label class="select-all-checkbox">
