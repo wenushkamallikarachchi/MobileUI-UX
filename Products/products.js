@@ -10,7 +10,7 @@ $(document).ready(function () {
 var productList = JSON.parse(data);
 // reset funtion for sorting
 function resetSort() {
-  $("#vegitable").css("text-align", "right");
+  $("#vegetable").css("text-align", "right");
   $("#meat").css("text-align", "right");
   $("#snack").css("text-align", "right");
   $("#beverage").css("text-align", "right");

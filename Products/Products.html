@@ -40,7 +40,7 @@
                               <label class="sortLbl">Sort</label>
                               <div class="hr1"></div>
                           
-                              <label class="lblfilter"id="vegitable">Vegetables</label>
+                              <label class="lblfilter"id="vegetable">Vegetables</label>
                               <label class="lblfilter" id="meat"> Meat</label>
                               <label class="lblfilter" id="snack"> Snacks</label>
                               <label class="lblfilter" id="beverage"> Beverage</label>
@@ -90,10 +90,9 @@
         </div>
     </body>
     <script>
-     $("#vegitable").click(function () {
-
+     $("#vegetable").click(function () {
     localStorage.setItem("type", "vegitable");
-    $("#vegitable").css('text-align','left');
+    $("#vegetable").css('text-align','left');
   });
   $("#meat").click(function () {
     localStorage.setItem("type", "meat");
