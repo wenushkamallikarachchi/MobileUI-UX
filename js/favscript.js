@@ -5,7 +5,6 @@ $(document).ready(function () {
   if (selectedProducts != null) {
     localStorage.removeItem("selected");
   }
-  displayFavourites();
 
   var favouriteProducts = [];
   favouriteProducts.push("product1");
@@ -13,12 +12,8 @@ $(document).ready(function () {
   favouriteProducts.push("product5");
   favouriteProducts.push("product4");
 
-  favouriteProducts.push("product2");
-  favouriteProducts.push("product6");
-  favouriteProducts.push("product7");
-  favouriteProducts.push("product8");
-
   localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
+  displayFavourites();
 
   $(".favourite-product-quantity .favourite-product-increase-button").click(function () {
     var text = $(this).parent().parent().parent().find('.count', '.favourite-product-quantity')

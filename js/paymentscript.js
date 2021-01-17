@@ -42,6 +42,13 @@ card.on('change', function (event) {
 
 $("#submit").click(function (event) {
   event.preventDefault();
+  var name = $('#name').val();
+
+  $("span.error").remove();
+
+  if (name === "") {
+    $('#name').after('<span style="color: red" class="error">Please enter the name on the card!</span>');
+  }
 
   stripe.createToken(card).then(function (result) {
     if (result.error) {
