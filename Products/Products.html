@@ -35,7 +35,23 @@
                         <p class="page-heading"> PRODUCTS </p>
                         <div class="filter-wrapper">
                             <span class="iconify filter" data-icon="bx:bx-filter" data-inline="true"></span> 
-                            <p class="filter-text"> Sort & Filter </p> 
+                            <a href="#popupBasic" data-rel="popup" class="popUp" data-transition="popup">Sort & Filter</a>
+                            <div data-role="popup" id="popupBasic" class="sort">
+                              <label class="sortLbl">Sort</label>
+                              <div class="hr1"></div>
+                          
+                              <label class="lblfilter"id="vegetable">Vegetables</label>
+                              <label class="lblfilter" id="meat"> Meat</label>
+                              <label class="lblfilter" id="snack"> Snacks</label>
+                              <label class="lblfilter" id="beverage"> Beverage</label>
+                              <div class="hr1"></div>
+                              <div class="row">
+                                <div class="column">
+                                  <button class="fltr" onclick="displaySorted()">Filter</button>
+                                </div>
+                                <div class="column"><button onclick="resetSort()" class="reset">Reset</button></div>
+                              </div>
+                            </div>
                         </div>
                     </div> </br></br></br></br></br>
                     <div id="ui-grid-a"></div>
@@ -73,6 +89,24 @@
             </div>
         </div>
     </body>
+    <script>
+     $("#vegetable").click(function () {
+    localStorage.setItem("type", "vegitable");
+    $("#vegetable").css('text-align','left');
+  });
+  $("#meat").click(function () {
+    localStorage.setItem("type", "meat");
+    $("#meat").css('text-align','left');
+  });
+  $("#snack").click(function () {
+    localStorage.setItem("type", "snack");
+    $("#snack").css('text-align','left');
+  });
+  $("#beverage").click(function () {
+    localStorage.setItem("type", "beverage");
+    $("#beverage").css('text-align','left');
+  });
+    </script>
     <script type="text/javascript" src="../data.json"></script>
     <script type="text/javascript" src="./products.js"></script>
 </html>

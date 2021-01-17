@@ -162,13 +162,12 @@ p {
   width: 350px !important;
   height: 230px !important;
 }
-.leaderboard{
+.leaderboard {
   display: none;
   border-radius: 20px 0px;
   border-top: 5px solid #8cc63f;
   border-left: 5px solid #8cc63f;
   box-shadow: 3px 3px 7px #888888;
-  padding: 10px 0;
   width: 350px !important;
   height: 230px !important;
 }
@@ -180,8 +179,10 @@ p {
   margin-right: 70px;
 } */
 .progressbar {
-  width: 250px;
-  margin-left: 25px;
+  width: 90%;
+  margin-left: 15px;
+  background-color: #efefef;
+  border-radius: 20px;
 }
 .arrow_down {
   width: 30px;
@@ -194,9 +195,10 @@ p {
   transform: rotate(-48deg);
 }
 .bar {
-  
+  border-radius: 20px;
+  width: 1%;
+  height: 25px;
   background-color: #8cc63f;
-  color: white;
 }
 
 .wrapper-grid3 .wrapper-order p {
@@ -299,6 +301,41 @@ p {
   font-family: "Open Sans";
   font-size: 12px;
 }
+.footerGame {
+  grid-area: footer;
+  bottom: 0;
+  width: 100%;
+  margin: 10px 0 20px -16px;
+}
+.navigationGame {
+  grid-area: navigation;
+  background-color: white;
+  position: fixed;
+  border-radius: 20px 20px 0px 0px;
+  border-top: 1px solid #e1e1e1;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . . .";
+  width: 100%;
+  height: 59px;
+  box-shadow: 0 0 8px 3px rgb(0, 0, 0, 0.1);
+  margin-left: -16px;
+}
+.navigationGame > img {
+  width: 19px;
+  height: 19px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  padding-top: 20px;
+}
+#footerGame-ipad-landscape,
+#footerGame-ipad-portrait {
+  display: none;
+}
 
 /* Media query */
 /* iphone landscape */
@@ -313,11 +350,17 @@ p {
   .popUp {
     margin-left: 450px !important;
   }
-
 }
 
 /* ipad portrait */
 @media (min-width: 768px) {
+
+  #footerGame-ipad-portrait{
+    margin-top: 13%;
+    display: block;
+  }
+
+
   .iconify.orders {
     display: inline;
     width: 20px;
@@ -383,7 +426,7 @@ p {
   }
   .leaderboard {
     display: block;
-   margin-top: 20px !important;
+    margin-top: 100px !important;
   }
   .popUp {
     display: none;
@@ -397,7 +440,7 @@ p {
     padding-left: 10px;
     font-size: 15px;
   }
-  .playPoint table{
+  .playPoint table {
     display: none;
   }
 }
@@ -433,15 +476,14 @@ p {
     margin-left: 350px !important;
     margin-bottom: -100px !important;
     width: 500px !important;
-height: 250px !important;
+    height: 250px !important;
   }
-  .intro p{
-  
+  .intro p {
     font-size: 20px;
   }
   .leaderboard {
-   width: 600px !important;
-   margin-top: 20px !important;
+    width: 600px !important;
+    margin-top: 20px !important;
   }
   .playPoint {
     margin-top: -200px !important;
@@ -449,4 +491,12 @@ height: 250px !important;
     width: 290px;
     height: 190px;
   }
+  #footerGame-ipad-portrait{
+    display: none;
+  }
+  #footerGame-ipad-landscape{
+    margin-top: 5%;
+    display: block;
+  }
+
 }
