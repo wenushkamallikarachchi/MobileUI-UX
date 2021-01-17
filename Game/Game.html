@@ -214,25 +214,23 @@
 
     <script>
       // navigation
+      var loc = window.location.pathname;
+      var locNew = loc.split("Game");
       $("#home-icon").click(function () {
-        window.location = "/index.html";
+        window.location.href = locNew[0] + "index.html";
       });
-      $("#game-icon").click(function () {
-        window.location = "/Game/Game.html";
+      $("#cart-icon").click(function () {
+        window.location.href = locNew[0] + "Cart/Cart.html";
       });
       $("#promo-icon").click(function () {
-        window.location = "/Promo/Promo.html";
-      });
-
-      $("#cart-icon").click(function () {
-        window.location = "/Cart/Cart.html";
+        window.location.href = locNew[0] + "Promo/Promo.html";
       });
 
       $("#user-icon").click(function () {
-        window.location = "/account.html";
+        window.location.href = locNew[0] + "account.html";
       });
       $("#shareCredit").click(function () {
-        window.location = "/Checkout/Checkout.html";
+        window.location = "Checkout/Checkout.html";
       });
       //game implementation
       function date() {

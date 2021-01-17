@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
-    <link rel="shortcut icon" href="../images/Logo.png">
+    <link rel="shortcut icon" href="../images/Logo.png" />
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link
@@ -176,9 +176,8 @@
           />
         </div>
       </div>
-    
     </div>
-    
+
     <div data-role="footer" class="ui-bar">
       <div class="navigation">
         <img src="../images/home.png" id="home-icon" />
@@ -196,23 +195,27 @@
       </div>
     </div>
     <script>
- 
+      var loc = window.location.pathname;
+      $("#promo-icon").click(function () {
+        var locNew = loc.split("Cart");
+        window.location.href = locNew[0] + "Promo/Promo.html";
+      });
       $("#checkout").click(function () {
-        window.location = "/Checkout/Checkout.html";
+        var locNew = loc.split("Cart");
+        window.location.href = locNew[0] + "Checkout/Checkout.html";
       });
       $("#home-icon").click(function () {
-        window.location = "/index.html";
+        var locNew = loc.split("Cart");
+        window.location.href = locNew[0] + "index.html";
       });
       $("#game-icon").click(function () {
-        window.location = "/Game/Game.html";
-      });
-      $("#promo-icon").click(function () {
-        window.location = "/Promo/Promo.html";
+        var locNew = loc.split("Cart");
+        window.location.href = locNew[0] + "Game/Game.html";
       });
       $("#user-icon").click(function () {
-        window.location = "/account.html";
+        var locNew = loc.split("Cart");
+        window.location.href = locNew[0] + "account.html";
       });
-      
     </script>
   </body>
 </html>
