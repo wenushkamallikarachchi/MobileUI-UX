@@ -6,13 +6,17 @@ $(document).ready(function () {
     localStorage.removeItem("selected");
   }
 
-  var favouriteProducts = [];
+  var favouriteProducts = JSON.parse(localStorage.getItem("favourites"));
+  if (favouriteProducts == null) {
+    var favouriteProducts = [];
   favouriteProducts.push("product1");
   favouriteProducts.push("product3");
   favouriteProducts.push("product5");
   favouriteProducts.push("product4");
 
   localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
+  }
+  
   displayFavourites();
 
   $(".favourite-product-quantity .favourite-product-increase-button").click(function () {
