@@ -14,9 +14,9 @@
       href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
     />
     <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  /> 
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -24,14 +24,14 @@
     <link rel="stylesheet" href="../common.css" />
   </head>
   <body>
-    <div data-role="page" id="promo">
-       <div class="header">
+    <div data-role="page" id="page-body">
+      <div class="header">
         <span class="material-icons back-icon"> navigate_before </span>
         <div class="Logo"><img src="../images/Logo.png" /></div>
-      </div> 
+      </div>
       <div data-role="main" class="ui-content">
-        <p class="page-heading">PROMOS</p>
-        <p  class="promoLine">Browse Through The Lastest Promos</p>
+        <p class="page-head">PROMO</p>
+        <p class="promoLine">Browse Through The Lastest Promos</p>
         <div class="outlets">
           <ul>
             <img
@@ -41,7 +41,7 @@
               alt="arrow"
             />
             <label class="labalDeal" id="deal"> Fresh Mart Deals</label>
-  
+
             <img
               onclick="changeDeals()"
               class="arrow_forward"
@@ -50,9 +50,8 @@
             />
           </ul>
         </div>
-        <img class="next" src="../icons/arrow_circle.png"/>
+        <img class="next" src="../icons/arrow_circle.png" />
         <div class="ui-block-a item">
-        
           <a href="#" class="ui-btn ui-shadow">
             <img
               class="product-img1"
@@ -75,17 +74,16 @@
               onclick="qty()"
               alt=""
             />
-  
-            <button class="ui-btn cart-btn" >
+
+            <button class="ui-btn cart-btn">
               <span
-              
                 class="iconify cart"
                 data-icon="ic:outline-add-shopping-cart"
                 data-inline="false"
               ></span>
             </button>
           </a>
-  
+
           <a href="#" class="ui-btn ui-shadow product-item1">
             <img
               class="product-img1"
@@ -102,12 +100,7 @@
               src="../icons/min_circle.png"
               alt=""
             />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-            <img
-              src="../icons/plus_circle.png"
-              id="minus"
-              onclick="qty()"
-              alt=""
-            />
+            <img src="../icons/plus_circle.png" id="minus" alt="" />
             <button class="ui-btn cart-btn">
               <span
                 class="iconify cart"
@@ -116,7 +109,7 @@
               ></span>
             </button>
           </a>
-  
+
           <a
             href="#"
             class="ui-btn ui-shadow product-item2"
@@ -137,12 +130,7 @@
               src="../icons/min_circle.png"
               alt=""
             />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-            <img
-              src="../icons/plus_circle.png"
-              id="minus"
-              onclick="qty()"
-              alt=""
-            />
+            <img src="../icons/plus_circle.png" id="minus" />
             <button class="ui-btn cart-btn">
               <span
                 class="iconify cart"
@@ -152,38 +140,71 @@
             </button>
           </a>
         </div>
-        <button class="ui-btn ui-shadow viewAll">
+        <button class="ui-btn viewAll">
           <a class="view" href="../Products/Products.html"> View All</a>
         </button>
+
+        <div class="footer">
+          <img
+            id="footer-iphone-portrait"
+            src="../images/navigation-iphone-portrait.jpg"
+          />
+          <img
+            id="footer-iphone-landscape"
+            src="../images/navigation-iphone-landscape.jpg"
+          />
+          <img
+            id="footerPromo-ipad-portrait"
+            src="../images/navigation-ipad-portrait.jpg"
+          />
+          <img
+            id="footerPromo-ipad-landscape"
+            src="../images/navigation-ipad-landscape.jpg"
+          />
+        </div>
       </div>
-     
+    </div>
+    <div data-role="footerPromo" class="ui-bar">
+      <div class="navigation">
+        <img src="../images/home.png" id="home-icon" />
+
+        <img src="../images/cart.png" id="cart-icon" />
+
+        <div class="nav-active">
+          <img
+            class="nav-account-icon"
+            src="../images/offer-white.png"
+            id="promo-icon"
+          />
+          <span class="nav-carted-text">Promo</span>
+        </div>
+        <img src="../images/rubic.png" id="game-icon" />
+        <img src="../images/user.png" id="user-icon" />
+      </div>
     </div>
     <script>
+      $("#home-icon").click(function () {
+        window.location = "/index.html";
+      });
+      $("#cart-icon").click(function () {
+        window.location = "/Cart/Cart.html";
+      });
+      $("#game-icon").click(function () {
+        window.location = "/Game/Game.html";
+      });
+      // $("#promo-icon").click(function () {
+      //   window.location = "/Promo/Promo.html";
+      // });
+      $("#user-icon").click(function () {
+        window.location = "/account.html";
+      });
+
       function changeDeals() {
         var x = document.getElementById("deal");
         if (x.innerHTML === "Fresh Mart Deals") {
           x.innerHTML = "Credit Card Deals";
         } else {
           x.innerHTML = "Fresh Mart Deals";
-        }
-      }
-
-      function qty() {
-        var numButtons = 10;
-        for (var i = 1; i <= numButtons; ++i) {
-          $("#add" + i).click(function () {
-            var currentVal = parseInt($("qty" + i).val());
-            if (!isNaN(currentVal)) {
-              $("qty" + i).val(currentVal + 1);
-            }
-          });
-
-          $("#minus" + i).click(function () {
-            var currentVal = parseInt($("qty" + i).val());
-            if (!isNaN(currentVal) && currentVal > 0) {
-              $("#qty" + i).val(currentVal - 1);
-            }
-          });
         }
       }
     </script>
