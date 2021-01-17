@@ -55,10 +55,13 @@
               <span class="medal"><img id="medal-iphone" src="../icons/medal-disabled.png" width="10%"> </span>
               <span id="points-iphone"></span>
             </div>
-            <div class="w3-light-grey w3-round progressbar">
-              <div id="progressbar-iphone" class="w3-container w3-round bar-iphone" style="width: 0%; height: 8px">
+            <div class="progressbar-iphone">	
+              <div
+              id="progressbar-iphone"
+              class="bar-iphone"
+              style="width: 0%; height: 8px"
+              ></div>
               </div>
-            </div>
             <div class="instruction-section">
               <p class="instructions" id="instruction-iphone">Redeem your points to get a discount</p>
             </div>
@@ -197,10 +200,13 @@
                   <span class="medal"><img id="medal-ipad" src="../icons/medal-disabled.png" width="10%"> </span>
                   <span id="points-ipad"></span>
                 </div>
-                <div class="w3-light-grey w3-round progressbar">
-                  <div id="progressbar-ipad" class="w3-container w3-round bar-ipad" style="width: 0%; height: 8px">
+                <div class="progressbar-ipad">	
+                  <div
+                  id="progressbar-ipad"
+                  class="bar-ipad"
+                  style="width: 0%; height: 8px"
+                  ></div>
                   </div>
-                </div>
                 <div class="instruction-section">
                   <p class="instructions" id="instructions-ipad">Redeem your points to get a discount</p>
                 </div>
@@ -349,9 +355,9 @@
 
 <script>
   $(document).ready(function () {
-    // var points = localStorage.get("points");
+   var points = localStorage.get("points");
 
-    let points = 100;
+    //let points = 80;
     let playPrice = 0;
 
     document.getElementById("play-price-ipad").innerHTML = "Rs." + playPrice +".00";
@@ -361,7 +367,7 @@
 
     document.getElementById("points-ipad").innerHTML = points + "/100";
 
-
+   
     $("#progressbar-ipad").css("width", points + "%");
     $("#progressbar-iphone").css("width", points + "%");
 

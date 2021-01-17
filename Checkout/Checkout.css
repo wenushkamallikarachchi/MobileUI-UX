@@ -222,13 +222,17 @@ hr {
   margin-top: 5%;
 }
 
-.bar-ipad {
+.bar-iphone, .bar-ipad {	
+	border-radius: 20px;
+	width: 1%;
+	height: 25px;
   background-color: black;
-  color: white;
-}
-
+  margin-top: 10px;
+	}
+  
 .points-label {
   margin-top: 3%;
+  padding-left: 12px;
 }
 
 .points {
@@ -269,22 +273,25 @@ hr {
   font-size: 18px;
 }
 
-#progressbar-ipad {
-  width: 250px;
-  margin-top: 5%;
-}
+.progressbar-ipad {	
+	width: 90%;
+	margin-left: 15px;
+	background-color: #efefef;
+	border-radius: 20px;
+	}
+
 
 /* iphone play*/
 
-#progressbar-iphone {
-  width: 250px;
-  margin-top: 5%;
-}
+.progressbar-iphone {	
+	width: 90%;
+	margin-left: 15px;
+	background-color: #efefef;
+	border-radius: 20px;
+	}
 
-.bar-iphone {
-  background-color: black;
-  color: white;
-}
+
+
 
 .page-footer {
   margin-bottom: 17% !important;
@@ -407,7 +414,7 @@ hr {
 .nav-account-text {
   float: right;
   padding-right: 23px;
-  padding-top: 7px;
+  padding-top: px;
   color: white;
   font-weight: 600;
   font-size: 11px;
