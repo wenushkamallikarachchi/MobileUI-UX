@@ -1,9 +1,9 @@
 $(document).ready(function () {
     // localStorage.setItem("product", "product1");
   
-    // var selectedProductIdIpad = localStorage.getItem("product");
-    // displayProductIpad(selectedProductIdIpad);
-    // commentsCardIpad();
+    var selectedProductIdIpad = localStorage.getItem("product-page-item");
+    displayProductIpad(selectedProductIdIpad);
+    commentsCardIpad();
 
 
 $('.favme').click(function() {
@@ -108,9 +108,9 @@ function commentsCardIpad() {
         $(".stars").stars();
       });
 
-      // reviewIpad += '<li class="comment-details-ipad"><div class="product-detail-section-ipad">';
-      // reviewIpad += '<div class="avatar-ipad"><img class="user-avatar-ipad" src="' + addedArrayIpad[i].image + '" alt = "profile-picture">';
-      // reviewIpad += '<div class="name-ipad"><span class="user-name-ipad">' + addedArrayIpad[i].name + '</span>';
+      reviewIpad += '<li class="comment-details-ipad"><div class="product-detail-section-ipad">';
+      reviewIpad += '<div class="avatar-ipad"><img class="user-avatar-ipad" src="' + addedArrayIpad[i].image + '" alt = "profile-picture">';
+      reviewIpad += '<div class="name-ipad"><span class="user-name-ipad">' + addedArrayIpad[i].name + '</span>';
       reviewIpad += '<div class="date-ipad"><span class="stars" data-rating="' + addedArrayIpad[i].rating + '" data-num-stars="5" ></span>Posted on ' + addedArrayIpad[i].date + ' </div><br><p class="user-comment-ipad">"' + addedArrayIpad[i].comment + '"</p> </div></div></div></li><br>';
     }
   }

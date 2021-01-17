@@ -9,6 +9,9 @@ body {
   background: black;
   margin: 0;
 }
+.qr-toast > p {
+  margin-left: 0px !important;
+}
 
 h1 {
   color: white;
@@ -82,7 +85,7 @@ video {
     width: 400px !important;
   }
 
-  #success-toast {
+  #qr-toast {
     left: 30% !important;
   }
 }
@@ -107,10 +110,6 @@ video {
     margin-top: -8% !important;
     margin-bottom: 3% !important;
   }
-
-  #success-toast {
-    left: 33% !important;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -133,57 +132,28 @@ video {
   #popupVideo {
     width: 430px !important;
   }
-
-  #success-toast {
-    left: 38% !important;
-  }
 }
 
-#success-toast {
+#qr-toast {
+  height: 43px;
   visibility: hidden;
   background-color: #333333b5;
   color: #fff;
   text-align: center;
   border-radius: 2px;
-  padding: 17px;
+  padding: 5px;
   position: fixed;
   z-index: 1;
-  left: 14%;
+  left: 22%;
   bottom: 30px;
   font-size: 14px;
   border-radius: 20px 0px;
   border: 1px solid #707070;
 }
-#success-toast.show {
+#qr-toast.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-#success-toast > p {
-  display: inline;
-}
-#error-toast {
-  visibility: hidden;
-  background-color: #333333b5;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
-  border-radius: 20px 0px;
-  border: 1px solid red;
-}
-#error-toast.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-#error-toast > p {
-  display: inline;
 }
 @-webkit-keyframes fadein {
   from {

@@ -13,14 +13,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
-    type='text/css'> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+    type='text/css'>
   <link href="http://s.w.org/wp-includes/css/dashicons.css?20150710" rel="stylesheet" type="text/css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 
+ 
   <link rel="stylesheet" href="Product.css" />
   <link rel="stylesheet" href="../Rating/Rating.css" />
 </head>
@@ -40,23 +39,29 @@
     <div class="main" class="ui-content">
 
       <!--IPhone layout-->
+
       <div class="grid-container" id="iphone-grid">
+
         <div class="product-image-iphone" id="product-image-iphone"></div>
         <div class="product-info-iphone" id="product-info-iphone"></div>
         <div class="product-description-iphone" id="product-description-iphone"></div>
+
+        <!--Comment section-->
         <div class="comment-section-iphone">
           <p class="rating-heading sub-topic">Comments</p>
           <div class="add-comment-iphone">
-                <a href="#popupComment" class="ui-btn ui-corner-all" data-rel="popup" data-position-to="window"
+                <a href="#popupComment" class="ui-btn ui-corner-all" data-rel="popup" data-position-to="window"
               data-transition="pop">Write a comment</a>
-          </div> 
+          </div>
           <div class="comment-display-iphone">
-            <ul data-role="listview" id="review-card"></ul>
+            <ul data-role="listview" id="review-card">
+                  
+            </ul>
           </div>
 
           <!--PopUp-->
-          <div data-role="popup" id="popupComment" data-theme="a" class="ui-corner-all">
-                
+          <div data-role="popup" id="popupComment" data-theme="a" class="ui-corner-all" data-overlay-theme="b">
+                
             <a href="#" data-rel="back"
               class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
             <div class="popup-heading">
@@ -65,12 +70,12 @@
             <div class="rating-section">
 
               <div class="ui-field-contain">
-                <p class="popup-label">Comment</p>
-                 <textarea id="popup-textarea" cols="40" rows="20" name="textarea-1"
+                <p class="page-details">Comment</p>
+                 <textarea id="popup-textarea" cols="40" rows="20" name="textarea-1" id="textarea-1"
                   placeholder="Add your comment here.."></textarea>
               </div>
               <div class="ui-field-contain">
-                <p class="popup-label">How is the product?</p>
+                <p class="page-details">How is the product?</p>
                 <!--Rating stars-->
                 <div class="rating-stars">
                   <div class="inclass-div">
@@ -107,9 +112,9 @@
           </div>
         </div>
       </div>
-      <!--IPhone layout end-->
 
       <!--IPad layout-->
+
       <div class="grid-container" id="ipad-grid">
         <div class="ui-grid-a product-detail-section" id="product-detail-ipad">
         </div>
@@ -118,8 +123,8 @@
           <fieldset class="ui-grid-a comment-section">
 
             <!--Rating section-->
-             <div class="ui-block-a ipad-column1">
-              <p class="rating-heading-ipad sub-topic">Rate Us!</p>
+             <div class="ui-block-a ipad-column1">
+              <p class="rating-heading sub-topic">Rate Us!</p>
 
               <!--Rating stars-->
               <div class="rating-stars">
@@ -151,11 +156,11 @@
               </div>
               <form method="post"></form>
               <div class="ui-field-contain">
-                    <textarea id="ipad-textarea" cols="40" rows="20" name="comment"
+                    <textarea id="ipad-textarea" cols="40" rows="20" name="comment" id="textarea-1"
                   placeholder="What do you think of this product?"></textarea>
               </div>
               <div class="ui-field-contain">
-                    <button type="submit" id="submit-1"
+                    <button type="submit" id="submit-1"
                   class="ui-shadow ui-btn ui-corner-all comment-btn-ipad">Submit</button>
               </div>
               </form>
@@ -168,56 +173,37 @@
                 <ul data-role="listview" id="review-card-ipad">
                      
                 </ul>
-                 
+                 
               </div>
             </div>
           </fieldset>
         </div>
       </div>
-      <!--IPad layout end-->
+
 
     </div>
 
-    <!--Page footer-->
     <div class="page-footer">
       <img id="footer-iphone-portrait" src="../images/navigation-iphone-portrait.jpg" />
       <img id="footer-iphone-landscape" src="../images/navigation-iphone-landscape.jpg" />
       <img id="footer-ipad-portrait" src="../images/navigation-ipad-portrait.jpg" />
       <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
     </div>
-    
-    <!-- <div class="share-favourites"><img src="images/forward-arrow-icon.png"> <span>Add to cart</span></div>  -->
-    <!--Navigation-->
-      
+
     <div class="nav-bar">
-     <div class="add-to-cart" id="add-to-cart"><span>Add to cart</span></div>
-      <div class="nav-items">
-        <div class="nav-active">
-          <img id="home-icon" class="nav-account-icon" src="../images/home-white.png" />
-          <span class="nav-account-text">Home</span>
-        </div>
-        <img id="cart-icon" src="../images/cart.png" />
-        <img id="promo-icon" src="../images/offer.png" />
-        <img id="game-icon" src="../images/rubic.png" />
-        <img id="user-icon" src="../images/user.png" />
-
-    </div>
-      <!-- <div class="navigation" style="display: flex; flex-direction: row;">
-        
-          <div class="nav-active">
-            <img id="home-icon" class="nav-account-icon" src="../images/home-white.png" />
-            <span class="nav-account-text">Home</span>
-          </div>
-          <img id="cart-icon" src="../images/cart.png" />
-          <img id="promo-icon" src="../images/offer.png" />
-          <img id="game-icon" src="../images/rubic.png" />
-          <img id="user-icon" src="../images/user.png" />
-      </div> -->
-
-         
-          
-    <!--Navigation end-->
-
+      <div class="add-to-cart" id="add-to-cart"><span>Add to cart</span></div>
+       <div class="nav-items">
+         <div class="nav-active">
+           <img id="home-icon" class="nav-account-icon" src="../images/home-white.png" />
+           <span class="nav-account-text">Home</span>
+         </div>
+         <img id="cart-icon" src="../images/cart.png" />
+         <img id="promo-icon" src="../images/offer.png" />
+         <img id="game-icon" src="../images/rubic.png" />
+         <img id="user-icon" src="../images/user.png" />
+ 
+     </div>
+ 
   </div>
 
   <div id="success-toast">
@@ -281,5 +267,6 @@
 <script type="text/javascript" src="product-iphone-script.js"></script>
 <script type="text/javascript" src="product-ipad-script.js"></script>
 <script type="text/javascript" src="./script.js"></script>
+
 
 </html>
