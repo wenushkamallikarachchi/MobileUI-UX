@@ -12,8 +12,13 @@ $(document).ready(function () {
   $(document).on("click", ".ui-block-a.item a", function () {
     var product_id = $(this).attr("product-id");
     localStorage.setItem("product-page-item", product_id);
+
+      window.location.href='../Product/Product.html';
+  // })
   });
 });
+
+
 // reset funtion for sorting
 function resetSort() {
   $("#vegetable").css("text-align", "right");
@@ -36,7 +41,7 @@ function displaySorted() {
       if (productList[i].type == sortType) {
         console.log("Iphone portrait");
         product += '<div class="ui-block-a item">';
-        product += '<a href="#" class="ui-btn ui-shadow">';
+        product += '<a href="../Product/Product.html" class="ui-btn ui-shadow">';
         product +=
           '<img class="product-img1" src="' +
           productList[i].url +

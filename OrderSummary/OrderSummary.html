@@ -21,7 +21,7 @@
 
         <div data-role="page" id="page-body">
                 <div class="header"> 
-                    <span class="material-icons back-icon"> navigate_before </span>
+                    <!-- <span class="material-icons back-icon"> navigate_before </span> -->
                     <div class="Logo"> <img src="../images/Logo.png"> </div>
                 </div>
             <div class="main" class="ui-content">
@@ -190,14 +190,31 @@
         </div>
         <div data-role="footer" class="ui-bar">
             <div class="navigation">
-                <img src="../images//home.png" />
+                <img src="../images//home.png" id="home-icon"/>
                 <div class="nav-active">
-                    <img class="nav-account-icon" src="../images/cart-white.png" />
+                    <img class="nav-account-icon" src="../images/cart-white.png" id="cart-icon" />
                     <span class="nav-account-text">Cart</span>
                 </div>
-                <img src="../images/offer.png" />
-                <img src="../images/rubic.png" />
-                  <img src="../images/user.png" />
+                <img src="../images/offer.png" id="promo-icon" />
+                <img src="../images/rubic.png" id="game-icon"/>
+                  <img src="../images/user.png" id="user-icon"/>
+                  
+                <script>
+                    $('#home-icon').click(function(){
+                        window.location.href='../index.html';
+                    })
+                    $('#promo-icon').click(function(){
+                                window.location.href='../Promo/Promo.html';
+                    })
+                    $('#game-icon').click(function(){
+                        window.location.href='../Game/Game.html';
+                    })
+                    $('#user-icon').click(function(){
+                        window.location.href='../account.html';
+                    })
+                </script>
+
+                  
             </div>
         </div>
     </body>
