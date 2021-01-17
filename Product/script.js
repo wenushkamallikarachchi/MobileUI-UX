@@ -16,6 +16,7 @@ $(".popup-btn").click(function () {
     comment: message,
     date: getCurrentDate()
   };
+  console.log(test);
   reviewsList.push(test);
   addedArray = reviewsList.reverse();
   commentsCard();
@@ -40,6 +41,7 @@ $("#stars li").on("click", function () {
 
   ratingValue = parseInt($("#stars li.selected").last().data("value"), 10);
 });
+
 $.fn.stars = function () {
   return $(this).each(function () {
     const rating = $(this).data("rating");
@@ -65,7 +67,7 @@ function commentsCard() {
       review += '<li class="comment-details-iphone"><div class="product-detail-section-iphone">';
       review += '<div class="avatar-iphone"><img class="user-avatar-iphone" src="' + addedArray[i].image + '" alt = "profile-picture">';
       review += '<div class="name-iphone"><span class="user-name-iphone">' + addedArray[i].name + '</span>';
-      review += '<div class="date-iphone"><span class="stars" id="" data-rating="' + addedArray[i].rating + '" data-num-stars="5" ></span>Posted on ' + addedArray[i].date + ' </div><br><p class="user-comment-iphone">"' + addedArray[i].comment + '"</p> </div></div></div></li><br>';
+      review += '<div class="date-iphone"><span class="stars" data-rating="' + addedArray[i].rating + '" data-num-stars="5" ></span>Posted on ' + addedArray[i].date + ' </div><br><p class="user-comment-iphone">"' + addedArray[i].comment + '"</p> </div></div></div></li><br>';
     }
   }
   document.getElementById("review-card").innerHTML = review;

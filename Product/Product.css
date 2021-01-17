@@ -129,6 +129,12 @@
   height: 20%;
   width: 50%;
   margin: 0 auto;
+  
+}
+
+.comment-btn-ipad:focus{
+background-color: #8cc63f !important;
+color: white;
 }
 
 .comment-details-iphone img {
@@ -323,7 +329,7 @@
   margin-left: 0;
 }
 
-.stars {
+.stars-iphone,.stars {
   font-size: 12px !important;
 }
 
@@ -353,9 +359,9 @@
   margin-top: 20px;
 }
 
-#checked-fav {
+/* #checked-fav {
   color: #e80057;
-}
+} */
 
 
 #page-body {

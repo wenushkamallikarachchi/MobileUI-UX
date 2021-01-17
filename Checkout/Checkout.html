@@ -355,7 +355,39 @@
 
 <script>
   $(document).ready(function () {
-   var points = localStorage.get("points");
+
+  localStorage.setItem("points","80");
+   var points = localStorage.getItem("points");
+
+   $('.back-icon').click(function () {
+      window.history.back();
+    });
+
+    $('#home-icon').click(function (){
+        window.location="../index.html";
+    });
+
+    $('#cart-icon').click(function (){
+        window.location="../Cart/Cart.html";
+    });
+
+    $('#promo-icon').click(function (){
+        window.location="../Promo/Promo.html";
+    });
+
+    $('#game-icon').click(function (){
+        window.location="../Game/Game.html";
+    });
+
+    $('#user-icon').click(function (){
+        var isUserLogged = localStorage.getItem("isuserLogged");
+        if(isUserLogged == "true") {
+            window.location="../account.html";
+        }
+        else {
+            window.location="../login.html";
+        }
+    });
 
     //let points = 80;
     let playPrice = 0;
@@ -407,35 +439,7 @@
       $("#progressbar-iphone").css("width", points + "%");
     })
 
-    $('.back-icon').click(function () {
-      window.history.back();
-    });
-
-    $('#home-icon').click(function (){
-        window.location="../index.html";
-    });
-
-    $('#cart-icon').click(function (){
-        window.location="../Cart/Cart.html";
-    });
-
-    $('#promo-icon').click(function (){
-        window.location="../Promo/Promo.html";
-    });
-
-    $('#game-icon').click(function (){
-        window.location="../Game/Game.html";
-    });
-
-    $('#user-icon').click(function (){
-        var isUserLogged = localStorage.getItem("isuserLogged");
-        if(isUserLogged == "true") {
-            window.location="../account.html";
-        }
-        else {
-            window.location="../login.html";
-        }
-    });
+   
 
   });
 </script>

@@ -258,9 +258,6 @@
         }
     });
 
-
-
-
   $('#add-to-cart').click(function () {
     showSuccessToast();
     });
@@ -269,6 +266,7 @@
   function showSuccessToast() {
   var x = document.getElementById("success-toast");
   x.className = "show";
+  
   setTimeout(function () {
     x.className = x.className.replace("show", "");
     window.location="../Cart/Cart.html";

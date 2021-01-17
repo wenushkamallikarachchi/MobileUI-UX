@@ -2,8 +2,8 @@
 $(document).ready(function () {
   // var productList = JSON.parse(data);
   // localStorage.setItem("productList",productList)
-  
-  localStorage.setItem("product", "product1");
+  var favouriteList =[];
+  localStorage.setItem("product", "product8");
 
   var selectedProductId = localStorage.getItem("product");
   displayProduct(selectedProductId);
@@ -11,7 +11,30 @@ $(document).ready(function () {
 
 $('.favme-iphone').click(function() {
   $(this).toggleClass('active');
-  localStorage.setItem('favourites',selectedProductId);
+  var favouriteProducts = JSON.parse(localStorage.getItem("favourites"));
+
+  if(favouriteProducts != null){
+    var storedFavouriteProducts = [];
+    storedFavouriteProducts = favouriteProducts;
+      storedFavouriteProducts.push("product2");
+      localStorage.setItem("favourites", JSON.stringify(storedFavouriteProducts));
+  }
+  else{
+    var favouriteProducts = [];
+      favouriteProducts.push("product2");
+      localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
+  }
+  // if (favouriteProducts != null) {​​​​​
+  //   var storedFavouriteProducts = [];
+  //   storedFavouriteProducts = favouriteProducts;
+  //   storedFavouriteProducts.push("product2");
+  //   localStorage.setItem("favourites", JSON.stringify(storedFavouriteProducts));
+  // }​​​​​ 
+  // else {​​​​​
+  //   var favouriteProducts = [];
+  //   favouriteProducts.push("product2");
+  //   localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
+  // }​​​​​
 });
 
 /* when a user clicks, toggle the 'is-animating' class */
@@ -23,6 +46,8 @@ $(".favme-iphone").on('click touchstart', function(){
 $(".favme-iphone").on('animationend', function(){
   $(this).toggleClass('is_animating');
 });
+
+
   //displayComments(selectedProductId);
 
   //var productList = JSON.parse(data);
