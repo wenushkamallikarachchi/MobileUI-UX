@@ -1,4 +1,12 @@
 // JavaScript Document
+
+$(document).ready(function () {
+  var total = localStorage.getItem("cartTotal");
+  if(total == null) {
+    total = "1101.00"
+  }
+  document.getElementById("card-button").innerHTML = '<button class="payment-btn" id="submit" data-role="none">Pay Rs.'+ total +'</button>';
+});
 // Create a Stripe client.
 var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -49,21 +57,23 @@ $("#submit").click(function (event) {
   if (name === "") {
     $('#name').after('<span style="color: red" class="error">Please enter the name on the card!</span>');
   }
-
-  stripe.createToken(card).then(function (result) {
-    if (result.error) {
-      // Inform the user if there was an error.
-      var errorElement = document.getElementById('card-errors');
-      errorElement.textContent = result.error.message;
-    } else {
-      showSuccessToast();
-      var loc = window.location.pathname;
-      console.log(loc.substring(0, loc.lastIndexOf('/')));
-      setTimeout(function () {
-        window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/account.html';
-      }, 3000);
-    }
-  });
+  else{
+    stripe.createToken(card).then(function (result) {
+      if (result.error) {
+        showErrorToast();
+        // Inform the user if there was an error.
+        var errorElement = document.getElementById('card-errors');
+        errorElement.textContent = result.error.message;
+      } else {
+        showSuccessToast();
+        var loc = window.location.pathname;
+        console.log(loc.substring(0, loc.lastIndexOf('/')));
+        setTimeout(function () {
+          window.location.href = loc.substring(0, loc.lastIndexOf('/')) + '/OrderSummary/OrderSummary.html';
+        }, 3000);
+      }
+    });
+  }
 });
 
 function showSuccessToast() {
