@@ -1,13 +1,12 @@
 // JavaScript Document
-
 $(document).ready(function () {
   var total = localStorage.getItem("cartTotal");
   if(total == null) {
     total = "1101.00"
   }
   document.getElementById("card-button").innerHTML = '<button class="payment-btn" id="submit" data-role="none">Pay Rs.'+ total +'</button>';
-});
-// Create a Stripe client.
+
+  // Create a Stripe client.
 var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 // Create an instance of Elements.
@@ -91,3 +90,4 @@ function showErrorToast() {
     x.className = x.className.replace("show", "");
   }, 3000);
 }
+});
