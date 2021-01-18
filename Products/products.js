@@ -5,16 +5,10 @@ $(document).ready(function () {
   pagination();
   productListing();
 
-  // $(".iconify.increase").click(function() {
-  //     alert('I got a click');
-  // });
-
   $(document).on("click", ".ui-block-a.item a", function () {
     var product_id = $(this).attr("product-id");
     localStorage.setItem("product-page-item", product_id);
-
       window.location.href='../Product/Product.html';
-  // })
   });
 });
 
@@ -70,7 +64,7 @@ function productListing() {
     for (var i = 0; i < productList.length; i++) {
       product += '<div class="ui-block-a item">';
       product +=
-        '<a href="../Product/Product.html" data-ajax="false" class="ui-btn ui-shadow" product-id=' +
+        '<a href="#" class="ui-btn ui-shadow" product-id=' +
         productList[i].id +
         ">";
       product +=

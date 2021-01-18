@@ -114,7 +114,7 @@ $(".popup-btn").click(function () {
   var message = $("#popup-textarea").val();
   var test = {
     id: 4,
-    name: "Marry Ann",
+    name: "David Spade",
     image: "../images/user-picture.jpg",
     rating: ratingValue,
     comment: message,
