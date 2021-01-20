@@ -174,7 +174,9 @@
   font-family: "Open Sans";
   font-size: 12px;
 }
-
+.brSpeIpad{
+  display: none;
+}
 /* Media query */
 /* iphone landscape */
 @media (min-width: 667px) {
@@ -241,6 +243,12 @@
     display: none;
   }
   #footerCart-ipad-portrait {
+    display: block;
+  }
+  .ipadCart{
+    margin-top: 140px;
+  }
+  .brSpeIpad{
     display: block;
   }
 }
