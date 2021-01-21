@@ -9,9 +9,6 @@ body {
   background: black;
   margin: 0;
 }
-.qr-toast > p {
-  margin-left: 0px !important;
-}
 
 h1 {
   color: white;
@@ -63,13 +60,15 @@ video {
   padding: 2% !important;
   margin-left: 1% !important;
   margin-top: 1.3% !important;
+  border-radius: 0 0 2em 2em !important;
+  width: 300px;
 }
 .popup-heading {
   text-align: center;
   font-family: Proza Libre;
   background-color: #8cc63f !important;
   padding: 5% !important;
-  height: 15px !important;
+  height: 0 !important;
   margin-top: -5%;
   border-radius: 2em 0 0 0 !important ;
 }
@@ -78,83 +77,33 @@ video {
   margin-top: -1.5%;
 }
 
-@media (min-width: 667px) {
-  video {
-    margin-left: -14% !important;
-    height: 250px !important;
-    width: 400px !important;
-  }
-
-  #qr-toast {
-    left: 30% !important;
-  }
-}
-
-@media (min-width: 768px) {
-  video {
-    height: 390px !important;
-    margin-left: 1% !important;
-    margin-top: -20px !important;
-  }
-
-  #popupVideo {
-    width: 430px !important;
-  }
-
-  .scan-btn button {
-    height: 70px !important;
-    width: 70px !important;
-    border-radius: 12em;
-    font-size: 16px;
-    margin-left: 43% !important;
-    margin-top: -8% !important;
-    margin-bottom: 3% !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  video {
-    height: 390px !important;
-    margin-left: 1.3% !important;
-    margin-top: -20px !important;
-  }
-
-  .scan-btn button {
-    height: 60px !important;
-    width: 60px !important;
-    border-radius: 12em;
-    font-size: 16px;
-    margin-left: 43% !important;
-    margin-top: -8% !important;
-    margin-bottom: 3% !important;
-  }
-
-  #popupVideo {
-    width: 430px !important;
-  }
-}
-
 #qr-toast {
-  height: 43px;
   visibility: hidden;
   background-color: #333333b5;
   color: #fff;
   text-align: center;
   border-radius: 2px;
-  padding: 5px;
+  padding: 17px;
   position: fixed;
   z-index: 1;
-  left: 22%;
+  left: 14%;
   bottom: 30px;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 20px 0px;
   border: 1px solid #707070;
+  width: 60% !important;
+  font-family: "calibri" !important;
 }
 #qr-toast.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
+#qr-toast > p {
+  display: inline;
+  color: white;
+}
+
 @-webkit-keyframes fadein {
   from {
     bottom: 0;
@@ -202,3 +151,75 @@ video {
   margin-bottom: 1%;
   border: #8cc63f;
 }
+
+
+@media (min-width: 667px) {
+  video {
+    /* margin-left: -14% !important;
+    height: 250px !important; */
+    width: 300px !important;
+  }
+
+  #qr-toast {
+    left: 110px !important;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  video {
+    width: 565px !important;
+  }
+
+  #popupVideo {
+    width: 600px !important;
+  }
+
+  .scan-btn button {
+    height: 70px !important;
+    width: 70px !important;
+    border-radius: 12em;
+    font-size: 16px;
+    margin-left: 43% !important;
+    margin-top: -8% !important;
+    margin-bottom: 3% !important;
+  }
+
+  #qr-toast {
+    left: 140px !important;
+    font-size: 16px;
+  }
+  .popup-heading{
+    margin-top: -3% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  video {
+    width: 755px !important;
+  }
+
+  .scan-btn button {
+    height: 60px !important;
+    width: 60px !important;
+    border-radius: 12em;
+    font-size: 16px;
+    margin-left: 43% !important;
+    margin-top: -8% !important;
+    margin-bottom: 3% !important;
+  }
+
+  #popupVideo {
+    width: 800px !important;
+  }
+
+  #qr-toast {
+    left: 180px !important;
+    font-size: 16px;
+  }
+
+  .popup-heading{
+    margin-top: -2% !important;
+  }
+}
+

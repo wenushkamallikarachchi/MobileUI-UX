@@ -193,7 +193,7 @@ color: white;
 }
 
 .date-ipad {
-  font-size: 6px;
+  font-size: 8px !important;
   font-family: "open sans";
   color: #7f7f7f;
   font-weight: bold;
@@ -278,13 +278,13 @@ color: white;
 .avatar-ipad img {
   margin-top: 6px;
   margin-left: 5% !important;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 }
 
 .user-name-ipad {
   font-family: "Open Sans" !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
 }
 
 #star-descrip{
@@ -309,7 +309,7 @@ color: white;
   background-color: white !important;
   font-size: 15px !important;
   font-family: "Open Sans";
-  margin-top: -3% !important;
+  margin-top: 10px !important;
   padding-left: 4%;
 }
 
@@ -982,6 +982,10 @@ flexbox {
   .flexbox {
     margin-left: 85% !important;
   }
+  .rating-heading {
+    text-align: center;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -1033,11 +1037,19 @@ flexbox {
     margin-left: 85% !important;
     margin-top: 0;
   }
+  .rating-heading {
+    text-align: center;
+  }
+
 }
 
 @media (min-width: 1024px) {
   #iphone-grid {
     display: none;
+  }
+
+  .rating-heading {
+    text-align: center;
   }
 
   .product-name {
