@@ -24,17 +24,6 @@ $('.favme-iphone').click(function() {
       favouriteProducts.push(selectedProductId);
       localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
   }
-  // if (favouriteProducts != null) {​​​​​
-  //   var storedFavouriteProducts = [];
-  //   storedFavouriteProducts = favouriteProducts;
-  //   storedFavouriteProducts.push("product2");
-  //   localStorage.setItem("favourites", JSON.stringify(storedFavouriteProducts));
-  // }​​​​​ 
-  // else {​​​​​
-  //   var favouriteProducts = [];
-  //   favouriteProducts.push("product2");
-  //   localStorage.setItem("favourites", JSON.stringify(favouriteProducts));
-  // }​​​​​
 });
 
 /* when a user clicks, toggle the 'is-animating' class */
@@ -47,82 +36,8 @@ $(".favme-iphone").on('animationend', function(){
   $(this).toggleClass('is_animating');
 });
 
-
-  //displayComments(selectedProductId);
-
-  //var productList = JSON.parse(data);
-//   var ratingValue;
-
-// $(".popup-btn").click(function () {
-//   var userComment = $("#popup-textarea").val();
-//   var productFeedback = [];
-
-//   for (l = 0;l < productList.length; l++){
-//     if(productList[l].id == selectedProductId){
-//       productFeedback = productList[l].feedback;
-
-//       var feedbackObject = {
-//         username: "David Spade",
-//         image: "../images/avatar.png",
-//         comment: userComment,
-//         rating: ratingValue,
-//         date: getCurrentDate()
-//       }
-
-//       productFeedback.push(feedbackObject);
-//       localStorage.setItem('updatedProductList',productList);
-//       var updatedProductList =localStorage.getItem('updatedProductList');
-//       displayComments(selectedProductId,updatedProductList);
-//     }
-//   }
-
-
-  // reviewsList.push(test);
-  // addedArray = reviewsList.reverse();
-  // commentsCard();
 });
 
-// $("#stars li").on("click", function () {
-//   var onStar = parseInt($(this).data("value"), 10);
-//   var stars = $(this).parent().children("li.star");
-
-//   for (i = 0; i < stars.length; i++) {
-//     $(stars[i]).removeClass("selected");
-//   }
-
-//   for (i = 0; i < onStar; i++) {
-//     $(stars[i]).addClass("selected");
-//   }
-
-//   ratingValue = parseInt($("#stars li.selected").last().data("value"), 10);
-// });
-// $.fn.stars = function () {
-//   return $(this).each(function () {
-//     const rating = $(this).data("rating");
-//     const numStars = $(this).data("numStars");
-//     const fullStar = '<i class="fas fa-star"></i>'.repeat(Math.floor(rating));
-//     const halfStar =
-//       rating % 1 !== 0 ? '<i class="fas fa-star-half-alt"></i>' : "";
-//     const noStar = '<i class="far fa-star"></i>'.repeat(
-//       Math.floor(numStars - rating)
-//     );
-//     $(this).html(`${fullStar}${halfStar}${noStar}`);
-//   });
-// };
-
-// });
-
-// function getCurrentDate(){
-//   today = new Date();
-//   var dd = today.getDate();
-//   var mm = today.getMonth()+1; 
-//   var yyyy = today.getFullYear();
-
-//   if(dd<10) dd='0'+dd;
-//   if(mm<10) mm='0'+mm;  
-
-//   return (dd+'/'+mm+'/'+yyyy);
-// }
 
 function displayProduct(productId) {
   var products = JSON.parse(data);

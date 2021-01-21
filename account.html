@@ -14,6 +14,8 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
 <script src="https://js.stripe.com/v3/"></script>
+<script src="./qr.js"></script>
+<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </head>
 
 <body>
@@ -69,7 +71,7 @@
 	</div>
 		</a>
 	<a href="#popupVideo" data-rel="popup"
-	data-position-to="window">
+	data-position-to="window" id="openScan">
   <div class="share-credit">
 	<div class="share-credit-icon account-property-icon">
 	  <img src="images/shareCredit.png" alt="share-credit">
@@ -116,12 +118,9 @@
 		<div class="video-wrap">
 			<video id="video" playsinline autoplay></video>
 		</div>
-		<div class="scan-btn">
-			<button class="modal-button" id="scan-btn" data-role="none" type="submit">Scan</button>
-		</div>
 	</div>
 	<div id="qr-toast">
-        <p data-role="none">Successfully transferred 100 points!</p>
+        <p data-role="none" id="success-message"></p>
     </div>
 <!--		</div>-->
 <!--	<div class="footer"></div>-->
@@ -140,54 +139,40 @@
 <script type="text/javascript" src="js/navigation.js" ></script>
 <script>
 
-    $(document).ready(function () {
-        $("#scan-btn").click(function () {
-            document.getElementById("popupVideo").style.display = 'none';
-            showSuccessToast();
-            closeWebcam();
-        });
-    });
+$("#openScan").click(function(){
+    let scanner = new Instascan.Scanner({ video: document.getElementById('video') });
 
-    function showSuccessToast() {
+scanner.addListener('scan', function (content) {
+    var message = "Successfully transferred 100 points to "+content;
+    $("#popupVideo").css("display","none");
+    
+    showSuccessToast(message);
+
+});
+
+Instascan.Camera.getCameras().then(function (cameras) {
+
+  if (cameras.length > 0) {
+     scanner.start(cameras[0]);
+  } else {
+    console.error('No cameras found.');
+  }
+
+}).catch(function (e) {
+  console.error(e);
+});
+})
+    function showSuccessToast(message) {
+        console.log(message);
         var x = document.getElementById("qr-toast");
-		x.className = "show";
+
+        $("#success-message").text(message);
+        x.className = "show";
+
         setTimeout(function () {
             x.className = x.className.replace("show", "");
         }, 3000);
     }
-    "use strict";
-    const video = document.getElementById("video");
-    const constraints = {
-        video: {
-            width: 300,
-            height: 250,
-        },
-    };
-    //access webcam
-    async function init() {
-        try {
-            const stream = await navigator.mediaDevices.getUserMedia(constraints);
-            handleSuccess(stream);
-        } catch (e) {
-            console.error();
-        }
-    }
-    //success
-    function handleSuccess(stream) {
-        window.stream = stream;
-        video.srcObject = stream;
-    }
-
-    function closeWebcam() {
-        // can also use getAudioTracks() or getVideoTracks()
-        var track = stream.getTracks()[0];  // if only one media track
-        // ...
-        track.stop();
-
-    }
-
-    // load init function
-    init();
 </script>
 </body>
 </html>

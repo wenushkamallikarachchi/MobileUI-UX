@@ -115,9 +115,9 @@ $(".popup-btn").click(function () {
   var test = {
     id: 4,
     name: "David Spade",
-    image: "../images/user-picture.jpg",
-    rating: ratingValue,
+    image: "../images/avatar.png",
     comment: message,
+    rating: ratingValue
   };
   reviewsList.push(test);
   addedArray = reviewsList.reverse();
@@ -162,19 +162,13 @@ function commentsCard() {
       review += '<li class="comment-details-iphone">';
       review += '<fieldset class="ui-grid-a product-detail-section-iphone">';
       review += '<div class="ui-block-a avatar-iphone">';
-      review +=
-        '<img class="user-avatar-iphone" src="../images/user-picture.jpg" alt = "profile-picture"> </div>';
+      review += '<img class="user-avatar-iphone" src="../images/user-picture.jpg" alt = "profile-picture"> </div>';
       review += '<div class="ui-block-b user-comment-display">';
       review += '<p class="user-name-iphone">' + addedArray[i].name + "</p>";
-      review +=
-        '<span class="stars" data-rating="' +
-        addedArray[i].rating +
-        '" data-num-stars="5" ></span>';
+      review += '<span class="stars" data-rating="' + addedArray[i].rating + '" data-num-stars="5" ></span>';
       review += '<div class="rating-iphone"></div>';
-      review +=
-        '<p class="user-comment-iphone">“' +
-        addedArray[i].comment +
-        "”  </p> </div> </fieldset> </li> <br>";
+      review += '<p class="user-comment-iphone">“' + addedArray[i].comment +
+"”  </p> </div> </fieldset> </li> <br>";
     }
   }
   document.getElementById("review-card").innerHTML = review;
