@@ -55,7 +55,6 @@ var ratingValueIpad;
 
 
 $(".comment-btn-ipad").click(function(){
-  console.log("clicked");
   var commentLocalListIpad = JSON.parse(localStorage.getItem("comments"));
   var userCommentIpad = $("#ipad-textarea").val();
   var commentObj = {
@@ -66,7 +65,6 @@ $(".comment-btn-ipad").click(function(){
     date: getCurrentDateIpad()
   }
   commentLocalListIpad.push(commentObj);
-  console.log(commentLocalListIpad);
   localStorage.setItem("comments", JSON.stringify(commentLocalListIpad));
   commentsCardIpad();
 })
@@ -103,7 +101,6 @@ $.fn.stars = function () {
 function commentsCardIpad(){
   var reviewIpad = "";
   var commentsIpad = JSON.parse(localStorage.getItem("comments")).reverse();
-
     for( var m = 0; m <commentsIpad.length ; m++){
       $(function() {
         $(".stars").stars();

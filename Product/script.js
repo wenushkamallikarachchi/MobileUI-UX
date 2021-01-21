@@ -1,10 +1,12 @@
-$(document).ready(function () {
-  commentsCard();
-});
-
 var reviewsList = JSON.parse(customer);
 var ratingValue;
-var addedArray = reviewsList;
+var productDisplayed = localStorage.getItem("product-page-item");
+
+$(document).ready(function () {
+  commentsCard();
+
+});
+
 
 $(".popup-btn").click(function () {
   var message = $("#popup-textarea").val();
@@ -14,12 +16,12 @@ $(".popup-btn").click(function () {
     image: "../images/avatar.png",
     comment: message,
     rating: ratingValue,
-    date: getCurrentDateIpad()
+    date: getCurrentDateIpad(),
+    productId: productDisplayed
   };
   reviewsList.push(test);
   addedArray = reviewsList.reverse();
   commentsCard();
-  $("#popup-textarea").val() = null
 });
 
 $("#stars li").on("click", function () {
@@ -52,21 +54,24 @@ $.fn.stars = function () {
 
 function commentsCard() {
   var review = "";
-  if (addedArray != []) {
-    for (var i = 0; i < addedArray.length; i++) {
-      $(function () {
-        $(".stars").stars();
-      });
-      review += '<li class="comment-details-iphone">';
-      review += '<fieldset class="ui-grid-a product-detail-section-iphone">';
-      review += '<div class="ui-block-a avatar-iphone">';
-      review += '<img class="user-avatar-iphone" src="../images/user-picture.jpg" alt = "profile-picture"> </div>';
-      review += '<div class="ui-block-b user-comment-display">';
-      review += '<p class="user-name-iphone">' + addedArray[i].name + "</p>";
-      review += '<div class="date-iphone"><span class="stars" data-rating="' + addedArray[i].rating + '" data-num-stars="5" ></span>Posted on ' + addedArray[i].date + ' </div>';
-      // review += '<div class="rating-iphone"></div>';
-      review += '<p class="user-comment-iphone">“' + addedArray[i].comment +
-"”  </p> </div> </fieldset> </li> <br>";
+  localStorage.setItem("comments-iphone",JSON.stringify(reviewsList));
+  var commentsIphone = JSON.parse(localStorage.getItem("comments-iphone"));
+  if (reviewsList != []) {
+    for (var i = 0; i < commentsIphone.length; i++) {
+      if(commentsIphone[i].productId === productDisplayed) {
+        $(function () {
+          $(".stars").stars();
+        });
+        review += '<li class="comment-details-iphone">';
+        review += '<fieldset class="ui-grid-a product-detail-section-iphone">';
+        review += '<div class="ui-block-a avatar-iphone">';
+        review += '<img class="user-avatar-iphone" src="../images/user-picture.jpg" alt = "profile-picture"> </div>';
+        review += '<div class="ui-block-b user-comment-display">';
+        review += '<p class="user-name-iphone">' + commentsIphone[i].name + "</p>";
+        review += '<div class="date-iphone"><span class="stars" data-rating="' + commentsIphone[i].rating + '" data-num-stars="5" ></span>Posted on ' + commentsIphone[i].date + ' </div>';
+        review += '<p class="user-comment-iphone">“' + commentsIphone[i].comment +
+  "”  </p> </div> </fieldset> </li> <br>";
+      }
     }
   }
   document.getElementById("review-card").innerHTML = review;
