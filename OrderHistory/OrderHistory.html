@@ -15,7 +15,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../common.css" />
   <link rel="stylesheet" href="OrderHistory.css" />
 </head>
 
@@ -180,20 +179,17 @@
       <img id="footer-ipad-landscape" src="../images/navigation-ipad-landscape.jpg" />
     </div>
 
-    <div data-role="footer" data-id="foo1" data-position="fixed">
+    <div data-position="fixed">
 
       <div class="product-nav">
-        <!-- <a href="" class="ui-btn" id="cart-btn-iphone">
-            <img src="../icons/cart-icon.png" width="5%"> &nbsp; <span>Add to cart</span>
-          </a> -->
         <div data-role="navbar" id="navbar">
           <div class="navigation">
-            <img src="../images/home.png" />
-            <img src="../images/cart.png" />
-            <img src="../images/offer.png" />
-            <img src="../images/rubic.png" />
+            <img id="home-icon" src="../images/home.png" />
+            <img id="cart-icon" src="../images/cart.png" />
+            <img id="promo-icon" src="../images/offer.png" />
+            <img id="game-icon" src="../images/rubic.png" />
             <div class="nav-active">
-              <img class="nav-account-icon" src="../images/user-white.png" />
+              <img id="user-icon" class="nav-account-icon" src="../images/user-white.png" />
               <span class="nav-account-text">Account</span>
             </div>
           </div>
@@ -203,5 +199,39 @@
     </div>
   </div>
 </body>
+
+<script>
+  $(document).ready(function () {
+    $('.back-icon').click(function () {
+      window.history.back();
+    });
+
+    $('#home-icon').click(function (){
+        window.location="../index.html";
+    });
+
+    $('#cart-icon').click(function (){
+        window.location="../Cart/Cart.html";
+    });
+
+    $('#promo-icon').click(function (){
+        window.location="../Promo/Promo.html";
+    });
+
+    $('#game-icon').click(function (){
+        window.location="../Game/Game.html";
+    });
+
+    $('#user-icon').click(function (){
+        var isUserLogged = localStorage.getItem("isuserLogged");
+        if(isUserLogged == "true") {
+            window.location="../account.html";
+        }
+        else {
+            window.location="../login.html";
+        }
+    });
+  });
+</script>
 
 </html>

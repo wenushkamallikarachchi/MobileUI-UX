@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/Logo.png">
+
+<!-- the three things that jQuery Mobile needs to work -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+<div class="payment-container">
+  <div class="header">
+    <div class="Logo"> <img src="images/Logo.png"> </div>
+  </div>
+  <div class="payement-body">
+    <div class="heading"> <img src="images/stripe-logo.png" alt="stripe-logo">
+      <h2>Payment Gateway</h2>
+    </div>
+    <div class="card-name">
+      <p>Name on Card</p>
+      <input type="text" id="name" class="text-box" data-role="none">
+    </div>
+    <div class="card-details">
+      <form action="/" method="post" id="payment-form" data-role="none">
+        <div class="form-row" data-role="none">
+          <label for="card-element" style="color: #7F7F7F;" data-role="none"> Credit or debit card </label>
+          <div id="card-element" data-role="none"> 
+            <!-- A Stripe Element will be inserted here. --> 
+          </div>
+          <!-- Used to display form errors. -->
+          <div id="card-errors" role="alert" data-role="none"></div>
+        </div>
+      </form>
+    </div>
+    <div class="card-button" id="card-button">
+    </div>
+    <div class="payment-image"> </div>
+  </div>
+  <div class="navigation"> 
+    <img src="images/home.png" id="home-icon"/>
+    <div class="nav-active"> 
+		<img  class="nav-cart-icon" src="images/cart-white.png" /> 
+		<span class="nav-cart-text" >Cart</span> 
+	  </div>
+    <img src="images/offer.png" id="promo-icon"/> 
+    <img src="images/rubic.png" id="game-icon"/> 
+    <img src="images/user.png" id="user-icon"/> 
+  </div>
+  <div id="success-toast"> <span class="material-icons success-icon">check_circle</span>
+    <p data-role="none">Payment successful !</p>
+  </div>
+  <div id="error-toast"> <span class="material-icons error-icon">cancel</span>
+    <p data-role="none">Payment failed !</p>
+  </div>
+</div>
+<script type="text/javascript" src="js/paymentscript.js" ></script>
+<script type="text/javascript" src="js/navigation.js" ></script>
+</body>
+</html>

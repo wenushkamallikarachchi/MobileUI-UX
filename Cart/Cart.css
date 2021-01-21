@@ -1,6 +1,12 @@
+#footerCart-ipad-portrait,
+#footerCart-ipad-landscape {
+  display: none;
+}
+
 .page-heading {
   margin: 2px 0 0 0;
 }
+
 .page-sub {
   color: #e80057;
   font-family: "Proza Libre";
@@ -15,7 +21,7 @@
   margin-top: -20px;
   margin-left: 30px;
 }
-.sort{
+.sort {
   font-family: "Open Sans";
 }
 .noti {
@@ -168,7 +174,9 @@
   font-family: "Open Sans";
   font-size: 12px;
 }
-
+.brSpeIpad{
+  display: none;
+}
 /* Media query */
 /* iphone landscape */
 @media (min-width: 667px) {
@@ -231,6 +239,18 @@
   .cart-delete {
     margin-left: 560px;
   }
+  #footerCart-ipad-landscape {
+    display: none;
+  }
+  #footerCart-ipad-portrait {
+    display: block;
+  }
+  .ipadCart{
+    margin-top: 140px;
+  }
+  .brSpeIpad{
+    display: block;
+  }
 }
 /* ipad landscape */
 @media (min-width: 1024px) {
@@ -258,5 +278,12 @@
   }
   .cart-delete {
     margin-left: 800px;
+  }
+  #footerCart-ipad-portrait {
+    display: none;
+  }
+  #footerCart-ipad-landscape {
+    display: block;
+    margin-top: 120px;
   }
 }

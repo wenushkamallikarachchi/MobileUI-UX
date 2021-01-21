@@ -1,183 +1,216 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Promo</title>
+    <meta charset="utf-8" />
+    <title>FreshMart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../images/Logo.png" />
+
+    <!-- the three things that jQuery Mobile needs to work -->
     <link
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <link rel="stylesheet" href="Promo.css" />
     <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="Promo.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
-    <div data-role="page" id="promo">
-      <div data-role="header">
-        <h1 class="ui-header">include header elements</h1>
+    <div data-role="page" id="page-body">
+      <div class="header">
+        <span class="material-icons back-icon"> navigate_before </span>
+        <div class="Logo"><img src="../images/Logo.png" /></div>
       </div>
       <div data-role="main" class="ui-content">
-        <p class="page-heading">PROMOS</p>
-        <p style="" class="promoLine">Browse Through The Lastest Promos</p>
-      </div>
-      <div class="outlets">
-        <ul>
+        <p class="page-heading">Promo</p>
+        <p class="page-sub-heading sub-topic">
+          Browse Through The Lastest Promos
+        </p>
+        <br />
+        <div class="FreshMartDeal">
           <img
-            onclick="changeDeals()"
             class="arrow_back"
+            onclick="changeDeals()"
             src="../icons/arrow_back.png"
             alt="arrow"
           />
-          <label class="labalDeal" id="deal"> Fresh Mart Deals</label>
-
+          <label id="dealsLabel" class="deals">Fresh Mart Deals</label>
           <img
-            onclick="changeDeals()"
             class="arrow_forward"
+            onclick="changeDeals()"
             src="../icons/arrow_forward.png"
             alt="arrow"
           />
-        </ul>
+        </div>
+        <br />
+        <div class="row1">
+          <div class="column">
+            <a href="#" class="ui-btn ui-shadow gridItem item1">
+              <img class="heart" src="../icons/heart_outline.png" />
+              <img
+                class="product-img1"
+                src="../images/beetroot.jpg"
+                alt="beetroot"
+              />
+              <div class="btn-details">
+                <p class="product-name">Beetroot</p>
+                <p class="product-detail">Rs. 55.00/500g</p>
+              </div>
+              <img
+                style="margin-left: -25px"
+                src="../icons/min_circle.png"
+              />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
+              <img src="../icons/plus_circle.png" />
+
+              <button class="ui-btn cart-btn">
+                <img class="cartIcon" src="../icons/cart-icon.png" />
+              </button>
+            </a>
+          </div>
+         
+            <img class="next" src="../icons/arrow_circle.png" />
+    
+          <div class="column2">
+            <a href="#" class="ui-btn ui-shadow gridItem item2">
+              <img class="heart" src="../icons/heart_outline.png" />
+              <img
+                class="product-img1"
+                src="../images/beetroot.jpg"
+                alt="beetroot"
+              />
+              <div class="btn-details">
+                <p class="product-name">Beetroot</p>
+                <p class="product-detail">Rs. 55.00/500g</p>
+              </div>
+              <img
+                style="margin-left: -25px"
+                src="../icons/min_circle.png"
+              />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
+              <img src="../icons/plus_circle.png" />
+
+              <button class="ui-btn cart-btn">
+                <img class="cartIcon" src="../icons/cart-icon.png" />
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="column">
+            <a href="#" class="ui-btn ui-shadow gridItem item1">
+              <img class="heart" src="../icons/heart_outline.png" />
+              <img
+                class="product-img1"
+                src="../images/beetroot.jpg"
+                alt="beetroot"
+              />
+              <div class="btn-details">
+                <p class="product-name">Beetroot</p>
+                <p class="product-detail">Rs. 55.00/500g</p>
+              </div>
+              <img
+                style="margin-left: -25px"
+                src="../icons/min_circle.png"
+              />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
+              <img src="../icons/plus_circle.png" />
+
+              <button class="ui-btn cart-btn">
+                <img class="cartIcon" src="../icons/cart-icon.png" />
+              </button>
+            </a>
+          </div>
+         
+            <img class="next" src="../icons/arrow_circle.png" />
+    
+          <div class="column2">
+            <a href="#" class="ui-btn ui-shadow gridItem item2">
+              <img class="heart" src="../icons/heart_outline.png" />
+              <img
+                class="product-img1"
+                src="../images/beetroot.jpg"
+                alt="beetroot"
+              />
+              <div class="btn-details">
+                <p class="product-name">Beetroot</p>
+                <p class="product-detail">Rs. 55.00/500g</p>
+              </div>
+              <img
+                style="margin-left: -25px"
+                src="../icons/min_circle.png"
+              />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
+              <img src="../icons/plus_circle.png" />
+
+              <button class="ui-btn cart-btn">
+                <img class="cartIcon" src="../icons/cart-icon.png" />
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="footer footerPromo">
+          <img
+            id="footer-iphone-portrait"
+            src="../images/navigation-iphone-portrait.jpg"
+          />
+          <img
+            id="footer-iphone-landscape"
+            src="../images/navigation-iphone-landscape.jpg"
+          />
+          <img
+            id="footer-ipad-portrait"
+            src="../images/navigation-ipad-portrait.jpg"
+          />
+          <img
+            id="footer-ipad-landscape"
+            src="../images/navigation-ipad-landscape.jpg"
+          />
+        </div>
       </div>
-      <img class="next" src="../icons/arrow_circle.png"/>
-      <div class="ui-block-a item">
-      
-        <a href="#" class="ui-btn ui-shadow">
+    </div>
+    <div data-role="footer" class="ui-bar">
+      <div class="navigation">
+        <img src="../images/home.png" id="home-icon" />
+        <img src="../images/cart.png" id="cart-icon" />
+        <div class="nav-active">
           <img
-            class="product-img1"
-            src="../images/beetroot.jpg"
-            alt="beetroot"
+            class="nav-account-icon"
+            src="../images/offer.png"
+            id="promo-icon"
           />
-          <div class="btn-details">
-            <p class="product-name">Beetroot</p>
-            <p class="product-detail">Rs. 55.00/500g</p>
-          </div>
-          <img
-            style="margin-left: -25px"
-            id="add"
-            src="../icons/min_circle.png"
-            alt=""
-          />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-          <img
-            src="../icons/plus_circle.png"
-            id="minus"
-            onclick="qty()"
-            alt=""
-          />
+          <span class="nav-carted-text">Promo</span>
+        </div>
 
-          <button class="ui-btn cart-btn" >
-            <span
-            
-              class="iconify cart"
-              data-icon="ic:outline-add-shopping-cart"
-              data-inline="false"
-            ></span>
-          </button>
-        </a>
+        <img src="../images/rubic.png" id="game-icon" />
 
-        <a href="#" class="ui-btn ui-shadow product-item1">
-          <img
-            class="product-img1"
-            src="../images/beetroot.jpg"
-            alt="beetroot"
-          />
-          <div class="btn-details">
-            <p class="product-name">Beetroot</p>
-            <p class="product-detail">Rs. 55.00/500g</p>
-          </div>
-          <img
-            style="margin-left: -25px"
-            id="add"
-            src="../icons/min_circle.png"
-            alt=""
-          />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-          <img
-            src="../icons/plus_circle.png"
-            id="minus"
-            onclick="qty()"
-            alt=""
-          />
-          <button class="ui-btn cart-btn">
-            <span
-              class="iconify cart"
-              data-icon="ic:outline-add-shopping-cart"
-              data-inline="false"
-            ></span>
-          </button>
-        </a>
-
-        <a
-          href="#"
-          class="ui-btn ui-shadow product-item2"
-          style="margin-left: 325px"
-        >
-          <img
-            class="product-img1"
-            src="../images/beetroot.jpg"
-            alt="beetroot"
-          />
-          <div class="btn-details">
-            <p class="product-name">Beetroot</p>
-            <p class="product-detail">Rs. 55.00/500g</p>
-          </div>
-          <img
-            style="margin-left: -25px"
-            id="add"
-            src="../icons/min_circle.png"
-            alt=""
-          />&nbsp;&nbsp;&nbsp; <span id="qty">1</span>&nbsp;&nbsp;&nbsp;
-          <img
-            src="../icons/plus_circle.png"
-            id="minus"
-            onclick="qty()"
-            alt=""
-          />
-          <button class="ui-btn cart-btn">
-            <span
-              class="iconify cart"
-              data-icon="ic:outline-add-shopping-cart"
-              data-inline="false"
-            ></span>
-          </button>
-        </a>
+        <img src="../images/user.png" id="user-icon" />
       </div>
-      <button class="ui-btn ui-shadow viewAll">
-        <a class="view" href="../Products/Products.html"> View All</a>
-      </button>
     </div>
     <script>
+      var loc = window.location.pathname;
+      var locNew = loc.split("Promo");
+      $("#home-icon").click(function () {
+        window.location.href = locNew[0] + "index.html";
+      });
+      $("#cart-icon").click(function () {
+        window.location.href = locNew[0] + "Cart/Cart.html";
+      });
+      $("#game-icon").click(function () {
+        window.location.href = locNew[0] + "Game/Game.html";
+      });
+
+      $("#user-icon").click(function () {
+        window.location.href = locNew[0] + "account.html";
+      });
       function changeDeals() {
-        var x = document.getElementById("deal");
+        var x = document.getElementById("dealsLabel");
         if (x.innerHTML === "Fresh Mart Deals") {
           x.innerHTML = "Credit Card Deals";
         } else {
           x.innerHTML = "Fresh Mart Deals";
-        }
-      }
-
-      function qty() {
-        var numButtons = 10;
-        for (var i = 1; i <= numButtons; ++i) {
-          $("#add" + i).click(function () {
-            var currentVal = parseInt($("qty" + i).val());
-            if (!isNaN(currentVal)) {
-              $("qty" + i).val(currentVal + 1);
-            }
-          });
-
-          $("#minus" + i).click(function () {
-            var currentVal = parseInt($("qty" + i).val());
-            if (!isNaN(currentVal) && currentVal > 0) {
-              $("#qty" + i).val(currentVal - 1);
-            }
-          });
         }
       }
     </script>
