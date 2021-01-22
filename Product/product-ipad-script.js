@@ -1,5 +1,6 @@
+var selectedProductIdIpad = localStorage.getItem("product-page-item");
+
 $(document).ready(function () {
-    var selectedProductIdIpad = localStorage.getItem("product-page-item");
     displayProductIpad(selectedProductIdIpad);
    
 
@@ -32,16 +33,23 @@ $(document).ready(function () {
   
   function displayProductIpad(productId) {
     var productsIpad = JSON.parse(data);
-  
+    var commentsIpad = JSON.parse(localStorage.getItem("comments")).reverse();
+
     var output = "";
-  
+    var rating = 0;
+    var tempRate = 0;
+
+    for (let i = 0; i < commentsIpad.length; i++) {
+      tempRate += parseInt(commentsIpad[i].rating);
+      rating = (tempRate/commentsIpad.length).toFixed(1)
+    }
     for (var i = 0; i < productsIpad.length; i++) {
       if (productsIpad[i].id == productId) {
         output+= '<div class="ui-block-a ipad-column1"><img src="' + productsIpad[i].image + '" alt="beetroot"></div>';
         output+= '<div class="ui-block-b ipad-column2"><div class="product-details"><div class="ui-grid-a">';
         output+= '<div class="ui-block-a product-name-block"><p class="product-name">' + productsIpad[i].name + '</p></div>';
         output+= '<div class="ui-block-b"><div class="flexbox"><div class="fav-btn"><span href="" class="favme dashicons dashicons-heart"></span></div></div></div></div>';
-        output+= '<div class="star-rating-avg"><span class="stars" data-rating=4 data-num-stars="5"></span> <span class="product-rating">0.4</span></div>';
+        output+= '<div class="star-rating-avg"><span class="stars" data-rating='+rating+' data-num-stars="5"></span> <span class="product-rating">'+rating+'</span></div>';
         output+= '<p class="product-price">' + productsIpad[i].price + '</p><br>';
         output+= '<p class="description-heading">Description</p>';
         output+= '<p class="product-description">' + productsIpad[i].description+ '</p></div></div>';
@@ -67,6 +75,7 @@ $(".comment-btn-ipad").click(function(){
   commentLocalListIpad.push(commentObj);
   localStorage.setItem("comments", JSON.stringify(commentLocalListIpad));
   commentsCardIpad();
+  displayProductIpad(selectedProductIdIpad);
 })
 
 $("#stars li").on("click", function () {
@@ -105,7 +114,6 @@ function commentsCardIpad(){
       $(function() {
         $(".stars").stars();
       })
-
       reviewIpad += '<li class="comment-details-ipad"><div class="product-detail-section-ipad">';
       reviewIpad += '<div class="avatar-ipad"><img class="user-avatar-ipad" src="' + commentsIpad[m].image + '" alt = "profile-picture">';
       reviewIpad += '<div class="name-ipad"><span class="user-name-ipad">' + commentsIpad[m].username + '</span>';

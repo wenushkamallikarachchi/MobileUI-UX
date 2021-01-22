@@ -233,7 +233,9 @@
     $('#game-icon').click(function (){
         window.location="../Game/Game.html";
     });
-
+    $(".Logo img").click(function () {
+        window.location.href = "../Products/Products.html";
+    });
     $('#user-icon').click(function (){
         var isUserLogged = localStorage.getItem("isuserLogged");
         if(isUserLogged == "true") {

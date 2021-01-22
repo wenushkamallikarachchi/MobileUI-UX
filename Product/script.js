@@ -4,14 +4,13 @@ var productDisplayed = localStorage.getItem("product-page-item");
 
 $(document).ready(function () {
   commentsCard();
-
 });
 
 
 $(".popup-btn").click(function () {
   var message = $("#popup-textarea").val();
   var test = {
-    id: 4,
+    id: 11,
     name: "David Spade",
     image: "../images/avatar.png",
     comment: message,
@@ -22,6 +21,7 @@ $(".popup-btn").click(function () {
   reviewsList.push(test);
   addedArray = reviewsList.reverse();
   commentsCard();
+  displayProduct(productDisplayed)
 });
 
 $("#stars li").on("click", function () {
