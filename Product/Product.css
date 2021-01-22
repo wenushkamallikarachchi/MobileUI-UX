@@ -823,12 +823,13 @@ flexbox {
   background-color: #8cc63f;
   color: white;
   height: 53px;
-  font-family: "Prozo libre" !important;
+  font-family: "Open Sans" !important;
   font-weight: bold;
   text-align: center;
   margin-bottom: -20px;
   padding-top: 15px;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .add-to-cart > img {
