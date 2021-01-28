@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="../common.css" />
   </head>
   <body>
-    <div data-role="page" id="game">
+    <div data-role="page" id="page-body">
       <div class="header">
         <span class="material-icons back-icon"> navigate_before </span>
         <div class="Logo"><img src="../images/Logo.png" /></div>
@@ -120,10 +120,11 @@
             </div>
           </div>
         </div>
+        <br>
         <div class="playPoint">
           <label class="lbl1">Play Point</label>
           <img class="medal" src="../icons/medal.png" />
-          <label id="total" class="totallbl">/100</label>
+          <label id="total" class="totallbl">0/100</label>
           <div class="progressbar">
             <div
               id="progressbar"
@@ -132,9 +133,9 @@
             ></div>
           </div>
           <br />
-          <label id="date" class="timeLbl"></label>
+        
           <button id="shareCredit" disabled class="share Sharelbl">
-            Share Credit
+            Redeem
           </button>
 
           <br />
@@ -230,7 +231,7 @@
         window.location.href = locNew[0] + "account.html";
       });
       $("#shareCredit").click(function () {
-        window.location = "Checkout/Checkout.html";
+        window.location.href = locNew[0] + "Checkout/Checkout.html";
       });
       //game implementation
       function date() {
@@ -315,7 +316,7 @@
         count = count + test1;
 
         console.log(count);
-
+        count = 100;
         document.getElementById("total").innerHTML = count + "/100";
         if (count < 100) {
           $("#progressbar").css("width", count + "%");
@@ -323,7 +324,7 @@
         } else if (count >= 100) {
           count == 100;
           $("#progressbar").css("width", count + "%");
-
+          localStorage.setItem("points", count);
           document.getElementById("shareCredit").disabled = false;
         }
       }

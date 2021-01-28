@@ -1,39 +1,55 @@
+var selectedProductIdIpad = localStorage.getItem("product-page-item");
+
 $(document).ready(function () {
-    // localStorage.setItem("product", "product1");
-  
-    var selectedProductIdIpad = localStorage.getItem("product-page-item");
     displayProductIpad(selectedProductIdIpad);
+   
+
+    var productListIpad = JSON.parse(data);
+    var commentListIpad = [];
+    
+    for(var k = 0; k < productListIpad.length ; k++){
+      if(productListIpad[k].id == selectedProductIdIpad){
+        commentListIpad = productListIpad[k].feedback;
+
+        localStorage.setItem("comments",JSON.stringify(commentListIpad));
+      }
+    }
+
     commentsCardIpad();
+    
+
+    $('.favme').click(function() {
+      $(this).toggleClass('active');
+      localStorage.setItem('favourites',selectedProductIdIpad);
+    });
 
 
-$('.favme').click(function() {
-  $(this).toggleClass('active');
-  localStorage.setItem('favourites',selectedProductIdIpad);
+    /*when the animation is over, remove the class*/
+    $(".favme").on('animationend', function(){
+      $(this).toggleClass('is_animating');
+    });
+
 });
-
-/* when a user clicks, toggle the 'is-animating' class */
-$(".favme").on('click touchstart', function(){
-  $(this).toggleClass('is_animating');
-});
-
-/*when the animation is over, remove the class*/
-$(".favme").on('animationend', function(){
-  $(this).toggleClass('is_animating');
-});
-  });
   
   function displayProductIpad(productId) {
     var productsIpad = JSON.parse(data);
-  
+    var commentsIpad = JSON.parse(localStorage.getItem("comments")).reverse();
+
     var output = "";
-  
+    var rating = 0;
+    var tempRate = 0;
+
+    for (let i = 0; i < commentsIpad.length; i++) {
+      tempRate += parseInt(commentsIpad[i].rating);
+      rating = (tempRate/commentsIpad.length).toFixed(1)
+    }
     for (var i = 0; i < productsIpad.length; i++) {
       if (productsIpad[i].id == productId) {
         output+= '<div class="ui-block-a ipad-column1"><img src="' + productsIpad[i].image + '" alt="beetroot"></div>';
         output+= '<div class="ui-block-b ipad-column2"><div class="product-details"><div class="ui-grid-a">';
         output+= '<div class="ui-block-a product-name-block"><p class="product-name">' + productsIpad[i].name + '</p></div>';
         output+= '<div class="ui-block-b"><div class="flexbox"><div class="fav-btn"><span href="" class="favme dashicons dashicons-heart"></span></div></div></div></div>';
-        output+= '<div class="star-rating-avg"><span class="stars" data-rating=4 data-num-stars="5"></span> <span class="product-rating">0.4</span></div>';
+        output+= '<div class="star-rating-avg"><span class="stars" data-rating='+rating+' data-num-stars="5"></span> <span class="product-rating">'+rating+'</span></div>';
         output+= '<p class="product-price">' + productsIpad[i].price + '</p><br>';
         output+= '<p class="description-heading">Description</p>';
         output+= '<p class="product-description">' + productsIpad[i].description+ '</p></div></div>';
@@ -42,34 +58,25 @@ $(".favme").on('animationend', function(){
   
     document.getElementById("product-detail-ipad").innerHTML = output;
   }
-  
-var reviewsListIpad = JSON.parse(customer);
-var ratingValueIpad;
-var addedArrayIpad = reviewsListIpad;
 
-$(".comment-btn-ipad").click(function () {
-  var messageIpad = $("#ipad-textarea").val();
-  var testIpad = {
-    id: 4,
-    name: "David Spade",
+var ratingValueIpad;
+
+
+$(".comment-btn-ipad").click(function(){
+  var commentLocalListIpad = JSON.parse(localStorage.getItem("comments"));
+  var userCommentIpad = $("#ipad-textarea").val();
+  var commentObj = {
+    username : "David Spade",
     image: "../images/avatar.png",
     rating: ratingValueIpad,
-    comment: messageIpad,
+    comment: userCommentIpad,
     date: getCurrentDateIpad()
-  };
-  reviewsListIpad.push(testIpad);
-  addedArrayIpad = reviewsListIpad.reverse();
-  commentsCardIpad();
-
-  $("#ipad-textarea").val("");
-  var stars = $("#stars li").parent().children("li.star");
-
-  if(stars != null){
-    for (i = 0; i < stars.length; i++) {
-      $(stars[i]).removeClass("selected");
-    }
   }
-});
+  commentLocalListIpad.push(commentObj);
+  localStorage.setItem("comments", JSON.stringify(commentLocalListIpad));
+  commentsCardIpad();
+  displayProductIpad(selectedProductIdIpad);
+})
 
 $("#stars li").on("click", function () {
   var onStar = parseInt($(this).data("value"), 10);
@@ -99,29 +106,29 @@ $.fn.stars = function () {
   });
 };
 
-function commentsCardIpad() {
+
+function commentsCardIpad(){
   var reviewIpad = "";
-
-  if (addedArrayIpad.length != []) {
-    for (var i = 0; i < addedArrayIpad.length; i++) {
-      $(function () {
+  var commentsIpad = JSON.parse(localStorage.getItem("comments")).reverse();
+    for( var m = 0; m <commentsIpad.length ; m++){
+      $(function() {
         $(".stars").stars();
-      });
-
+      })
       reviewIpad += '<li class="comment-details-ipad"><div class="product-detail-section-ipad">';
-      reviewIpad += '<div class="avatar-ipad"><img class="user-avatar-ipad" src="' + addedArrayIpad[i].image + '" alt = "profile-picture">';
-      reviewIpad += '<div class="name-ipad"><span class="user-name-ipad">' + addedArrayIpad[i].name + '</span>';
-      reviewIpad += '<div class="date-ipad"><span class="stars" data-rating="' + addedArrayIpad[i].rating + '" data-num-stars="5" ></span>Posted on ' + addedArrayIpad[i].date + ' </div><br><p class="user-comment-ipad">"' + addedArrayIpad[i].comment + '"</p> </div></div></div></li><br>';
+      reviewIpad += '<div class="avatar-ipad"><img class="user-avatar-ipad" src="' + commentsIpad[m].image + '" alt = "profile-picture">';
+      reviewIpad += '<div class="name-ipad"><span class="user-name-ipad">' + commentsIpad[m].username + '</span>';
+      reviewIpad += '<div class="date-ipad"><span class="stars" data-rating="' + commentsIpad[m].rating + '" data-num-stars="5" ></span>Posted on ' + commentsIpad[m].date + ' </div><p class="user-comment-ipad">"' + commentsIpad[m].comment + '"</p> </div></div></div></li><br>';
+
     }
-  }
-  document.getElementById("review-card-ipad").innerHTML = reviewIpad;
+
+    document.getElementById("review-card-ipad").innerHTML = reviewIpad;
 }
 
 function getCurrentDateIpad(){
-    today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1; 
-    var yyyy = today.getFullYear();
+    todayIpad = new Date();
+    var dd = todayIpad.getDate();
+    var mm = todayIpad.getMonth()+1; 
+    var yyyy = todayIpad.getFullYear();
   
     if(dd<10) dd='0'+dd;
     if(mm<10) mm='0'+mm;  

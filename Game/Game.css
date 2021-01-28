@@ -85,9 +85,16 @@ p {
   color: #000000;
 }
 .Sharelbl {
+  width: 88px;
+  height: 18px;
   font-family: Gilroy;
   font-size: 15px;
-  text-align: center;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
   color: #ffffff;
 }
 .resetlbl,
@@ -306,6 +313,7 @@ p {
   bottom: 0;
   width: 100%;
   margin: 10px 0 20px -16px;
+  padding-bottom: 30px;
 }
 .navigationGame {
   grid-area: navigation;
@@ -354,12 +362,10 @@ p {
 
 /* ipad portrait */
 @media (min-width: 768px) {
-
-  #footerGame-ipad-portrait{
+  #footerGame-ipad-portrait {
     margin-top: 13%;
     display: block;
   }
-
 
   .iconify.orders {
     display: inline;
@@ -394,7 +400,7 @@ p {
   }
   .playPoint {
     margin-top: -200px !important;
-    margin-left: 360px !important;
+    margin-left: 374px !important;
     width: 350px;
     height: 190px;
   }
@@ -443,6 +449,10 @@ p {
   .playPoint table {
     display: none;
   }
+  .Sharelbl{
+    margin-top: 10px;
+  }
+ 
 }
 /* ipad landscape */
 @media (min-width: 1024px) {
@@ -491,12 +501,11 @@ p {
     width: 290px;
     height: 190px;
   }
-  #footerGame-ipad-portrait{
+  #footerGame-ipad-portrait {
     display: none;
   }
-  #footerGame-ipad-landscape{
+  #footerGame-ipad-landscape {
     margin-top: 5%;
     display: block;
   }
-
 }

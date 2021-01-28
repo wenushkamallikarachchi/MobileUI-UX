@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>FreshMart</title>
+    <title>Promo</title>
+    <link  rel="shortcut icon" href="../images/Logo.png">
+      
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../images/Logo.png" />
+   
 
     <!-- the three things that jQuery Mobile needs to work -->
     <link
@@ -205,6 +206,11 @@
       $("#user-icon").click(function () {
         window.location.href = locNew[0] + "account.html";
       });
+      $(".Logo img").click(function () {
+        window.location.href = "../Products/Products.html";
+      });
+      
+
       function changeDeals() {
         var x = document.getElementById("dealsLabel");
         if (x.innerHTML === "Fresh Mart Deals") {

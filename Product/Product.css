@@ -78,7 +78,7 @@
 }
 
 .user-comment-display {
-  margin-left: -13% !important;
+  margin-left: -3% !important;
 }
 
 #popupComment {
@@ -118,7 +118,7 @@
   font-size: 15px;
 }
 
-.comment-btn > button {
+.comment-btn > a {
   background-color: #8cc63f !important;
   color: white !important;
   font-family: "Proza Libre" !important;
@@ -152,8 +152,8 @@ color: white;
 }
 
 .avatar-iphone img {
-  margin-top: 4px;
-  margin-left: 5% !important;
+  margin-top: 25px;
+  margin-left: 21% !important;
   width: 40px;
   height: 40px;
 }
@@ -179,25 +179,27 @@ color: white;
 }
 
 .name-ipad{
-  margin: 9px !important;
+  margin: 15px 0 15px 24px !important;
   display: flex;
   flex-direction: column;
 }
 
 .date-iphone {
-  font-size: 6px;
+  font-size: 8px;
   font-family: "open sans";
   color: #7f7f7f;
   font-weight: bold;
   margin-left: -1.8% !important;
+  width: 160px;
 }
 
 .date-ipad {
-  font-size: 6px;
+  font-size: 8px !important;
   font-family: "open sans";
   color: #7f7f7f;
   font-weight: bold;
   margin-left: -1.8% !important;
+  padding: 5px 0 5px 0;
 }
 .user-comment-iphone {
   font-family: "PT Serif" !important;
@@ -276,15 +278,15 @@ color: white;
 }
 
 .avatar-ipad img {
-  margin-top: 6px;
-  margin-left: 5% !important;
-  width: 45px;
-  height: 45px;
+  margin-top: 13px;
+  margin-left: 15% !important;
+  width: 50px;
+  height: 50px;
 }
 
 .user-name-ipad {
   font-family: "Open Sans" !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
 }
 
 #star-descrip{
@@ -309,7 +311,7 @@ color: white;
   background-color: white !important;
   font-size: 15px !important;
   font-family: "Open Sans";
-  margin-top: -3% !important;
+  margin-top: 10px !important;
   padding-left: 4%;
 }
 
@@ -823,12 +825,13 @@ flexbox {
   background-color: #8cc63f;
   color: white;
   height: 53px;
-  font-family: "Prozo libre" !important;
+  font-family: "Open Sans" !important;
   font-weight: bold;
   text-align: center;
   margin-bottom: -20px;
   padding-top: 15px;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .add-to-cart > img {
@@ -982,6 +985,10 @@ flexbox {
   .flexbox {
     margin-left: 85% !important;
   }
+  .rating-heading {
+    text-align: center;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -1033,11 +1040,19 @@ flexbox {
     margin-left: 85% !important;
     margin-top: 0;
   }
+  .rating-heading {
+    text-align: center;
+  }
+
 }
 
 @media (min-width: 1024px) {
   #iphone-grid {
     display: none;
+  }
+
+  .rating-heading {
+    text-align: center;
   }
 
   .product-name {
