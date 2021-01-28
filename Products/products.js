@@ -13,7 +13,7 @@ $(document).ready(function () {
 });
 
 
-// reset funtion for sorting
+// reset function for sorting
 function resetSort() {
   $("#vegetable").css("text-align", "right");
   $("#meat").css("text-align", "right");

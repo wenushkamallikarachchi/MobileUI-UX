@@ -157,7 +157,7 @@
                   <p class="total-price-label">Total</p>
                 </div>
                 <div class="ui-block-b price-block">
-                  <p class="price">Rs.530.00</p>
+                  <p class="price" id="price_iphone"></p>
                 </div>
               </div>
             </div>
@@ -310,7 +310,7 @@
                       <p class="total-price-label">Total</p>
                     </div>
                     <div class="ui-block-b price-block">
-                      <p class="price">Rs.530.00</p>
+                      <p class="price" id="price_ipad"></p>
                     </div>
                   </div>
                 </div>
@@ -391,7 +391,10 @@
 
     //let points = 80;
     let playPrice = 0;
-
+    let price_iphone;
+    let price_ipad;
+    document.getElementById("price_iphone").innerHTML = "Rs.550.00";
+    document.getElementById("price_ipad").innerHTML = "Rs.550.00";
     document.getElementById("play-price-ipad").innerHTML = "Rs." + playPrice +".00";
     document.getElementById("play-price-iphone").innerHTML = "Rs." + playPrice +".00";
 
@@ -410,6 +413,7 @@
       $("#medal-iphone").attr("src", "../icons/medal.png");
       $(".bar-iphone").css('background-color', '#8CC63F');
 
+
       //ipad changes
       document.getElementById("redeem-ipad").disabled = false;
 
@@ -421,6 +425,7 @@
       playPrice = 100;
       points = 0 ;
       document.getElementById("play-price-iphone").innerHTML = "Rs." + playPrice +".00";
+      document.getElementById("price_iphone").innerHTML = "Rs.450.00";
       document.getElementById("redeem-iphone").disabled = true;
       $(".section-title-play").css('background-color', 'black');
       $(".bar-iphone").css('background-color', 'black');
@@ -433,6 +438,7 @@
       points = 0 ;
       document.getElementById("play-price-ipad").innerHTML = "Rs." + playPrice +".00";
       document.getElementById("redeem-ipad").disabled = true;
+      document.getElementById("price_ipad").innerHTML = "Rs.450.00";
       $(".section-title-play").css('background-color', 'black');
       $(".bar-ipad").css('background-color', 'black');
       $("#medal-ipad").attr("src", "../icons/medal-disabled.png");
