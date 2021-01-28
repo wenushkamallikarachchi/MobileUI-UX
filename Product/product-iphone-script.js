@@ -55,7 +55,7 @@ function displayProduct(productId) {
   }
   for (var i = 0; i < products.length; i++) {
     if (products[i].id == productId) {
-      image_output += '<img src="' + products[i].image + '" alt="beetroot">';
+      image_output += '<img src="' + products[i].image + '" alt="' + products[i].name + '">';
 
       info_output += '<div class="ui-grid-a productname-grid-iphone">';
       info_output += '<div class="ui-block-a product-name-block"><p class="product-name-iphone">' + products[i].name + '</p></div>';
